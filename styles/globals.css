@@ -13,7 +13,6 @@ body {
   font-family: neo-sans, Helvetica, Arial, sans-serif;
   overscroll-behavior: none;
 
-  overflow: hidden;
 }
 
 :root {
@@ -35,6 +34,10 @@ body {
 
   /* ----------------- Primary palette colors: ----------------- */
 
+  --color-red-left:  rgb(210, 108, 25);
+  --color-red-middle:  rgb(194, 0, 22);
+  --color-red-right:  rgb(144, 21, 45);
+
   /* Buttons */
   --color-primary-button-background: #ee0000;
   --color-primary-button-background-hover: #7a2936;
@@ -53,8 +56,11 @@ body {
   --color-tertiary-body-background: #000000;
 
   /*  ----------------- Space props:  ----------------- */
-  /* 1.25rem(20px) @ 20rem(320px) increasing to 10.3125rem(165px) @ 160rem(2560px) */
-  --x: clamp(1.25rem, calc(1.25rem + ((1vw - 0.2rem) * 6.4732)), 10.3125rem);
+  /* 1.84375rem(29.5px) @ 20rem(320px) increasing to 6.25rem(100px) @ 160rem(2560px) */
+  --x: clamp(1.84375rem, calc(1.84375rem + ((1vw - 0.2rem) * 3.1473)), 6.25rem);
+
+  /* Safari resize fix */
+  min-height: 0vw;
 
   /* ----------------- Header props: ----------------- */
 

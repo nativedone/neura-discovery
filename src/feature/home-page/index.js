@@ -12,6 +12,4 @@ export function Homepage() {
   );
 }
 
-const PageContainer = styled("div", {
-  overflow: "hidden",
-});
+const PageContainer = styled("div", {});

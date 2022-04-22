@@ -8,9 +8,9 @@ import { DevGuidelines } from "@components/dev-guidelines";
 export function Layout({ children }) {
   return (
     <LayoutContainer>
-      <Header />
+      {/* <Header /> */}
       <Main>{children}</Main>
-      {/* <DevGuidelines /> */}
+      <DevGuidelines />
     </LayoutContainer>
   );
 }

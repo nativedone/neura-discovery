@@ -1,6 +1,6 @@
 import { styled } from "@theme";
 
-const SIZES = [35, 50, 67, 75, 85];
+const SIZES = [50, 58, 75, 85];
 
 export const DevGuidelines = () => {
   return SIZES.map((size) => <Lines size={size} key={size} />);
