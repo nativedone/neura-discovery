@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import * as gtag from "@lib/gtm";
 import "@styles/globals.css";
 
-
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   useEffect(() => {
@@ -38,11 +37,6 @@ function MyApp({ Component, pageProps }) {
             });
           `,
         }}
-      />
-      <Script
-        id="share-api-polyfill"
-        strategy="lazyOnload"
-        src="https://unpkg.com/share-api-polyfill/dist/share-min.js"
       />
 
       <Component {...pageProps} />

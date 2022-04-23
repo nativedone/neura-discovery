@@ -1,15 +1,16 @@
 import { styled } from "@theme";
-import { Share } from "@components/share";
+import { Button } from "@components/button";
 
 import { LogoMenuLink } from "./logo-menu-link";
 
 export function Header() {
   return (
     <SemanticHeader>
+      <GradientLine />
       <SemanticNav>
         <LogoMenuLink />
 
-        <Share />
+        <Button variant="secondary">JOIN US NOW</Button>
       </SemanticNav>
     </SemanticHeader>
   );
@@ -24,18 +25,31 @@ const SemanticHeader = styled("header", {
   right: 0,
   zIndex: "$50",
 
-  height: "$3x_2",
-  "@3": {
-    height: "$x_2",
-  },
+  height: "$2x",
+
+   /* 0.25rem(4px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
+   "--height-gradient-line": "clamp(0.25rem, calc(0.25rem + ((1vw - 0.2rem) * 0.7143)), 1.25rem)",
+
+   borderBottom: '1px solid purple'
+});
+
+const GradientLine = styled("div", {
+  height: "var(--height-gradient-line)",
+
+  /* Safari resize fix */
+  minHeight: "0vw",
+  width: "100%",
+
+  background:
+    "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
 });
 
 const SemanticNav = styled("nav", {
-  height: "100%",
+  height: "calc(100% - var(--height-gradient-line))",
 
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "flex-end",
+  alignItems: "center",
 
   position: "relative",
 
@@ -43,6 +57,6 @@ const SemanticNav = styled("nav", {
   width: "85vw",
 
   "@3": {
-    width: "67vw",
+    width: "75vw",
   },
 });

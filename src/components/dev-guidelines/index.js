@@ -24,4 +24,5 @@ const Line = styled("div", {
   borderLeftStyle: "solid",
   borderLeftColor: "orange",
   position: "absolute",
+  zIndex: '$debug'
 });
