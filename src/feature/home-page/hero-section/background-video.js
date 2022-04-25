@@ -12,11 +12,12 @@ export function BackgroundVideo() {
 }
 
 const Video = styled("video", {
-  zIndex: "$40",
+  zIndex: "$10",
 
   position: "fixed",
   top: "0",
   left: "0",
   width: "100vw",
-  aspectRatio: "507 / 320",
+  height: "auto",
+  // aspectRatio: "507 / 320",
 });

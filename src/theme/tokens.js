@@ -63,7 +63,6 @@ export const tokens = {
       full: "9999px",
     },
     zIndices: {
-      //TODO: apply these z-indexes
       auto: "auto",
       0: "0",
       10: "10",
@@ -71,6 +70,7 @@ export const tokens = {
       30: "30",
       40: "40",
       50: "50",
+      debug: "99999999999"
     },
   },
   media: {

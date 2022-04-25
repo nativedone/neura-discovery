@@ -1,99 +1,65 @@
 import dynamic from "next/dynamic";
 import { styled } from "@theme";
 
-import { useState } from "react";
+import { DividerGap } from "@components/divider-gap";
 
-import { Button } from "@components/button";
-import { Card } from "@components/card";
+import { IntroSection } from "../intro-section";
+import { BannerSection } from "../banner-section";
+import { CarouselSection } from "../carousel-section";
+import { BecomePartnerSection } from "../become-partner-section";
 
 const HeroSection = dynamic(() =>
   import("../hero-section").then((mod) => mod.HeroSection)
 );
 
-const SubscribeForm = dynamic(() =>
-  import("../subscribe-form").then((mod) => mod.SubscribeForm)
-);
-
-const Quiz = dynamic(() => import("../quiz").then((mod) => mod.Quiz));
-
-// -------- States
-// idle: user has landed into the page
-// subscribing: user is filling in the consent form
-// answering: user is answering the quiz
-
 export function Body() {
-  const [state, setState] = useState("idle");
   return (
-    <BodyContainer className={state}>
-      {/* <Text>MAX15Characters</Text> */}
-      {/* <div style={{ marginTop: 300 }}> */}
-      <Card />
-      <Card layout="reverse"/>
-        {/* <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer />
-        <SectionDummyContainer /> */}
-      {/* </div> */}
-      {/* {state === "idle" && (
-        <ButtonContainer>
-          <Button onClick={() => setState("subscribing")}>TAKE THE QUIZ</Button>
-        </ButtonContainer>
-      )} */}
+    <BodyContainer>
+      <BodyContent>
+        <IntroSection />
 
-      {/* <HeroSection /> */}
+        <DividerGap />
+
+        <BannerSection
+          text={`By taking one small step and partnering with NeuRA, you can help our world take a giant leap towards understanding the human brain.`}
+        />
+
+        <DividerGap />
+
+        <CarouselSection />
+
+        <BecomePartnerSection />
+
+        <DividerGap />
+
+        <BannerSection
+          text={`The brain is a whole universe yet to be explored — and your support is the rocket fuel.`}
+          renderButton
+        />
+        
+        <DividerGap />
+      </BodyContent>
+
+      <HeroSection />
     </BodyContainer>
   );
 }
 
 const BodyContainer = styled("div", {
-  // overflow: "hidden",
-
   position: "relative",
+  width: "100vw",
+});
+
+const BodyContent = styled("div", {
+  position: "relative",
+  zIndex: "$40",
 
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
-
-  // paddingTop: "100vh",
-  // paddingBottom: "$x",
-
-  // backgroundColor: "red",
-
   width: "100vw",
 
-  width: "100vw",
-  paddingTop: "calc(507 / 320 * 100vw)",
-  // height: "100vh",
-
-  alignItems: "flex-end",
-  "&.idle": {
-    alignItems: "center",
-  },
+  marginTop: "30vh",
   "@3": {
-    alignItems: "center",
+    marginTop: "100vh",
   },
-});
-
-const SectionDummyContainer = styled("div", {
-  zIndex: "$50",
-
-  width: "100vw",
-  height: "30vh",
-  marginBottom: "10px",
-  backgroundColor: "red",
-});
-
-const Text = styled("h1", {
-  zIndex: "$50",
-  fontSize: "72px",
-  fontWeight: "$bold",
-  background:
-    "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
 });

@@ -9,7 +9,7 @@ export function HeroSection() {
   return (
     <HeroSectionContainer>
       <BackgroundVideo />
-     
+
       <HeroTextContainer>
         <h1>Join us on the discovery mission of your lifetime</h1>
       </HeroTextContainer>
@@ -24,6 +24,7 @@ const HeroSectionContainer = styled("div", {
   width: "100vw",
   aspectRatio: "507 / 320",
 
+  zIndex: "$20",
   backgroundColor: "#1E2C38",
 });
 
@@ -36,18 +37,19 @@ const HeroTextContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  zIndex: "$50",
+  zIndex: "$20",
   height: "100%",
   maxHeight: "100vh",
 
-  // backgroundColor: "green",
-
   fontSize: "$5", // TODO: confirm b/c design says 72px
   fontWeight: "$bold",
+  color: "rgb(0, 35, 65)",
 
-   margin: '0 auto',
+  margin: "0 auto",
   width: "75vw",
   textAlign: "center",
+
+  textShadow: "-4px -4px 15px #fff, 4px 4px 15px #fff",
 
   "@3": {
     width: "50vw",

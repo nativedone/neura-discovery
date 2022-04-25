@@ -1,6 +1,7 @@
 import { styled } from "@theme";
 
 import { Header } from "@components/header";
+import { Footer } from "@components/footer";
 import { Main } from "@components/main";
 
 import { DevGuidelines } from "@components/dev-guidelines";
@@ -8,8 +9,9 @@ import { DevGuidelines } from "@components/dev-guidelines";
 export function Layout({ children }) {
   return (
     <LayoutContainer>
-      {/* <Header /> */}
+      <Header />
       <Main>{children}</Main>
+      <Footer />
       <DevGuidelines />
     </LayoutContainer>
   );
