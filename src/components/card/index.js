@@ -1,26 +1,65 @@
 import { styled } from "@theme";
+import Image from 'next/image';
+
+import heroImageOne from "../../../public/assets/DSC07357.jpeg";
+import heroImageTwo from "../../../public/assets/RxMobile.PNG";
+
+
+const data = [
+  {
+    id: 0,
+    landscape: {
+      image: heroImageOne,
+      width: 3600,
+      height: 2400,
+    },
+  },
+  // {
+  //   id: 1,
+  //   landscape: {
+  //     image: heroImageTwo,
+  //     width: 400,
+  //     height: 400,
+  //   },
+  // },
+];
+
+
 
 export function Card({ layout, subheading, paragraphs }) {
   return (
     <CardContainer variantLayout={layout}>
       <TextContainer>
-        <h2>{subheading}</h2>
+        <H2>{subheading}</H2>
         {paragraphs.map((paragraph) => (
-          <p key={paragraph}>{paragraph}</p>
+          <P key={paragraph}>{paragraph}</P>
         ))}
       </TextContainer>
-
-      <ImageContainer />
+      {data?.map((data) => (    
+        <ImageContainer key={data.id}>         
+              <Image
+                src={data.landscape.image}
+                width={data.landscape.width}
+                height={data.landscape.height}
+                // layout="responsive"
+                loading="eager"
+                objectFit= "contain"
+              />
+        </ImageContainer>
+      ))}
     </CardContainer>
   );
 }
 
 const CardContainer = styled("div", {
   display: "flex",
+  justifyContent: "space-between",
   backgroundColor: "rgb( 0, 35, 65)",
-
   margin: "0 auto",
   padding: "$x $x $3x_2 $x",
+  objectFit: "contain",
+  
+
   width: "75vw",
   "@3": {
     width: "58vw",
@@ -33,6 +72,7 @@ const CardContainer = styled("div", {
 
         "@3": {
           flexDirection: "row",
+          
         },
       },
       reverse: {
@@ -51,12 +91,13 @@ const CardContainer = styled("div", {
 const ImageContainer = styled("div", {
   display: "flex",
   width: "100%",
+  objectFit: "contain",
   "@3": {
-    width: '50%',
+    width: "46.5%",
+    objectFit: "cover",
   },
-  aspectRatio: "1",
-
-  backgroundColor: "red",
+  // aspectRatio: "1",
+  // backgroundColor: "red",
 });
 
 const TextContainer = styled("div", {
@@ -64,12 +105,75 @@ const TextContainer = styled("div", {
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-
+  color: "#fff",
+  
+  
   "@3": {
-    maxWidth: '50%',
+    maxWidth: '46.5%',
   },
-  backgroundColor: "blue",
+  // backgroundColor: "blue",
 
   //   fontSize: "$5", // TODO: confirm b/c design says 72px
   fontWeight: "$bold",
 });
+
+const H2 = styled("h2", {
+    fontSize: "$2",
+    paddingBottom: "$x_2",
+    fontWeight: "bold",
+});
+
+const P = styled("p", {
+  fontSize: "$normal",
+  paddingBottom: "$x_2",
+  fontWeight: "regular",
+});
+
+
+
+// const data = [
+//   {
+//     id: 0,
+//     landscape: {
+//       image: heroImageOne,
+//       width: 400,
+//       height: 400,
+//     },
+//     // portrait: {
+//     //   image: heroImageOne,
+//     //   width: 249,
+//     //   height: 216,
+//     // },
+//   },
+//   {
+//     id: 1,
+//     landscape: {
+//       image: heroImageTwo,
+//       width: 400,
+//       height: 400,
+//     },
+//     // portrait: {
+//     //   image: heroImageTwo,
+//     //   width: 249,
+//     //   height: 216,
+//     // },
+//   },
+// ];
+
+
+
+
+
+// const HeroImageTwo = (props) => {
+//   return (
+
+//     <Image
+//       src={heroImageTwo}
+//       width="400px"
+//       height="100%"
+//       // layout="fill"
+//       priority={true}
+//       loading="eager"
+//     />
+//   )
+// }
