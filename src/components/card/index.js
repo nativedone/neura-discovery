@@ -1,32 +1,12 @@
 import { styled } from "@theme";
 import Image from 'next/image';
 
-import heroImageOne from "../../../public/assets/DSC07357.jpeg";
-import heroImageTwo from "../../../public/assets/RxMobile.PNG";
+// import heroImageOne from "../../../public/assets/DSC07357.jpeg";
+// import heroImageTwo from "../../../public/assets/RxMobile.PNG";
 
 
-const data = [
-  {
-    id: 0,
-    landscape: {
-      image: heroImageOne,
-      width: 3600,
-      height: 2400,
-    },
-  },
-  // {
-  //   id: 1,
-  //   landscape: {
-  //     image: heroImageTwo,
-  //     width: 400,
-  //     height: 400,
-  //   },
-  // },
-];
-
-
-
-export function Card({ layout, subheading, paragraphs }) {
+export function Card({ layout, subheading, paragraphs, imageData }) {
+  console.log(imageData, "imageData");
   return (
     <CardContainer variantLayout={layout}>
       <TextContainer>
@@ -35,18 +15,9 @@ export function Card({ layout, subheading, paragraphs }) {
           <P key={paragraph}>{paragraph}</P>
         ))}
       </TextContainer>
-      {data?.map((data) => (    
-        <ImageContainer key={data.id}>         
-              <Image
-                src={data.landscape.image}
-                width={data.landscape.width}
-                height={data.landscape.height}
-                // layout="responsive"
-                loading="eager"
-                objectFit= "contain"
-              />
+        <ImageContainer>         
+              <Image src={imageData.src} width={imageData.aspectRatio.width} height={imageData.aspectRatio.height}/>
         </ImageContainer>
-      ))}
     </CardContainer>
   );
 }
@@ -89,12 +60,12 @@ const CardContainer = styled("div", {
 });
 
 const ImageContainer = styled("div", {
-  display: "flex",
+  // display: "flex",
   width: "100%",
-  objectFit: "contain",
+  // objectFit: "contain",
   "@3": {
-    width: "46.5%",
-    objectFit: "cover",
+    width: "50%",
+    // objectFit: "cover",
   },
   // aspectRatio: "1",
   // backgroundColor: "red",
@@ -109,7 +80,7 @@ const TextContainer = styled("div", {
   
   
   "@3": {
-    maxWidth: '46.5%',
+    maxWidth: '50%',
   },
   // backgroundColor: "blue",
 

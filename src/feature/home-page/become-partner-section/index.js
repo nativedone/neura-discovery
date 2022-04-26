@@ -24,6 +24,13 @@ export function BecomePartnerSection() {
 
             `You can be a part of this extraordinary journey to unlocking the secrets of the brain and helping millions of people around the world live fuller, healthier and more enriched lives.`,
           ]}
+          imageData={{
+            src: "/assets/DocWMobile.PNG",
+            aspectRatio:{
+              width: 454,
+              height: 482,
+            }
+          }}
         />
       </div>
       <Lateral />
