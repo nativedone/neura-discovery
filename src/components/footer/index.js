@@ -1,15 +1,7 @@
 import { styled } from "@theme";
 import Image from 'next/image';
 
-import logo from "../../../public/assets/logo.png";
-import instagram from "../../../public/assets/instagram.png";
-import facebook from "../../../public/assets/facebook.png";
-import twitter from "../../../public/assets/twiter.png";
-import youtube from "../../../public/assets/yt.PNG";
-
 // TODO: fix my styles and content
-
-
 
 export function Footer() {
   return (
@@ -21,100 +13,47 @@ export function Footer() {
           <span>DISCLAIMER | PRIVACY | CONTACT US | ABOUT US</span>
         </ExternalLinksNav>
         <div>
-          <NeuraLogo/>
+          <Image src="/assets/NeuRA_Favicon.svg" width="120px" height="60px"/>
         </div>
         <SocialLinksNav>
-          <span><Facebook/> | <Twitter/> | <Instagram/> | <Youtube/></span>
+          <Span>
+            <Image src="/assets/Facebook Icon.svg" width="80px" height="80px"/> 
+            <Space>|</Space>  
+            <Image src="/assets/Twitter Icon.svg" width="80px" height="80px"/>
+            <Space>|</Space> 
+            <Image src="/assets/Instagram Icon.svg" width="80px" height="80px"/>
+            <Space>|</Space> 
+            <Image src="/assets/Youtube Icon.svg" width="80px" height="80px"/> 
+          </Span>
         </SocialLinksNav>
       </SemanticContainer>
     </SemanticFooter>
   );
 }
 
-const NeuraLogo = () => {
-  return (
-    <Image
-      src={logo}
-      width="210px"
-      height="70px"
-      // layout="fill"
-      priority={true}
-      loading="eager"
-    />
-  )
-}
-
-const Instagram = () => {
-  return (
-    <Image
-      src={instagram}
-      width="40px"
-      height="40px%"
-      // layout="fill"
-      priority={true}
-      loading="eager"
-    />
-  )
-}
-
-const Facebook = () => {
-  return (
-    <Image
-      src={facebook}
-      width="40px"
-      height="40px"
-      // layout="fill"
-      priority={true}
-      loading="eager"
-    />
-  )
-}
-
-const Twitter = () => {
-  return (
-    <Image
-      src={twitter}
-      width="40px"
-      height="40px"
-      // layout="fill"
-      priority={true}
-      loading="eager"
-    />
-  )
-}
-
-const Youtube = () => {
-  return (
-    <Image
-      src={youtube}
-      width="40px"
-      height="40px"
-      // layout="fill"
-      priority={true}
-      loading="eager"
-    />
-  )
-}
-
 const SemanticFooter = styled("footer", {
-
-  
+  display: "flex",
+  justifyContent:"center",
   backgroundColor: "#fff",
 
   zIndex: "$50",
   padding: "$3x_2 0",
 });
 
-const SemanticContainer = styled("div", {
+const SemanticContainer = styled("div", {});
+
+const ExternalLinksNav = styled("nav", {});
+
+const SocialLinksNav = styled("nav", {});
+
+const Span = styled("span", {
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItens:"center",
-  margin: "0 auto",
-
-
+  justifyContent:"center",
 
 });
 
-const ExternalLinksNav = styled("nav", {});
-const SocialLinksNav = styled("nav", {});
+const Space = styled("div", {
+  display: "flex",
+  justifyContent:"center",
+  alignItens: "center",
+});

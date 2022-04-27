@@ -20,7 +20,8 @@ export function Body() {
 
         <DividerGap />
 
-        <BannerSection
+        <BannerSection 
+
           text={`By taking one small step and partnering with NeuRA, you can help our world take a giant leap towards understanding the human brain.`}
         />
 

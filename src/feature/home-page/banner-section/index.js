@@ -6,7 +6,7 @@ export function BannerSection({ text, renderButton }) {
     <BannerSectionContainer>
       <H2>{text}</H2>
       {renderButton && (
-        <Button variant="secondary" css={{ marginTop: "$x_4" }}>
+        <Button variant="secondary" css={{ marginTop: "$x_2" }}>
           JOIN US NOW
         </Button>
       )}
@@ -26,7 +26,7 @@ const BannerSectionContainer = styled("section", {
 
 const H2 = styled("h2", {
   fontSize: "$3",
-  paddingBottom: "$x_2",
+  // paddingBottom: "$x_2",
   fontWeight: "medium",
   color:"#fff",
   width: "85vw",
