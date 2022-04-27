@@ -1,15 +1,18 @@
 import { styled } from "@theme";
 import { Button } from "@components/button";
 
-import { LogoMenuLink } from "./logo-menu-link";
+// import { LogoMenuLink } from "./logo-menu-link";
+import { Logo } from "./logo";
 
 export function Header() {
   return (
     <SemanticHeader>
       <GradientLine />
       <SemanticNav>
-        <LogoMenuLink />
-
+        {/* <LogoMenuLink /> */}
+        <LogoControl>
+          <Logo/>
+        </LogoControl>
         <Button variant="secondary">JOIN US NOW</Button>
       </SemanticNav>
     </SemanticHeader>
@@ -59,4 +62,22 @@ const SemanticNav = styled("nav", {
   "@3": {
     width: "75vw",
   },
+});
+
+const LogoControl = styled("div",{
+/* 2.5rem(40px) @ 20rem(320px) increasing to 9.25rem(148px) @ 160rem(2560px) */
+  fontSize: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 4.8214)), 9.25rem)",
+  /* Where: 4.8214 = 100 * font-size_difference / viewport_width_difference */
+
+  /* Safari resize fix */
+  minHeight: "0vw",
+  lineHeight: "1",
+  backgroundColor: "#fff",
+ 
+  /* 0.5625rem(9px) @ 20rem(320px) increasing to 1.625rem(26px) @ 160rem(2560px) */
+  padding: "clamp(0.5625rem, calc(0.5625rem + ((1vw - 0.2rem) * 0.7589)), 1.625rem)",
+  borderBottomLeftRadius: "clamp(0.5625rem, calc(0.5625rem + ((1vw - 0.2rem) * 0.7589)), 1.625rem)",
+  borderBottomRightRadius: "clamp(0.5625rem, calc(0.5625rem + ((1vw - 0.2rem) * 0.7589)), 1.625rem)",
+  
+  transform: "translateY(calc(0.9 * var(--height-gradient-line)))",
 });

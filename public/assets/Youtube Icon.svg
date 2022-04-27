@@ -1,16 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 595.3 595.3" style="enable-background:new 0 0 595.3 595.3;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 252.312 180.4"
+   xml:space="preserve"
+   sodipodi:docname="Youtube Icon.svg"
+   width="252.312"
+   height="180.39999"
+   inkscape:version="1.2-dev (44c0d328, 2021-10-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs322" /><sodipodi:namedview
+   id="namedview320"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:blackoutopacity="0.0"
+   showgrid="false"
+   width="252.312px"
+   inkscape:zoom="0.88358812"
+   inkscape:cx="108.08203"
+   inkscape:cy="298.21587"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style308">
 	.st0{fill:url(#SVGID_1_);}
 </style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="173.84" y1="300.7556" x2="438.06" y2="300.7556">
-	<stop  offset="0" style="stop-color:#D26C19"/>
-	<stop  offset="0.5" style="stop-color:#C20016"/>
-	<stop  offset="1" style="stop-color:#8F152E"/>
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="173.84"
+   y1="300.75562"
+   x2="438.06"
+   y2="300.75562"
+   gradientTransform="matrix(0.95500265,0,0,0.95500265,-165.97946,-197.01705)">
+	<stop
+   offset="0"
+   style="stop-color:#D26C19"
+   id="stop310" />
+	<stop
+   offset="0.5"
+   style="stop-color:#C20016"
+   id="stop312" />
+	<stop
+   offset="1"
+   style="stop-color:#8F152E"
+   id="stop314" />
 </linearGradient>
-<path class="st0" d="M382.7,206.3H229.2c-30.6,0-55.4,24.8-55.4,55.4v78.1c0,30.6,24.8,55.4,55.4,55.4h153.4
-	c30.6,0,55.4-24.8,55.4-55.4v-78.1C438.1,231.1,413.3,206.3,382.7,206.3z M345.4,305.3l-70.8,33.8c-2.2,1-4.7-0.5-4.7-2.9v-70
-	c0-2.4,2.6-4,4.8-2.9l70.8,36.1C347.9,300.6,347.8,304.1,345.4,305.3z"/>
+<path
+   class="st0"
+   d="M 199.50005,-3.0517578e-6 H 52.907154 C 23.684074,-3.0517578e-6 4.331173e-6,23.684067 4.331173e-6,52.907147 V 127.49285 C 4.331173e-6,156.71593 23.684074,180.4 52.907154,180.4 H 199.40455 c 29.22308,0 52.90715,-23.68407 52.90715,-52.90715 V 52.907147 C 252.4072,23.684067 228.72313,-3.0517578e-6 199.50005,-3.0517578e-6 Z M 163.87845,94.545257 96.264274,126.82435 c -2.10101,0.955 -4.48852,-0.4775 -4.48852,-2.76951 V 57.204657 c 0,-2.29201 2.48301,-3.82001 4.58402,-2.76951 l 67.614176,34.4756 c 2.29201,1.146 2.19651,4.48851 -0.0955,5.63451 z"
+   id="path317"
+   style="fill:url(#SVGID_1_);stroke-width:0.955003" />
 </svg>
