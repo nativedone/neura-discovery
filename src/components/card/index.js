@@ -16,7 +16,7 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
         ))}
       </TextContainer>
         <ImageContainer>         
-              <Image src={imageData.src} width={imageData.aspectRatio.width} height={imageData.aspectRatio.height}/>
+              <Image src={imageData.src} width={imageData.aspectRatio.width} height={imageData.aspectRatio.height} layout="responsive"/>
         </ImageContainer>
     </CardContainer>
   );
@@ -29,6 +29,7 @@ const CardContainer = styled("div", {
   margin: "0 auto",
   padding: "$x $x $3x_2 $x",
   objectFit: "contain",
+  gap: "$x",
   
 
   width: "75vw",
@@ -74,7 +75,7 @@ const ImageContainer = styled("div", {
 const TextContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
+  // justifyContent: "center",
   alignItems: "center",
   color: "#fff",
   
@@ -91,13 +92,13 @@ const TextContainer = styled("div", {
 const H2 = styled("h2", {
     fontSize: "$2",
     paddingBottom: "$x_2",
-    fontWeight: "bold",
+    fontWeight: "$bold",
 });
 
 const P = styled("p", {
   fontSize: "$normal",
   paddingBottom: "$x_2",
-  fontWeight: "regular",
+  fontWeight: "$normal",
 });
 
 

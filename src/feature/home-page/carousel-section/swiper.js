@@ -116,13 +116,18 @@ export function CarouselSwiper() {
 const CarouselItemContainer = styled("div", {
   display: "flex",
   flexDirection: "column-reverse",
-  position: "relative",
+  // position: "relative",
+  magin: "0 auto",
+  // width: "50vw",
+  // height: "50vw",
   "@3": {
     display: "flex",
     flexDirection: "row-reverse",  
     alignItens: "center",
     width: "100vw",
-    height: "80vh",
+    // aspectRatio: "2574/998",
+    // height: "calc( (998 / 2574) * 100vw )",
+    height: "calc( (998 / 2574) * 100vw )",
   },
 });
 
@@ -140,6 +145,10 @@ const CarouselParagraph = styled("p", {
   fontSize: "$0",
   lineHeight: "$tight",
   fontWeight: "$normal",
+
+  // paddingTop:"80px", // 2560
+  // paddingTop:"1px", // 1010
+  paddingTop:"clamp(0.0625rem, calc(0.0625rem + ((1vw - 0.63125rem) * 5.0968)), 5rem)", // 1px at 1010 - 80px at 2560
 });
 
 const ImageContainer = styled("div", {
@@ -154,22 +163,42 @@ const ImageContainer = styled("div", {
     left:0,
     right:0,
     bottom: 0,
-    aspectRatio: "3/1",
     },
 });
 
 const TextContainer = styled("div", {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
+    // justifyContent: "center",
+    // alignItens:"center",
+    textAlign:"center",
+    width: "85vw",
+    magin: "0 auto",
+
+    // paddingLeft: "40px;", // 320
+    // paddingLeft: "90px;", // 574
+    paddingLeft: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 19.685)), 5.625rem)", // 40px at 320 - 90px at 574
+
+    // paddingRight:"0",
     backgroundColor: "#fff",
+    paddingTop:".5rem",
+    paddingBottom: "2.2rem",
     "@3": {
-      width: "46%",
+      width: "40%",
       zIndex:"100",
       background: "-webkit-linear-gradient(0deg, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 1) 70%)",
-      paddingTop:" 20rem",
-      paddingRight: "12rem",
+      // paddingTop:"$3x",
+      // paddingTop:"220px", // 2560
+      // paddingTop:"0px", // 1280
+      textAlign:"left",
+      paddingTop:"clamp(1px, calc(0.0625rem + ((1vw - 10.1px) * 14.129)), 220px)", // 1px at 1010 - 240px at 2560
+      // paddingRight: "$3x",
+      // paddingRight: "290px", // 2560
+      // paddingRight: "30px", // 2560
+      paddingRight: "clamp(1.875rem, calc(1.875rem + ((1vw - 0.63125rem) * 16.7742)), 18.125rem)", // 30px at 1010 - 290px at 2560
+      paddingLeft:"0px",
     },
+
     
 });
 
