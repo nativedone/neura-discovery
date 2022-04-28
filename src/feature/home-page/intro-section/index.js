@@ -18,10 +18,10 @@ export function IntroSection() {
           ]}
           imageData={{
             src: "/assets/DocMobile.PNG",
-            aspectRatio:{
+            aspectRatio: {
               width: 457,
               height: 488,
-            }
+            },
           }}
         />
 
@@ -44,10 +44,10 @@ export function IntroSection() {
           ]}
           imageData={{
             src: "/assets/RxMobile.PNG",
-            aspectRatio:{
+            aspectRatio: {
               width: 453,
               height: 482,
-            }
+            },
           }}
         />
       </div>
@@ -64,11 +64,7 @@ const SectionContainer = styled("section", {
   // backgroundColor: "rgb(18, 26, 57)",
 });
 
-const Lateral = styled("span", {
-  zIndex: "$20",
-
-  backgroundColor: "rgb(18, 26, 57)",
-});
+const Lateral = styled("span", {});
 
 const Statement = styled("h2", {
   color: "#fff",
