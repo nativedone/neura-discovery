@@ -7,6 +7,7 @@ import { IntroSection } from "../intro-section";
 import { BannerSection } from "../banner-section";
 import { CarouselSection } from "../carousel-section";
 import { BecomePartnerSection } from "../become-partner-section";
+import { BackgroundVideo } from "../background-video";
 
 const HeroSection = dynamic(() =>
   import("../hero-section").then((mod) => mod.HeroSection)
@@ -16,6 +17,8 @@ export function Body() {
   return (
     <BodyContainer>
       <BodyContent>
+        <HeroSection />
+
         <IntroSection />
 
         <DividerGap />
@@ -36,11 +39,11 @@ export function Body() {
           text={`The brain is a whole universe yet to be explored — and your support is the rocket fuel.`}
           renderButton
         />
-        
+
         <DividerGap />
       </BodyContent>
 
-      <HeroSection />
+      <BackgroundVideo />
     </BodyContainer>
   );
 }
@@ -57,9 +60,4 @@ const BodyContent = styled("div", {
   display: "flex",
   flexDirection: "column",
   width: "100vw",
-
-  marginTop: "30vh",
-  "@3": {
-    marginTop: "100vh",
-  },
 });

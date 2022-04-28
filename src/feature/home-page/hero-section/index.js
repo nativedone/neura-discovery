@@ -1,31 +1,32 @@
-import dynamic from "next/dynamic";
 import { styled } from "@theme";
-
-const BackgroundVideo = dynamic(() =>
-  import("./background-video").then((mod) => mod.BackgroundVideo)
-);
 
 export function HeroSection() {
   return (
-    <HeroSectionContainer>
-      <BackgroundVideo />
-
-      <HeroTextContainer>
-        <h1>Join us on the discovery mission of your lifetime</h1>
-      </HeroTextContainer>
-    </HeroSectionContainer>
+    <>
+      <HeroSectionContainer>
+        <HeroTextContainer>
+          <h1>Join us on the discovery mission of your lifetime</h1>
+        </HeroTextContainer>
+      </HeroSectionContainer>
+    </>
   );
 }
 
 const HeroSectionContainer = styled("div", {
-  position: "fixed",
+  position: "relative",
   top: "0",
   left: "0",
   width: "100vw",
-  aspectRatio: "507 / 320",
+  "--mobile-height": "calc(243 / 320)",
+  height: "calc(100vw * var(--mobile-height))",
 
   zIndex: "$20",
-  backgroundColor: "#1E2C38",
+
+  "@3": {
+    height: '100vh'
+  },
+
+
 });
 
 const HeroTextContainer = styled("div", {
@@ -41,7 +42,6 @@ const HeroTextContainer = styled("div", {
   height: "100%",
   maxHeight: "100vh",
 
-  fontSize: "$5", // TODO: confirm b/c design says 72px
   fontWeight: "$bold",
   color: "rgb(0, 35, 65)",
 
@@ -51,7 +51,12 @@ const HeroTextContainer = styled("div", {
 
   textShadow: "-4px -4px 15px #fff, 4px 4px 15px #fff",
 
+  fontSize: "$3",
+  "@1": {
+    fontSize: "$4",
+  },
   "@3": {
+    fontSize: "$5", //
     width: "50vw",
     padding: "0 $x_4",
   },

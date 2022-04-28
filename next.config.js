@@ -3,8 +3,4 @@ module.exports = {
   experimental: {
     nextScriptWorkers: true,
   },
-  images: {
-    loader: "imgix",
-    path: "",
-  },
 };

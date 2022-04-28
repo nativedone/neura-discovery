@@ -16,6 +16,13 @@ export function IntroSection() {
 
             `Because research leads to discoveries, and discoveries lead to cures for life-threatening conditions that affect millions of people right here on Earth. Will you join NeuRA’s researchers in tackling the greatest discovery mission of your lifetime?`,
           ]}
+          imageData={{
+            src: "/assets/DocMobile.PNG",
+            aspectRatio: {
+              width: 457,
+              height: 488,
+            },
+          }}
         />
 
         <DividerGapWithFiller />
@@ -35,6 +42,13 @@ export function IntroSection() {
 
             `As a leader in brain and nervous system research, NeuRA’s goal is to tackle some of the world’s biggest health challenges. Our scientists have pioneered breakthroughs in dementia and schizophrenia research, developed mobile phone apps that can predict falls in older people, and given hope to those living with spinal cord injuries.`,
           ]}
+          imageData={{
+            src: "/assets/RxMobile.PNG",
+            aspectRatio: {
+              width: 453,
+              height: 482,
+            },
+          }}
         />
       </div>
       <Lateral />
@@ -50,11 +64,7 @@ const SectionContainer = styled("section", {
   // backgroundColor: "rgb(18, 26, 57)",
 });
 
-const Lateral = styled("span", {
-  zIndex: "$20",
-
-  backgroundColor: "rgb(18, 26, 57)",
-});
+const Lateral = styled("span", {});
 
 const Statement = styled("h2", {
   color: "#fff",
@@ -64,7 +74,7 @@ const Statement = styled("h2", {
 
   margin: "0 auto",
   padding: "$x_2 $x",
-  width: "75vw",
+  width: "85vw",
   "@3": {
     width: "58vw",
   },

@@ -1,24 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 595.3 595.3" style="enable-background:new 0 0 595.3 595.3;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 180.39999 180.39999"
+   xml:space="preserve"
+   sodipodi:docname="Instagram Icon.svg"
+   width="180.39999"
+   height="180.39999"
+   inkscape:version="1.2-dev (44c0d328, 2021-10-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs61" /><sodipodi:namedview
+   id="namedview59"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:blackoutopacity="0.0"
+   showgrid="false"
+   width="180.4mm"
+   units="px"
+   inkscape:zoom="0.88358811"
+   inkscape:cx="108.08203"
+   inkscape:cy="31.688973"
+   inkscape:window-width="1350"
+   inkscape:window-height="728"
+   inkscape:window-x="-15"
+   inkscape:window-y="0"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style36">
 	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:12;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:url(#SVGID_00000176044318843179362300000015312367382695299743_);stroke-width:12;stroke-miterlimit:10;}
 	.st2{fill:#90152D;}
 </style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="204.0991" y1="340.1032" x2="384.4739" y2="340.1032">
-	<stop  offset="0" style="stop-color:#D26C19"/>
-	<stop  offset="0.5" style="stop-color:#C20016"/>
-	<stop  offset="1" style="stop-color:#8F152E"/>
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="204.09911"
+   y1="340.10321"
+   x2="384.47391"
+   y2="340.10321">
+	<stop
+   offset="0"
+   style="stop-color:#D26C19"
+   id="stop38" />
+	<stop
+   offset="0.5"
+   style="stop-color:#C20016"
+   id="stop40" />
+	<stop
+   offset="1"
+   style="stop-color:#8F152E"
+   id="stop42" />
 </linearGradient>
-<path class="st0" d="M349.3,424.3h-110c-16.1,0-29.2-13.1-29.2-29.2v-110c0-16.1,13.1-29.2,29.2-29.2h110
-	c16.1,0,29.2,13.1,29.2,29.2v110C378.5,411.2,365.4,424.3,349.3,424.3z"/>
-<linearGradient id="SVGID_00000090260619189611748130000010635558184354726313_" gradientUnits="userSpaceOnUse" x1="248.9368" y1="340.1032" x2="339.6362" y2="340.1032">
-	<stop  offset="0" style="stop-color:#D26C19"/>
-	<stop  offset="0.5" style="stop-color:#C20016"/>
-	<stop  offset="1" style="stop-color:#8F152E"/>
+
+<linearGradient
+   id="SVGID_00000090260619189611748130000010635558184354726313_"
+   gradientUnits="userSpaceOnUse"
+   x1="248.9368"
+   y1="340.10321"
+   x2="339.6362"
+   y2="340.10321">
+	<stop
+   offset="0"
+   style="stop-color:#D26C19"
+   id="stop47" />
+	<stop
+   offset="0.5"
+   style="stop-color:#C20016"
+   id="stop49" />
+	<stop
+   offset="1"
+   style="stop-color:#8F152E"
+   id="stop51" />
 </linearGradient>
-<circle style="fill:none;stroke:url(#SVGID_00000090260619189611748130000010635558184354726313_);stroke-width:12;stroke-miterlimit:10;" cx="294.3" cy="340.1" r="39.3"/>
-<circle class="st2" cx="344.9" cy="289.6" r="10.8"/>
+
+<g
+   id="g274"
+   transform="translate(-204.1,-249.9)"><path
+     class="st0"
+     d="m 349.3,424.3 h -110 c -16.1,0 -29.2,-13.1 -29.2,-29.2 v -110 c 0,-16.1 13.1,-29.2 29.2,-29.2 h 110 c 16.1,0 29.2,13.1 29.2,29.2 v 110 c 0,16.1 -13.1,29.2 -29.2,29.2 z"
+     id="path45"
+     style="stroke:url(#SVGID_1_)" /><circle
+     style="fill:none;stroke:url(#SVGID_00000090260619189611748130000010635558184354726313_);stroke-width:12;stroke-miterlimit:10"
+     cx="294.29999"
+     cy="340.10001"
+     r="39.299999"
+     id="circle54" /><circle
+     class="st2"
+     cx="344.89999"
+     cy="289.60001"
+     r="10.8"
+     id="circle56" /></g>
 </svg>

@@ -1,15 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 595.3 595.3" style="enable-background:new 0 0 595.3 595.3;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 84.425005 180.4"
+   xml:space="preserve"
+   sodipodi:docname="Facebook Icon.svg"
+   width="84.425003"
+   height="180.39999"
+   inkscape:version="1.2-dev (44c0d328, 2021-10-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs453" /><sodipodi:namedview
+   id="namedview451"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:blackoutopacity="0.0"
+   showgrid="false"
+   width="84.425px"
+   inkscape:zoom="0.88358812"
+   inkscape:cx="108.08203"
+   inkscape:cy="297.64999"
+   inkscape:window-width="1350"
+   inkscape:window-height="728"
+   inkscape:window-x="-1"
+   inkscape:window-y="20"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<style
+   type="text/css"
+   id="style439">
 	.st0{fill:url(#SVGID_1_);}
 </style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="150.98" y1="277.7532" x2="186.09" y2="277.7532">
-	<stop  offset="0" style="stop-color:#D26C19"/>
-	<stop  offset="0.5" style="stop-color:#C20016"/>
-	<stop  offset="1" style="stop-color:#8F152E"/>
+<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="150.98"
+   y1="277.7532"
+   x2="186.09"
+   y2="277.7532"
+   gradientTransform="matrix(2.3984243,0,0,2.3984243,-362.16184,-575.82318)">
+	<stop
+   offset="0"
+   style="stop-color:#D26C19"
+   id="stop441" />
+	<stop
+   offset="0.5"
+   style="stop-color:#C20016"
+   id="stop443" />
+	<stop
+   offset="1"
+   style="stop-color:#8F152E"
+   id="stop445" />
 </linearGradient>
-<path class="st0" d="M173.5,257.7v7.5h12.5l-2.5,15h-10c0,16.2,0,35.1,0,35.1h-15v-35.1H151v-15h7.6v-9.9c0,0-0.8-13.2,12.2-14.9
-	c0,0,2.4-0.4,7.2-0.3c4.8,0.1,8.2,0,8.2,0v15h-10C176.1,255.2,173.5,254.9,173.5,257.7z"/>
+<path
+   class="st0"
+   d="m 53.964782,42.250758 v 17.98818 h 29.9803 l -5.99606,35.97637 h -23.98424 c 0,38.854472 0,84.184692 0,84.184692 H 17.988412 V 96.215308 H 2.3152588e-4 V 60.238938 H 18.228252 v -23.7444 c 0,0 -1.91873,-31.6591998 29.26078,-35.7365198 0,0 5.75622,-0.95937 17.26866,-0.71953 11.51243,0.23985 19.66708,0 19.66708,0 V 36.014858 h -23.98425 c -0.23984,0.23984 -6.47574,-0.47969 -6.47574,6.2359 z"
+   id="path448"
+   style="fill:url(#SVGID_1_);stroke-width:2.39842" />
 </svg>
