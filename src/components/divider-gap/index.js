@@ -11,7 +11,7 @@ export function DividerGap() {
 const DividerContainer = styled("div", {
   display: "flex",
   margin: "0 auto",
-  width: "75vw",
+  width: "85vw",
   "@3": {
     width: "58vw",
   },

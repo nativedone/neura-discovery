@@ -62,7 +62,7 @@ const Statement = styled("h2", {
 
   margin: "0 auto",
   padding: "$x_2 $x",
-  width: "75vw",
+  width: "85vw",
   "@3": {
     width: "58vw",
   },
