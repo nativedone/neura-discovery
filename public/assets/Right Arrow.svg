@@ -1,27 +1,99 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Generator: Adobe Illustrator 26.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 595.3 595.3" style="enable-background:new 0 0 595.3 595.3;" xml:space="preserve">
-<style type="text/css">
+
+<svg
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 45.599999 91.400003"
+   xml:space="preserve"
+   sodipodi:docname="Right Arrow.svg"
+   width="45.599998"
+   height="91.400002"
+   inkscape:version="1.2-dev (44c0d328, 2021-10-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs325" /><sodipodi:namedview
+   id="namedview323"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:blackoutopacity="0.0"
+   showgrid="false"
+   height="595.29999px"
+   width="45.6px"
+   inkscape:zoom="0.88358812"
+   inkscape:cx="297.08412"
+   inkscape:cy="298.21587"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g320" />
+<style
+   type="text/css"
+   id="style303">
 	
 		.st0{clip-path:url(#SVGID_00000025408667610013556280000007677600563160242583_);fill:url(#SVGID_00000173125608744778387390000015438147492186037392_);}
 </style>
-<g>
-	<defs>
-		<rect id="SVGID_1_" x="274.3" y="239.1" width="46.4" height="91.9"/>
+<g
+   id="g320">
+	<defs
+   id="defs306">
+		<rect
+   id="SVGID_1_"
+   x="274.29999"
+   y="239.10001"
+   width="46.400002"
+   height="91.900002" />
 	</defs>
-	<clipPath id="SVGID_00000082352968058104253480000004487452032733800091_">
-		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	<clipPath
+   id="SVGID_00000082352968058104253480000004487452032733800091_">
+		<use
+   xlink:href="#SVGID_1_"
+   style="overflow:visible"
+   id="use308"
+   x="0"
+   y="0"
+   width="100%"
+   height="100%" />
 	</clipPath>
 	
-		<linearGradient id="SVGID_00000019669662994858016320000008885388971549968516_" gradientUnits="userSpaceOnUse" x1="1.1024" y1="589.764" x2="2.1024" y2="589.764" gradientTransform="matrix(40.3462 40.3462 -40.3462 40.3462 24006.2461 -23576.9902)">
-		<stop  offset="0" style="stop-color:#CF6D36"/>
-		<stop  offset="0.5" style="stop-color:#C6343E"/>
-		<stop  offset="1" style="stop-color:#8A333C"/>
+		<linearGradient
+   id="SVGID_00000019669662994858016320000008885388971549968516_"
+   gradientUnits="userSpaceOnUse"
+   x1="1.1023999"
+   y1="589.76398"
+   x2="2.1024001"
+   y2="589.76398"
+   gradientTransform="matrix(40.3462,40.3462,-40.3462,40.3462,24006.246,-23576.99)">
+		<stop
+   offset="0"
+   style="stop-color:#CF6D36"
+   id="stop311" />
+		<stop
+   offset="0.5"
+   style="stop-color:#C6343E"
+   id="stop313" />
+		<stop
+   offset="1"
+   style="stop-color:#8A333C"
+   id="stop315" />
 	</linearGradient>
 	
-		<path style="clip-path:url(#SVGID_00000082352968058104253480000004487452032733800091_);fill:url(#SVGID_00000019669662994858016320000008885388971549968516_);" d="
-		M278.8,239.4l38.4,38.4c2,2,3,4.6,3,7.3c0,2.6-1,5.3-3,7.3l-38.4,38.4l-4.2-4.2l38.4-38.4c0.8-0.8,1.2-1.9,1.2-3
-		c0-1.1-0.4-2.2-1.2-3l-38.4-38.4L278.8,239.4L278.8,239.4z"/>
+		<path
+   style="fill:url(#SVGID_00000019669662994858016320000008885388971549968516_)"
+   d="m 278.8,239.4 38.4,38.4 c 2,2 3,4.6 3,7.3 0,2.6 -1,5.3 -3,7.3 l -38.4,38.4 -4.2,-4.2 38.4,-38.4 c 0.8,-0.8 1.2,-1.9 1.2,-3 0,-1.1 -0.4,-2.2 -1.2,-3 l -38.4,-38.4 z"
+   clip-path="url(#SVGID_00000082352968058104253480000004487452032733800091_)"
+   id="path318"
+   transform="translate(-274.6,-239.4)" />
 </g>
 </svg>

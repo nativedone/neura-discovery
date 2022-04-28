@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
 import { styled } from "@theme";
-
+import React, { useCallback, useRef, useState } from "react";
+import { CarouselNavigation } from "./carouselNavigation";
 import Image from 'next/image';
 
 // Import Swiper React components
@@ -104,6 +104,15 @@ const data = [
 console.log(data, 'data');
   
 export function CarouselSwiper() {
+    const swiperRef = useRef(null);
+
+    const prevSlide = useCallback(() => {
+      swiperRef.current?.swiper.slidePrev();
+    }, [swiperRef]);
+
+    const nextSlide = useCallback(() => {
+      swiperRef.current?.swiper.slideNext();
+    }, [swiperRef]);
 
     const source = useSources({
       mediaQueryType: "landscape",
@@ -112,46 +121,68 @@ export function CarouselSwiper() {
       defaultData: undefined,
     });
 
-
     if(!source) {
       return null;
     }
 
   return (
     <>
-      <Swiper
-        cssMode={true}
-        navigation={true}
-        pagination={true}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        // className="mySwiper"
-        key={source}
-      >
-        {data?.map((item) => (          
-            <SwiperSlide key={item.id}>
-                <CarouselItemContainer>
-                    <TextContainer>
-                        <CarouselSubheading>{item.subheading}</CarouselSubheading>  
-                        <CarouselParagraph>{item.paragraph}</CarouselParagraph>   
-                    </TextContainer>
-                    <ImageContainer>         
-                        <Image
-                            src={item[source].url}
-                            width={item[source].width}
-                            height={item[source].height}
-                            // layout="responsive"
-                            objectFit=" cover"
-                        />
-                    </ImageContainer>    
-                </CarouselItemContainer> 
-            </SwiperSlide>
-        ))}
-      </Swiper>
+      <CarouselDesktopContainer>
+        <Swiper
+          ref={swiperRef}
+          cssMode={true}
+          // navigation={true}
+          pagination={true}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          // className="mySwiper"
+          key={source}
+          // onChange={(value) => setCurrentSlide(value)}
+        >
+          {data?.map((item) => (          
+              <SwiperSlide key={item.id}>
+                  <CarouselItemContainer>
+                      <TextContainer>
+                          <CarouselSubheading>{item.subheading}</CarouselSubheading>  
+                          <CarouselParagraph>{item.paragraph}</CarouselParagraph>   
+                      </TextContainer>
+                      <ImageContainer>         
+                          <Image
+                              src={item[source].url}
+                              width={item[source].width}
+                              height={item[source].height}
+                              // layout="responsive"
+                              objectFit=" cover"
+                          />
+                      </ImageContainer>    
+                  </CarouselItemContainer> 
+              </SwiperSlide>
+          ))}
+        </Swiper>
+        <CarouselNavigation prevSlide={prevSlide} nextSlide={nextSlide} />
+      </CarouselDesktopContainer>
     </>
   );
 };
+
+const CarouselDesktopContainer = styled("div", {
+  display: "flex",
+  // width: "67vw",
+  justifyContent: "center",
+  position: "relative",
+  margin: "0 auto",
+  "@media (hover: hover) and (pointer: fine)": {
+    "&:hover": {
+      "button.prev-carousel-desktop-navigation": {
+        opacity: 1,
+      },
+      "button.next-carousel-desktop-navigation": {
+        opacity: 1,
+      },
+    },
+  },
+});
 
 const CarouselItemContainer = styled("div", {
   display: "flex",
@@ -192,54 +223,51 @@ const CarouselParagraph = styled("p", {
 });
 
 const ImageContainer = styled("div", {
-    
-    display: "flex",
-    width: "100%",
-    height: "100%",
-    // aspectRatio: "1",
-    "@3": {
+  display: "flex",
+  width: "100%",
+  height: "100%",
+  // aspectRatio: "1",
+  "@3": {
     position: "absolute",
     top:0,
     left:0,
     right:0,
     bottom: 0,
-    },
+  },
 });
 
 const TextContainer = styled("div", {
-    display: "flex",
-    flexDirection: "column",
-    // justifyContent: "center",
-    // alignItens:"center",
-    textAlign:"center",
-    width: "85vw",
-    magin: "0 auto",
+  display: "flex",
+  flexDirection: "column",
+  // justifyContent: "center",
+  // alignItens:"center",
+  textAlign:"center",
+  width: "85vw",
+  magin: "0 auto",
 
-    // paddingLeft: "40px;", // 320
-    // paddingLeft: "90px;", // 574
-    paddingLeft: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 19.685)), 5.625rem)", // 40px at 320 - 90px at 574
+  // paddingLeft: "40px;", // 320
+  // paddingLeft: "90px;", // 574
+  paddingLeft: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 19.685)), 5.625rem)", // 40px at 320 - 90px at 574
 
-    // paddingRight:"0",
-    backgroundColor: "#fff",
-    paddingTop:".5rem",
-    paddingBottom: "2.2rem",
-    "@3": {
-      width: "40%",
-      zIndex:"100",
-      background: "-webkit-linear-gradient(0deg, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 1) 70%)",
-      // paddingTop:"$3x",
-      // paddingTop:"220px", // 2560
-      // paddingTop:"0px", // 1280
-      textAlign:"left",
-      paddingTop:"clamp(1px, calc(0.0625rem + ((1vw - 10.1px) * 14.129)), 220px)", // 1px at 1010 - 240px at 2560
-      // paddingRight: "$3x",
-      // paddingRight: "290px", // 2560
-      // paddingRight: "30px", // 2560
-      paddingRight: "clamp(1.875rem, calc(1.875rem + ((1vw - 0.63125rem) * 16.7742)), 18.125rem)", // 30px at 1010 - 290px at 2560
-      paddingLeft:"0px",
-    },
-
-    
+  // paddingRight:"0",
+  backgroundColor: "#fff",
+  paddingTop:".5rem",
+  paddingBottom: "2.2rem",
+  "@3": {
+    width: "40%",
+    zIndex:"100",
+    background: "-webkit-linear-gradient(0deg, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 1) 70%)",
+    // paddingTop:"$3x",
+    // paddingTop:"220px", // 2560
+    // paddingTop:"0px", // 1280
+    textAlign:"left",
+    paddingTop:"clamp(1px, calc(0.0625rem + ((1vw - 10.1px) * 14.129)), 220px)", // 1px at 1010 - 240px at 2560
+    // paddingRight: "$3x",
+    // paddingRight: "290px", // 2560
+    // paddingRight: "30px", // 2560
+    paddingRight: "clamp(1.875rem, calc(1.875rem + ((1vw - 0.63125rem) * 16.7742)), 18.125rem)", // 30px at 1010 - 290px at 2560
+    paddingLeft:"0px",
+  },  
 });
 
 

@@ -2,7 +2,7 @@ import { styled } from "@theme";
 
 import { InstagramIcon } from './instagramIcon';
 import { YoutubeIcon } from './youtubeIcon';
-// import { TwitterIcon } from './twitterIcon';
+import { TwitterIcon } from './twitterIcon';
 import { FacebookIcon } from './facebookIcon';
 // import { LogoIcon } from './logoIcon';
 import { LogoNew } from './logoNew';
@@ -25,8 +25,8 @@ export function Footer() {
           <Span> 
             <FacebookIcon/>           
             <InstagramIcon/>
-            <InstagramIcon/>
-            {/* <TwitterIcon/> */} 
+            {/* <InstagramIcon/> */}
+            <TwitterIcon/> 
             <YoutubeIcon/>       
           </Span>
         </SocialLinksNav>
