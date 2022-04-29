@@ -17,10 +17,10 @@ export function IntroSection() {
             `Because research leads to discoveries, and discoveries lead to cures for life-threatening conditions that affect millions of people right here on Earth. Will you join NeuRA’s researchers in tackling the greatest discovery mission of your lifetime?`,
           ]}
           imageData={{
-            src: "/assets/DocMobile.PNG",
+            src: "/assets/Dr. Steve - 570x605px - Desktop.jpg",
             aspectRatio: {
-              width: 457,
-              height: 488,
+              width: 570,
+              height: 605,
             },
           }}
         />
@@ -43,10 +43,10 @@ export function IntroSection() {
             `As a leader in brain and nervous system research, NeuRA’s goal is to tackle some of the world’s biggest health challenges. Our scientists have pioneered breakthroughs in dementia and schizophrenia research, developed mobile phone apps that can predict falls in older people, and given hope to those living with spinal cord injuries.`,
           ]}
           imageData={{
-            src: "/assets/RxMobile.PNG",
+            src: "/assets/Bringing Hope - 570 x 605px - Desktop.jpg",
             aspectRatio: {
-              width: 453,
-              height: 482,
+              width: 570,
+              height: 605,
             },
           }}
         />

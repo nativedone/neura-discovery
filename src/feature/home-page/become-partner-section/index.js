@@ -25,10 +25,10 @@ export function BecomePartnerSection() {
             `You can be a part of this extraordinary journey to unlocking the secrets of the brain and helping millions of people around the world live fuller, healthier and more enriched lives.`,
           ]}
           imageData={{
-            src: "/assets/DocWMobile.PNG",
+            src: "/assets/The Generosity - 570x605px - Desktop.jpg",
             aspectRatio: {
-              width: 454,
-              height: 482,
+              width: 570,
+              height: 605,
             },
           }}
         />

@@ -24,14 +24,14 @@ const data = [
       paragraph: `Like all explorers, neuroscientists need maps to guide their path to success. World-renowned brain cartographer and NeuRA scientist Professor George Paxinos AO made medical history in 2019 when he launched the most comprehensive atlas of the human brainstem ever made. His work has assisted in the development of treatments for conditions like Parkinson’s and Alzheimer’s disease and is now considered the foundation for all neuroscientific research.`,
 
       portrait: {
-        url: "/assets/DSC07357.jpeg",
-        width: 3600,
-        height: 2400,
+        url: "/assets/Brain Atlas - 320x235px - Mobile.jpg",
+        width: 320,
+        height: 235,
       },
       landscape: {
-        url: "/assets/Brain-bank_DSC_1960.jpg",
-        width: 2574,
-        height: 998,
+        url: "/assets/Brain Atlas-Desktop.jpg",
+        width: 2560,
+        height: 1256,
       },
     },
     {
@@ -41,13 +41,13 @@ const data = [
 
       portrait: {
         url: "/assets/DSC07357.jpeg",
-        width: 3600,
-        height: 2400,
+        width: 320,
+        height: 235,
       },
       landscape: {
-        url: "/assets/Brain-bank_DSC_1960.jpg",
-        width: 2574,
-        height: 998,
+        url: "/assets/Connecting Young & Old-Desktop.jpg",
+        width: 2560,
+        height: 1256,
       },
     },
     {
@@ -56,14 +56,14 @@ const data = [
       paragraph: `Can you imagine a bank that houses not money, but human brain and spinal cord tissue? Well, the Sydney Brain Bank does exactly that. This NeuRA facility collects, stores and distributes tissue samples for research into conditions such as Alzheimer’s, Parkinson’s and motor neuron disease. The bank currently holds brain tissue from over 700 donors and donates around 6,000 specimens every year to research groups here and overseas to facilitate advances in medical research.`,
 
       portrait: {
-        url: "/assets/DSC07357.jpeg",
-        width: 3600,
-        height: 2400,
+        url: "/assets/Brain Bank - 320x235px - Mobile.jpg",
+        width: 320,
+        height: 235,
       },
       landscape: {
-        url: "/assets/Brain-bank_DSC_1960.jpg",
-        width: 2574,
-        height: 998,
+        url: "/assets/Brain Bank - Desktop.jpg",
+        width: 2560,
+        height: 1256,
       },
     },
   
@@ -73,14 +73,14 @@ const data = [
       paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. More than 34,000 Australians live with this condition, which has no known cure. Data from the 320 participants aged 5–14 will help researchers track muscles over time, creating a vital foundation for further investigation. Pretty magical stuff!`,
 
       portrait: {
-        url: "/assets/DSC07357.jpeg",
-        width: 3600,
-        height: 2400,
+        url: "/assets/Muggle - 320x235px - Mobile.jpg",
+        width: 320,
+        height: 235,
       },
       landscape: {
-        url: "/assets/Brain-bank_DSC_1960.jpg",
-        width: 2574,
-        height: 998,
+        url: "/assets/Muggle - Desktop.jpg",
+        width: 2560,
+        height: 1256,
       },
     },
     {
@@ -89,14 +89,14 @@ const data = [
       paragraph: `One in 100 people live with schizophrenia, a serious mental disorder that causes people to misinterpret reality. Current treatments only partially address psychotic symptoms and don’t restore people to their full potential. NeuRA’s Schizophrenia Research Institute is the only national institute solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made a discovery that opened a new avenue for more effective treatment.`,
 
       portrait: {
-        url: "/assets/DSC07357.jpeg",
-        width: 3600,
-        height: 2400,
+        url: "/assets/Supporting Schizophrenia - 320x235px - Mobile.jpg",
+        width: 320,
+        height: 235,
       },
       landscape: {
-        url: "/assets/Brain-bank_DSC_1960.jpg",
-        width: 2574,
-        height: 998,
+        url: "/assets/Supporting Schizophrenia-Desktop.jpg",
+        width: 2560,
+        height: 1256,
       },
     },
 ];
