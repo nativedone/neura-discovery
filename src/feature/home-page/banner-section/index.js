@@ -22,6 +22,8 @@ const BannerSectionContainer = styled("section", {
   padding: "$x 0",
   background:
     "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
+
+    zIndex: '$20',
 });
 
 const H2 = styled("h2", {

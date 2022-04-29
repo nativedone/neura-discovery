@@ -32,7 +32,7 @@ const CardContainer = styled("div", {
   gap: "$x",
   
 
-  width: "75vw",
+  width: "85vw",
   "@3": {
     width: "58vw",
   },

@@ -26,10 +26,10 @@ export function BecomePartnerSection() {
           ]}
           imageData={{
             src: "/assets/DocWMobile.PNG",
-            aspectRatio:{
+            aspectRatio: {
               width: 454,
               height: 482,
-            }
+            },
           }}
         />
       </div>
@@ -46,9 +46,7 @@ const SectionContainer = styled("section", {
   // backgroundColor: "rgb(18, 26, 57)",
 });
 
-const Lateral = styled("span", {
-  backgroundColor: "rgb(18, 26, 57)",
-});
+const Lateral = styled("span", {});
 
 const FullFiller = styled("div", {
   backgroundColor: "rgb( 0, 35, 65)",
@@ -64,7 +62,7 @@ const Statement = styled("h2", {
 
   margin: "0 auto",
   padding: "$x_2 $x",
-  width: "75vw",
+  width: "85vw",
   "@3": {
     width: "58vw",
   },

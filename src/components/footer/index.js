@@ -44,8 +44,9 @@ const SemanticFooter = styled("footer", {
 });
 
 const LogoControl = styled("div",{
-  /* 4.25rem(68px) @ 20rem(320px) increasing to 10.5rem(168px) @ 160rem(2560px) */
-  fontSize: "clamp(4.25rem, calc(4.25rem + ((1vw - 0.2rem) * 4.4643)), 10.5rem)",
+ /* 2.125rem(34px) @ 20rem(320px) increasing to 5.35rem(85.6px) @ 160rem(2560px) */
+  fontSize: "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 2.3036)), 5.35rem)",
+
   /* Safari resize fix */
   minHeight: "0vw",
 
@@ -83,8 +84,9 @@ const SocialLinksNav = styled("nav", {
 const Span = styled("span", {
   display: "flex",
   justifyContent:"space-between",
-  /* 2.625rem(42px) @ 20rem(320px) increasing to 9.125rem(146px) @ 160rem(2560px) */
-  fontSize: "clamp(2.625rem, calc(2.625rem + ((1vw - 0.2rem) * 4.6429)), 9.125rem)",
+ /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 4.71875rem(75.5px) @ 160rem(2560px) */
+  fontSize: "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 2.4554)), 4.71875rem)",
+
   /* Safari resize fix */
   minHeight:" 0vw",
 
