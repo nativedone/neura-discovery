@@ -111,7 +111,7 @@ export function CarouselSwiper() {
     const slideTo = useCallback( // mobile
       (value) => {
         //   console.log("useCallback value", value);
-        swiperRef.current?.swiper.slideTo(value + 1);
+        swiperRef.current?.swiper.slideTo(value);
       },
       [swiperRef]
     );

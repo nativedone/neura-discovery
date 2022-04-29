@@ -6,8 +6,8 @@ export const ActiveCircle = (props) => (
     x={0}
     y={0}
     xmlSpace="preserve"
-    width={`${27/27}em`}
-    viewBox="0 0 27 27"
+    width={`${29/29}em`}
+    viewBox="0 0 29 29"
     // width="1em"
     height="1em"
     xmlnsXlink="http://www.w3.org/1999/xlink"
