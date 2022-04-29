@@ -1,17 +1,24 @@
 import { styled } from "@theme";
 
-// import { VisuallyHidden } from "@components/visually-hidden";
+import { VisuallyHidden } from "@components/visually-hidden";
+
+import { InactiveCircle } from "./inactiveCircle";
+import { ActiveCircle } from "./activeCircle";
+
 
 export function CarouselMobileNavigation({ index, data, slideTo }) {
+
+
   return (
     <MobileNavigationContainer>
       {data.map((_, i) => (
         <button
           key={`nav${i}`}
           onClick={() => slideTo(i)}
-          className={i === index ? "active" : ""}
+          // className={i === index ? "active" : ""}
         >
-          {/* <VisuallyHidden>{`Go to slide ${i + 1}`}</VisuallyHidden> */}
+          {i === index ? <ActiveCircle/> : <InactiveCircle/>}
+          <VisuallyHidden>{`Go to slide ${i + 1}`}</VisuallyHidden>
         </button>
       ))}
     </MobileNavigationContainer>
@@ -35,12 +42,12 @@ const MobileNavigationContainer = styled("div", {
 
   display: "flex",
 
-  "--mobile-margin-left": "16px",
+  "--mobile-margin-left": "10px",
 
   button: {
-    borderColor: "white",
-    borderWidth: "1px",
-    borderStyle: "solid",
+    // borderColor: "white",
+    // borderWidth: "1px",
+    // borderStyle: "solid",
     width: "var(--size)",
     height: "var(--size)",
     borderRadius: "$full",
