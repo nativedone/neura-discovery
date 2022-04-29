@@ -1,6 +1,7 @@
 import { styled } from "@theme";
 import React, { useCallback, useRef, useState } from "react";
 import { CarouselNavigation } from "./carouselNavigation";
+import { CarouselMobileNavigation } from "./carouselMobileNavigation";
 import Image from 'next/image';
 
 // Import Swiper React components
@@ -105,6 +106,15 @@ console.log(data, 'data');
   
 export function CarouselSwiper() {
     const swiperRef = useRef(null);
+    const [index, setIndex] = useState(0); // mobile
+
+    const slideTo = useCallback( // mobile
+      (value) => {
+        //   console.log("useCallback value", value);
+        swiperRef.current?.swiper.slideTo(value + 1);
+      },
+      [swiperRef]
+    );
 
     const prevSlide = useCallback(() => {
       swiperRef.current?.swiper.slidePrev();
@@ -132,17 +142,23 @@ export function CarouselSwiper() {
           ref={swiperRef}
           cssMode={true}
           // navigation={true}
-          pagination={true}
+          slidesPerView={1}
+          // pagination={true}
           mousewheel={true}
           keyboard={true}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           // className="mySwiper"
           key={source}
           // onChange={(value) => setCurrentSlide(value)}
+          onSlideChange={(a) => {
+            // console.log("slide change", a);
+            // console.log("slide change realIndex", a.realIndex);
+            setIndex(a.realIndex);
+          }}
         >
-          {data?.map((item) => (          
-              <SwiperSlide key={item.id}>
-                  <CarouselItemContainer>
+           {data?.map((item, index) => (          
+              <SwiperSlide key={`slide key.id ${index}`}>
+                  <CarouselItemContainer {...item} priority={index === 0}>
                       <TextContainer>
                           <CarouselSubheading>{item.subheading}</CarouselSubheading>  
                           <CarouselParagraph>{item.paragraph}</CarouselParagraph>   
@@ -161,6 +177,7 @@ export function CarouselSwiper() {
           ))}
         </Swiper>
         <CarouselNavigation prevSlide={prevSlide} nextSlide={nextSlide} />
+        <CarouselMobileNavigation index={index} data={data} slideTo={slideTo} />
       </CarouselDesktopContainer>
     </>
   );
