@@ -73,6 +73,7 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
           </LogoControl>
           <Button variant="secondary">JOIN US NOW</Button>
         </SemanticNav>
+        <div className="on-scrolling-gap-line" />
       </SemanticHeader>
     </MotionHeaderContainer>
   );
@@ -96,14 +97,22 @@ const MotionHeaderContainer = styled(motion.div, {
   "&.is-visible": {
     nav: {
       height: "100%",
+      boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
     },
     "div.gradient-line": {
       height: "100%",
+      boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
     },
     "div.logo-control": {
-      margin: "auto 0",
-      borderRadius: "0px",
-      // borderRadius: "var(--radius-value)",
+      marginTop: "0px",
+    },
+    "div.on-scrolling-gap-line": {
+      position: "absolute",
+      top: "103%",
+      height: "var(--height-gradient-line)",
+      width: "100%",
+      background:
+        "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
     },
   },
 });
