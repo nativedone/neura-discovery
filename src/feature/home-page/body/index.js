@@ -24,7 +24,7 @@ export function Body() {
         <DividerGap />
 
         <BannerSection
-          text={`By taking one small step and partnering with NeuRA, you can help our world take a giant leap towards understanding the human brain.`}
+          text={`With one small step in partnering with NeuRA, you can help us take a giant leap towards understanding the human brain.`}
         />
 
         <DividerGap />
