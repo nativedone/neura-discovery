@@ -20,9 +20,9 @@ export function BecomePartnerSection() {
         <Card
           subheading={`“The generosity of everyday Australians keeps our research going” – Professor XXXXXXXXXXXXXX.`}
           paragraphs={[
-            `NeuRA’s team of scientists and researchers are among the best in the world. But their life-changing work is only made possible by ongoing support from regular donors who are passionate about finding ways to cure, treat and prevent diseases, disabilities and injuries of the brain.`,
+            `NeuRA’s scientists and researchers are among the best in the world. But their work is only possible with ongoing support from regular donors who are passionate about f inding ways to cure, treat and prevent diseases, disabilities and injuries of the brain.`,
 
-            `You can be a part of this extraordinary journey to unlocking the secrets of the brain and helping millions of people around the world live fuller, healthier and more enriched lives.`,
+            `Join us in this extraordinary journey.`,
           ]}
           imageData={{
             src: "/assets/The Generosity - 570x605px - Desktop.jpg",
