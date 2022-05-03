@@ -96,7 +96,7 @@ const H2 = styled("h2", {
 });
 
 const P = styled("p", {
-  fontSize: "$normal",
+  fontSize: "$0",
   paddingBottom: "$x_2",
   fontWeight: "$normal",
 });
