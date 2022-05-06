@@ -1,6 +1,5 @@
 import { styled } from "@theme";
 import Image from 'next/image';
-import { violet, mauve, blackA } from '@radix-ui/colors';
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area';
 
 
@@ -14,19 +13,22 @@ const StyledScrollArea = styled(ScrollAreaPrimitive.Root, {
   // boxShadow: `0 2px 10px ${blackA.blackA7}`,
   "@3": {
     width: '50%',
+    width: 'calc(50%  + 6px)',
+
     // height: '630px', // 2560px
     // height: '117px', // 576px
-
     /* 7.3125rem(117px) @ 36rem(576px) increasing to 39.375rem(630px) @ 160rem(2560px) */
     height: 'clamp(7.3125rem, calc(7.3125rem + ((1vw - 0.36rem) * 25.8569)), 39.375rem)',
 
     /* Safari resize fix */
     minHeight: '0vw',
+
+    paddingRight: "12px",
   },
 });
 
 const StyledViewport = styled(ScrollAreaPrimitive.Viewport, {
-  width: '97.5%',
+  width: '100%',
   height: '100%',
   borderRadius: 'inherit',
 });
@@ -38,9 +40,9 @@ const StyledScrollbar = styled(ScrollAreaPrimitive.Scrollbar, {
   // disable browser handling of all panning and zooming gestures on touch devices
   touchAction: 'none',
   padding: 1,
-  background: blackA.blackA6,
+  background: "transparent",
   transition: 'background 160ms ease-out',
-  '&:hover': { background: blackA.blackA8 },
+  '&:hover': { background: "rgba(0, 0, 0, 0.5)" },
   '&[data-orientation="vertical"]': { width: SCROLLBAR_SIZE },
   '&[data-orientation="horizontal"]': {
     flexDirection: 'column',
@@ -50,7 +52,7 @@ const StyledScrollbar = styled(ScrollAreaPrimitive.Scrollbar, {
 
 const StyledThumb = styled(ScrollAreaPrimitive.Thumb, {
   flex: 1,
-  background: mauve.mauve10,
+  background: "hsl(253 3.5% 53.5%)",
   borderRadius: SCROLLBAR_SIZE,
   // increase target size for touch devices https://www.w3.org/WAI/WCAG21/Understanding/target-size.html
   position: 'relative',
@@ -68,7 +70,7 @@ const StyledThumb = styled(ScrollAreaPrimitive.Thumb, {
 });
 
 const StyledCorner = styled(ScrollAreaPrimitive.Corner, {
-  background: blackA.blackA8,
+  background: "hsl(0 0% 78.0%)",
 });
 
 
@@ -83,7 +85,7 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
   console.log(imageData, "imageData");
   return (
     <CardContainer variantLayout={layout}>
-      <ScrollArea>
+      <ScrollArea type="always">
         <ScrollAreaViewport css={{ }}>
           <TextContainer>
             <H2>{subheading}</H2>
@@ -93,9 +95,6 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
           </TextContainer>
         </ScrollAreaViewport>
         <ScrollAreaScrollbar orientation="vertical" css={{ }}>
-          <ScrollAreaThumb />
-        </ScrollAreaScrollbar>
-        <ScrollAreaScrollbar orientation="horizontal">
           <ScrollAreaThumb />
         </ScrollAreaScrollbar>
         <ScrollAreaCorner />
@@ -118,6 +117,7 @@ const CardContainer = styled("div", {
   width: "85vw",
   "@3": {
     width: "58vw",
+    gap: "calc(var(--x) - 6px)",
   },
 
   variants: {
