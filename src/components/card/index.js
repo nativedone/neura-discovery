@@ -11,10 +11,17 @@ const StyledScrollArea = styled(ScrollAreaPrimitive.Root, {
   height: '100%',
   borderRadius: 4,
   overflow: 'hidden',
-  boxShadow: `0 2px 10px ${blackA.blackA7}`,
+  // boxShadow: `0 2px 10px ${blackA.blackA7}`,
   "@3": {
     width: '50%',
-    height: '25vw',
+    // height: '630px', // 2560px
+    // height: '117px', // 576px
+
+    /* 7.3125rem(117px) @ 36rem(576px) increasing to 39.375rem(630px) @ 160rem(2560px) */
+    height: 'clamp(7.3125rem, calc(7.3125rem + ((1vw - 0.36rem) * 25.8569)), 39.375rem)',
+
+    /* Safari resize fix */
+    minHeight: '0vw',
   },
 });
 
@@ -55,7 +62,7 @@ const StyledThumb = styled(ScrollAreaPrimitive.Thumb, {
     transform: 'translate(-50%, -50%)',
     width: '100%',
     height: '100%',
-    minWidth: 44,
+    minWidth: 34,
     minHeight: 44,
   },
 });
@@ -155,6 +162,7 @@ const TextContainer = styled("div", {
   color: "#fff",
   maxWidth: '100%',
   "@3": {
+    minWidth:'10%',
     maxWidth: '100%',
   },
   // backgroundColor: "blue",
@@ -173,20 +181,4 @@ const P = styled("p", {
   fontSize: "$0",
   paddingBottom: "$x_2",
   fontWeight: "$normal",
-});
-
-const Box = styled('div', {});
-const Text = styled('div', {
-  color: violet.violet11,
-  fontSize: 15,
-  lineHeight: '18px',
-  fontWeight: 500,
-});
-const Tag = styled('div', {
-  color: mauve.mauve12,
-  fontSize: 13,
-  lineHeight: '18px',
-  marginTop: 10,
-  borderTop: `1px solid ${mauve.mauve6}`,
-  paddingTop: 10,
 });
