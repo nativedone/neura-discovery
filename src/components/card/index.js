@@ -4,7 +4,7 @@ import { violet, mauve, blackA } from '@radix-ui/colors';
 import * as ScrollAreaPrimitive from '@radix-ui/react-scroll-area';
 
 
-const SCROLLBAR_SIZE = 10;
+const SCROLLBAR_SIZE = 6;
 
 const StyledScrollArea = styled(ScrollAreaPrimitive.Root, {
   width: '100%',
@@ -26,7 +26,7 @@ const StyledScrollArea = styled(ScrollAreaPrimitive.Root, {
 });
 
 const StyledViewport = styled(ScrollAreaPrimitive.Viewport, {
-  width: '100%',
+  width: '97.5%',
   height: '100%',
   borderRadius: 'inherit',
 });
@@ -37,7 +37,7 @@ const StyledScrollbar = styled(ScrollAreaPrimitive.Scrollbar, {
   userSelect: 'none',
   // disable browser handling of all panning and zooming gestures on touch devices
   touchAction: 'none',
-  padding: 2,
+  padding: 1,
   background: blackA.blackA6,
   transition: 'background 160ms ease-out',
   '&:hover': { background: blackA.blackA8 },
@@ -62,7 +62,7 @@ const StyledThumb = styled(ScrollAreaPrimitive.Thumb, {
     transform: 'translate(-50%, -50%)',
     width: '100%',
     height: '100%',
-    minWidth: 34,
+    minWidth: 44,
     minHeight: 44,
   },
 });
@@ -92,7 +92,7 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
             ))}
           </TextContainer>
         </ScrollAreaViewport>
-        <ScrollAreaScrollbar orientation="vertical">
+        <ScrollAreaScrollbar orientation="vertical" css={{ }}>
           <ScrollAreaThumb />
         </ScrollAreaScrollbar>
         <ScrollAreaScrollbar orientation="horizontal">
