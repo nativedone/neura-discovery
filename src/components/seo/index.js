@@ -8,7 +8,8 @@ export function SEO({
     twitter: "@MSFAustralia",
   },
   image = {
-    url: "/assets/21-MSF_OpenGraph_1200x630_FINAL.jpeg",
+    // url: "/assets/21-MSF_OpenGraph_1200x630_FINAL.jpeg",
+    url: "/assets/Open_Graph_Image_Landing_Page.jpeg",
     alt: "Banner for changeand.co, featuring our tagline 'Do good. Better.'",
   },
   websiteUrl = "https://stories.msf.org.au/",

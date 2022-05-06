@@ -29,7 +29,7 @@ const data = [
       height: 235,
     },
     landscape: {
-      url: "/assets/Brain Atlas-Desktop.jpg",
+      url: "/assets/BrainAtlas-DesktopNew.jpg",
       width: 2560,
       height: 1256,
     },
@@ -45,7 +45,7 @@ const data = [
       height: 235,
     },
     landscape: {
-      url: "/assets/Connecting Young & Old-Desktop.jpg",
+      url: "/assets/ConnectingYoung&Old-DesktopNew.jpg",
       width: 2560,
       height: 1256,
     },
@@ -61,7 +61,7 @@ const data = [
       height: 235,
     },
     landscape: {
-      url: "/assets/Brain Bank - Desktop.jpg",
+      url: "/assets/BrainBank-DesktopNew.jpg",
       width: 2560,
       height: 1256,
     },
@@ -78,7 +78,7 @@ const data = [
       height: 235,
     },
     landscape: {
-      url: "/assets/Muggle - Desktop.jpg",
+      url: "/assets/Muggle-DesktopNew.jpg",
       width: 2560,
       height: 1256,
     },
@@ -94,7 +94,7 @@ const data = [
       height: 235,
     },
     landscape: {
-      url: "/assets/Supporting Schizophrenia-Desktop.jpg",
+      url: "/assets/SupportingSchizophrenia-DesktopNew.jpg",
       width: 2560,
       height: 1256,
     },
