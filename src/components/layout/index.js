@@ -12,7 +12,7 @@ export function Layout({ children }) {
       <Header />
       <Main>{children}</Main>
       <Footer />
-      {/* <DevGuidelines /> */}
+      <DevGuidelines />
     </LayoutContainer>
   );
 }
