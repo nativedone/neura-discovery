@@ -66,14 +66,13 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
       className={headerContainerClass}
     >
       <SemanticHeader>
-        <GradientLine className="gradient-line" />
+        <GradientLine />
         <SemanticNav>
-          <LogoControl className="logo-control">
+          <LogoControl>
             <Logo />
           </LogoControl>
           <Button variant="secondary">JOIN US NOW</Button>
         </SemanticNav>
-        <div className="on-scrolling-gap-line" />
       </SemanticHeader>
     </MotionHeaderContainer>
   );
@@ -95,24 +94,14 @@ const MotionHeaderContainer = styled(motion.div, {
   },
 
   "&.is-visible": {
-    nav: {
-      height: "100%",
-      boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
-    },
-    "div.gradient-line": {
-      height: "100%",
-      boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
-    },
-    "div.logo-control": {
-      marginTop: "0px",
-    },
-    "div.on-scrolling-gap-line": {
-      position: "absolute",
-      top: "103%",
-      height: "var(--height-gradient-line)",
-      width: "100%",
-      background:
-        "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
+    boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
+
+    header: {
+      /* From https://css.glass */
+      background: "rgba(0, 35, 65, 0.1)",
+      boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1)",
+      backdropFilter: "blur(5px)",
+      WebkitBackdropFilter: "blur(5px)",
     },
   },
 });
@@ -131,13 +120,9 @@ const SemanticHeader = styled("header", {
   /* 0.25rem(4px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
   "--height-gradient-line":
     "clamp(0.25rem, calc(0.25rem + ((1vw - 0.2rem) * 0.7143)), 1.25rem)",
-
-  // borderBottom: "1px solid purple", // TODO: remove me
 });
 
 const GradientLine = styled("div", {
-  position: "absolute",
-  top: 0,
   height: "var(--height-gradient-line)",
 
   /* Safari resize fix */
@@ -152,7 +137,7 @@ const SemanticNav = styled("nav", {
   height: "calc(100% - var(--height-gradient-line))",
 
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "flex-end",
   alignItems: "center",
 
   position: "relative",
@@ -166,6 +151,10 @@ const SemanticNav = styled("nav", {
 });
 
 const LogoControl = styled("div", {
+  position: 'absolute',
+  top: 0,
+  left: 0,
+
   /* 1.23125rem(19.7px) @ 20rem(320px) increasing to 4.6875rem(75px) @ 160rem(2560px) */
   fontSize:
     "clamp(1.23125rem, calc(1.23125rem + ((1vw - 0.2rem) * 2.4688)), 4.6875rem)",
@@ -182,7 +171,4 @@ const LogoControl = styled("div", {
   borderBottomLeftRadius: "var(--radius-value)",
   borderBottomRightRadius: "var(--radius-value)",
 
-  margin: "var(--height-gradient-line) 0 auto 0",
-
-  // transform: "translateY(calc(0.9 * var(--height-gradient-line)))",
 });
