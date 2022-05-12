@@ -15,17 +15,23 @@ export function Footer() {
       <SemanticContainer>
         <ExternalLinksNav>
           <Rights><span>©2022 NeuRA - All Rights Reserved</span></Rights>
-          <Links><span>DISCLAIMER | PRIVACY | CONTACT US | ABOUT US</span></Links>
+          <Links>
+            <span>
+              <a>DISCLAIMER</a>{'    '} | <a>PRIVACY</a> 
+             | <a>CONTACT US</a> 
+             | <a>ABOUT US</a>
+            </span></Links>
         </ExternalLinksNav>
         <SocialLinksNav>
           <LogoControl>
             <LogoNew/>
-            {/* <LogoIcon/> */}
           </LogoControl>
-          <Span> 
+          <Span>
+            <LogoDiv>
+              <LogoNew />
+            </LogoDiv> 
             <FacebookIcon/>           
             <InstagramIcon/>
-            {/* <InstagramIcon/> */}
             <TwitterIcon/> 
             <YoutubeIcon/>       
           </Span>
@@ -40,7 +46,8 @@ const SemanticFooter = styled("footer", {
   justifyContent:"center",
   backgroundColor: "#fff",
   zIndex: "$50",
-  padding: "$3x_2 0",
+  // padding: "$3x_2 0",
+  padding: "calc($x * 1.5)",
 });
 
 const LogoControl = styled("div",{
@@ -56,9 +63,13 @@ const LogoControl = styled("div",{
   justifyContent:"center",
   marginTop:"1rem",
   marginBottom:"1rem",
+  "@0":{
+    display: "block"
+  },
   "@3": {
     marginBottom:"3rem",
     // display:"none",
+    display: "none"
   }
 
 });
@@ -99,6 +110,15 @@ const Rights = styled("div",{
 const Links = styled("div",{
   paddingBottom:".5rem",
   "@3": { 
-  paddingBottom:"3rem",
+  paddingBottom:"calc($x * 0.75)",
+  }
+})
+
+const LogoDiv = styled("div",{
+  "@0":{
+    display: "none"
+  },
+  "@3": {
+    display: "block"
   }
 })

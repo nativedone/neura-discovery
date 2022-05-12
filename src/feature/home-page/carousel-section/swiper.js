@@ -12,10 +12,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import "swiper/css/effect-fade";
-
 // import required modules
-import { EffectFade, Keyboard } from "swiper";
+import { Keyboard } from "swiper";
 
 import { useSources } from "@hooks/use-sources";
 
@@ -137,12 +135,11 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
-          effect={"fade"}
           ref={swiperRef}
           speed={1200}
           slidesPerView={1}
           keyboard={true}
-          modules={[Keyboard, EffectFade]}
+          modules={[Keyboard]}
           key={source}
           // onChange={(value) => setCurrentSlide(value)}
           onSlideChange={(a) => {
@@ -186,6 +183,14 @@ const CarouselContainer = styled("div", {
   justifyContent: "center",
   position: "relative",
   margin: "0 auto",
+
+  "@media (hover: hover) and (pointer: fine)": {
+    "&:hover": {
+      ".navigation-arrow": {
+        opacity: "1",
+      },
+    },
+  },
 });
 
 const CarouselItemContainer = styled("div", {
@@ -212,7 +217,7 @@ const BackgroundSubheading = styled("span", {
     paddingBottom: "$x_2",
     marginBottom: "$_2",
 
-    outline: "1px solid red",
+    // outline: "1px solid red",
   }
 }
 );
@@ -275,6 +280,7 @@ const TextContainer = styled("div", {
   margin: "0 auto",
 
   paddingBottom: '46px', // TODO: fix me when we have a new content or design solution
+
 
   zIndex: "100",
   "@3": {
