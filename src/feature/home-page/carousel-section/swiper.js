@@ -40,12 +40,12 @@ const data = [
     paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. Early research suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
 
     portrait: {
-      url: "/assets/DSC07357.jpeg",
+      url: "/assets/ConnectingYoung&Old-MobileNew2.jpg",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/ConnectingYoung&Old-DesktopNew.jpg",
+      url: "/assets/ConnectingYoung&Old-DesktopNew2.jpg",
       width: 2560,
       height: 1256,
     },
@@ -56,12 +56,12 @@ const data = [
     paragraph: `Can you imagine a bank that houses not money, but human brain? The Sydney Brain Bank at NeuRA does just that. The facility collects, stores and distributes tissue samples for research into conditions such as Alzheimer’s and Parkinson’s disease. Currently they have brain tissue from over 700 donors and donate around 6,000 specimens each year to research groups to aid in medical research.`,
 
     portrait: {
-      url: "/assets/Brain Bank - 320x235px - Mobile.jpg",
+      url: "/assets/Brain Bank-320x235px-MobileNew2.jpg",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/BrainBank-DesktopNew.jpg",
+      url: "/assets/BrainBank-DesktopNew2.jpg",
       width: 2560,
       height: 1256,
     },
@@ -73,12 +73,12 @@ const data = [
     paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. Data from the 320 participants aged 5¬–14 will help researchers track muscles over time, creating a foundation for further investigation. Pretty magical stuff!`,
 
     portrait: {
-      url: "/assets/Muggle - 320x235px - Mobile.jpg",
+      url: "/assets/Muggle-320x235px-MobileNew2.jpg",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/Muggle-DesktopNew.jpg",
+      url: "/assets/Muggle-DesktopNew2.jpg",
       width: 2560,
       height: 1256,
     },
@@ -89,12 +89,12 @@ const data = [
     paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s Schizophrenia Research Institute is the only national institute solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made an incredible discovery that gets closer to finding a cure.`,
 
     portrait: {
-      url: "/assets/Supporting Schizophrenia - 320x235px - Mobile.jpg",
+      url: "/assets/SupportingSchizophrenia-320x235px-MobileNew2.jpg",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/SupportingSchizophrenia-DesktopNew.jpg",
+      url: "/assets/SupportingSchizophrenia-DesktopNew2.jpg",
       width: 2560,
       height: 1256,
     },
@@ -152,10 +152,11 @@ export function CarouselSwiper() {
             <SwiperSlide key={`slide key.id ${index}`}>
               <CarouselItemContainer {...item} priority={index === 0}>
                 <TextContainer>
-                  <CarouselSubheading>{item.subheading}</CarouselSubheading>
+                  <BackgroundSubheading>
+                    <CarouselSubheading>{item.subheading}</CarouselSubheading>
+                  </BackgroundSubheading>
                   <CarouselParagraph>{item.paragraph}</CarouselParagraph>
                 </TextContainer>
-
                 <ImageContainer>
                   <Image
                     src={item[source].url}
@@ -195,36 +196,58 @@ const CarouselItemContainer = styled("div", {
   },
 });
 
+const BackgroundSubheading = styled("span", {
+  paddingTop: "$x_2",
+  paddingBottom: "$x_2",
+  background: "-webkit-linear-gradient(0deg, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 1) 70%)",
+  "@3":{
+    display: "flex",
+    alignItems: "center",
+    // justifyContent: "center",
+    minWidth: '50vw',
+    paddingTop: "$x_4",
+    paddingBottom: "$x_2",
+    marginBottom: "$_2",
+
+    outline: "1px solid red",
+  }
+}
+);
+
 const CarouselSubheading = styled("span", {
   zIndex: "$40",
   fontSize: "$5",
   lineHeight: "1",
   fontWeight: "$bold",
-  background:
-    "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
+  // color: "red",
+  background:"-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
-
-  paddingTop: "$x_2",
-  paddingBottom: "$x_2",
   "@3": {
-    paddingTop: "0px",
-
-    /* 0.0625rem(1px) @ 36rem(576px) increasing to 7.75rem(124px) @ 160rem(2560px) */
-    paddingBottom:
-      "clamp(0.0625rem, calc(0.0625rem + ((1vw - 0.36rem) * 6.1996)), 7.75rem)",
-
     whiteSpace: "nowrap",
-
     display: "inline-block",
-    minWidth: '20ch',
+    // minWidth: '34ch',
+    lineHeight: "1",
+    paddingBottom: '$x_8',
+    paddingTop: '$x_4',
+    paddingLeft: '$x_2',
+    // width: "100%",
+    transform: "translate(0, .1em)",
+    display: "inline-block",
+    textAlign: "left",
   },
 });
+
 const CarouselParagraph = styled("p", {
   zIndex: "$40",
   fontSize: "$0",
   lineHeight: "$tight",
   fontWeight: "$normal",
+  paddingTop: "$x_4",
+  "@6":{
+    paddingTop: "$x_2",
+    paddingLeft: '$x_2',
+  }
 });
 
 const ImageContainer = styled("div", {
@@ -248,6 +271,11 @@ const TextContainer = styled("div", {
   width: "85vw",
   margin: "0 auto",
 
+  animationName: "fade-in",
+  animationDuration:" 2s",
+  animationDelay: "2s",
+  animationFillMode: "both",
+  animation: "dropIn 1000ms",
 
   paddingBottom: '46px', // TODO: fix me when we have a new content or design solution
 
@@ -269,3 +297,6 @@ const TextContainer = styled("div", {
     paddingRight: "25%",
   },
 });
+
+
+
