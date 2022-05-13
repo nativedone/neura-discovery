@@ -4,7 +4,7 @@ import { styled } from "@theme";
 export function BackgroundVideoMobile() {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 0.025], [0.5, 1.4]);
-  const y = useTransform(scrollYProgress, [0, 0.025], ["-5%", "28%"]);
+  const y = useTransform(scrollYProgress, [0, 0.025], ["-8%", "28%"]);
   return (
     <Video
       autoPlay={true}
