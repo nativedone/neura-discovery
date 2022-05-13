@@ -96,13 +96,13 @@ const MotionHeaderContainer = styled(motion.div, {
   "&.is-visible": {
     boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
 
-    header: {
-      /* From https://css.glass */
-      background: "rgba(0, 35, 65, 0.1)",
-      boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1)",
-      backdropFilter: "blur(5px)",
-      WebkitBackdropFilter: "blur(5px)",
-    },
+    // header: {
+    //   /* From https://css.glass */
+    //   background: "rgba(0, 35, 65, 0.1)",
+    //   boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1)",
+    //   backdropFilter: "blur(5px)",
+    //   WebkitBackdropFilter: "blur(5px)",
+    // },
   },
 });
 
