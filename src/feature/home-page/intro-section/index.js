@@ -24,8 +24,7 @@ export function IntroSection() {
         <DividerGapWithFiller />
 
         <Statement>
-          Research leads to discoveries. Discoveries lead to cures. At NeuRA, we
-          change lives through brain research.
+          Research leads to discoveries. Discoveries lead to cures. At NeuRA, we change lives through brain research. 
         </Statement>
 
         <DividerGapWithFiller />

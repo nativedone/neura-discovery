@@ -21,7 +21,7 @@ const data = [
   {
     id: "carousel-item1",
     subheading: "The Brain Atlas",
-    paragraph: `Like all explorers, neuroscientists need maps to guide their path to success. Worldrenowned brain cartographer and NeuRA scientist Professor George Paxinos AO made medical history in 2019 when he launched the most comprehensive atlas of the human brainstem ever made. His work has assisted in the development of treatments for conditions like Parkinson’s and Alzheimer’s disease.`,
+    paragraph: `Like all explorers, neuroscientists need maps to guide their path to success. World-renowned brain cartographer and NeuRA scientist Professor George Paxinos AO made medical history in 2019 when he launched the most comprehensive atlas of the human brainstem ever made. His work has assisted in the development of treatments for conditions like Parkinson’s and Alzheimer’s disease.`,
 
     portrait: {
       url: "/assets/Brain Atlas - 320x235px - Mobile.jpg",
@@ -70,7 +70,7 @@ const data = [
   {
     id: "carousel-item4",
     subheading: "The MUGgLE Study",
-    paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. Data from the 320 participants aged 5¬–14 will help researchers track muscles over time, creating a foundation for further investigation. Pretty magical stuff!`,
+    paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. Data from the 320 participants aged 5–14 will help researchers track muscles over time, creating a foundation for further investigation. Pretty magical stuff!`,
 
     portrait: {
       url: "/assets/Muggle-320x235px-MobileNew2.jpg",
@@ -86,7 +86,7 @@ const data = [
   {
     id: "carousel-item5",
     subheading: "Supporting schizophrenia",
-    paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s Schizophrenia Research Institute is the only national institute solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made an incredible discovery that gets closer to finding a cure.`,
+    paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s Schizophrenia Research Institute is the only national institute solely dedicated to discovering ways to treat, prevent and possibly cure this disorder - and in 2020, our scientists made an incredible discovery that gets us closer.`,
 
     portrait: {
       url: "/assets/SupportingSchizophrenia-320x235px-MobileNew2.jpg",
