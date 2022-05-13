@@ -1,9 +1,14 @@
+import { useViewportScroll, motion, useTransform } from "framer-motion";
 import { styled } from "@theme";
 
+
 export function HeroSection() {
+const { scrollYProgress } = useViewportScroll();
+const opacity = useTransform(scrollYProgress, [0, 0.025], [1, 0]);
+
   return (
     <>
-      <HeroSectionContainer>
+      <HeroSectionContainer style={{ opacity }}>
         <HeroTextContainer>
           <h1>Join us on the discovery mission of your lifetime</h1>
         </HeroTextContainer>
@@ -12,7 +17,7 @@ export function HeroSection() {
   );
 }
 
-const HeroSectionContainer = styled("div", {
+const HeroSectionContainer = styled(motion.div, {
   position: "relative",
   top: "0",
   left: "0",
