@@ -1,6 +1,10 @@
+import { useViewportScroll, motion, useTransform } from "framer-motion";
 import { styled } from "@theme";
 
-export function BackgroundVideoMobile({ hasStarted }) {
+export function BackgroundVideoMobile() {
+  const { scrollYProgress } = useViewportScroll();
+  const scale = useTransform(scrollYProgress, [0, 0.025], [0.5, 1.4]);
+  const y = useTransform(scrollYProgress, [0, 0.025], ["-5%", "28%"]);
   return (
     <Video
       autoPlay={true}
@@ -8,25 +12,17 @@ export function BackgroundVideoMobile({ hasStarted }) {
       muted={true}
       loop={true}
       playsInline={true}
-      className={hasStarted ? "zoom-out" : ""}
+      style={{ scale, y }}
     >
-      <source src="/assets/video-mobile-922-1920-copy.mp4" type="video/mp4" />
+      <source
+        src="/assets/TONE-NeuRa-LandingPage-922x1920-v02.mp4"
+        type="video/mp4"
+      />
     </Video>
   );
 }
 
-const Video = styled("video", {
+const Video = styled(motion.video, {
   width: "100%",
   height: "100%",
-  transform: "scale(1.8) translate3d(0, 20%, 0)",
-  transform: "scale(0.5) translate3d(0, -18%, 0)",
-
-  willChange: "transform", // Let the browser know what will change so it can optimize
-  
-  
-  transition: "transform 600ms", // 1.2 sec
-  
-  "&.zoom-out": {
-  transform: "scale(0.5) translate3d(0, -19%, 0)",
-  },
 });
