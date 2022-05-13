@@ -141,8 +141,12 @@ const LogoControl = styled("div",{
   justifyContent:"center",
   marginTop:"1rem",
   marginBottom:"1rem",
+  ".li" : {
+    listStyle: "none",
+  },
   "@0":{
     display: "block"
+    
   },
   "@3": {
     display: "none"
