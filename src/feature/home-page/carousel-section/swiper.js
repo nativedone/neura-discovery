@@ -264,7 +264,7 @@ const CarouselSubheading = styled("span", {
     paddingTop: "$x_4",
     paddingLeft: "$x_2",
     // width: "100%",
-    transform: "translate(0, .1em)", // this creates a bug on Safari
+    transform: "translate3d(0, 0.1em, 0)",
     display: "inline-block",
     textAlign: "left",
   },
