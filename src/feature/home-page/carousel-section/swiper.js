@@ -1,21 +1,16 @@
-import { styled } from "@theme";
 import React, { useCallback, useRef, useState } from "react";
-import { CarouselArrowsNavigation } from "./carouselArrowsNavigation";
-import { CarouselPagination } from "./carouselPagination";
 import Image from "next/image";
-
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
 // import required modules
 import { Keyboard } from "swiper";
+// Import Swiper styles
+import "swiper/css";
 
+import { styled, keyframes } from "@theme";
 import { useSources } from "@hooks/use-sources";
+
+import { CarouselArrowsNavigation } from "./carouselArrowsNavigation";
+import { CarouselPagination } from "./carouselPagination";
 
 const data = [
   {
@@ -150,12 +145,17 @@ export function CarouselSwiper() {
         >
           {data?.map((item, index) => (
             <SwiperSlide key={`slide key.id ${index}`}>
-              <CarouselItemContainer {...item} priority={index === 0}>
-                <TextContainer>
+              <CarouselItemContainer>
+                <TextContainer className="slider-text-container">
                   <BackgroundSubheading>
-                    <CarouselSubheading>{item.subheading}</CarouselSubheading>
+                    <CarouselSubheading>
+                      {item.subheading}
+                    </CarouselSubheading>
                   </BackgroundSubheading>
-                  <CarouselParagraph>{item.paragraph}</CarouselParagraph>
+                  <CarouselParagraph
+                  >
+                    {item.paragraph}
+                  </CarouselParagraph>
                 </TextContainer>
                 <ImageContainer>
                   <Image
@@ -164,7 +164,6 @@ export function CarouselSwiper() {
                     width={item[source].width}
                     height={item[source].height}
                     layout="responsive"
-                    // objectFit="cover"
                   />
                 </ImageContainer>
               </CarouselItemContainer>
@@ -178,6 +177,18 @@ export function CarouselSwiper() {
   );
 }
 
+const fadeInSlow = keyframes({
+  '0%': {  opacity: 0 },
+  '20%': {  opacity: 0.1 },
+  '100%': {  opacity: 1 },
+});
+
+const fadeOutFast = keyframes({
+  '0%': {  opacity: 1 },
+  '20%': {  opacity: 0.4 },
+  '100%': {  opacity: 0 },
+});
+
 const CarouselContainer = styled("div", {
   display: "flex",
   justifyContent: "center",
@@ -190,6 +201,18 @@ const CarouselContainer = styled("div", {
         opacity: "1",
       },
     },
+  },
+
+  ".swiper-slide-active .slider-text-container": {
+    animationName: `${fadeInSlow}`,
+    animationDuration: `2s`,
+    animationDelay: `0.3s`,
+  },
+  ".swiper-slide-prev .slider-text-container": {
+    animation: `${fadeOutFast} 2s`,
+  },
+  ".swiper-slide-next .slider-text-container": {
+    animation: `${fadeOutFast} 2s`,
   },
 });
 
@@ -207,20 +230,20 @@ const CarouselItemContainer = styled("div", {
 const BackgroundSubheading = styled("span", {
   paddingTop: "$x_2",
   paddingBottom: "$x_2",
-  background: "-webkit-linear-gradient(0deg, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 1) 70%)",
-  "@3":{
+  background:
+    "-webkit-linear-gradient(0deg, rgba(255, 255, 255, 0),  rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 1) 70%)",
+  "@3": {
     display: "flex",
     alignItems: "center",
     // justifyContent: "center",
-    minWidth: '50vw',
+    minWidth: "50vw",
     paddingTop: "$x_4",
     paddingBottom: "$x_2",
     marginBottom: "$_2",
 
     // outline: "1px solid red",
-  }
-}
-);
+  },
+});
 
 const CarouselSubheading = styled("span", {
   zIndex: "$40",
@@ -228,7 +251,8 @@ const CarouselSubheading = styled("span", {
   lineHeight: "1",
   fontWeight: "$bold",
   // color: "red",
-  background:"-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
+  background:
+    "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
   "@3": {
@@ -236,11 +260,11 @@ const CarouselSubheading = styled("span", {
     display: "inline-block",
     // minWidth: '34ch',
     lineHeight: "1",
-    paddingBottom: '$x_8',
-    paddingTop: '$x_4',
-    paddingLeft: '$x_2',
+    paddingBottom: "$x_8",
+    paddingTop: "$x_4",
+    paddingLeft: "$x_2",
     // width: "100%",
-    transform: "translate(0, .1em)",
+    transform: "translate(0, .1em)", // this creates a bug on Safari
     display: "inline-block",
     textAlign: "left",
   },
@@ -252,10 +276,10 @@ const CarouselParagraph = styled("p", {
   lineHeight: "$tight",
   fontWeight: "$normal",
   paddingTop: "$x_4",
-  "@6":{
+  "@6": {
     paddingTop: "$x_2",
-    paddingLeft: '$x_2',
-  }
+    paddingLeft: "$x_2",
+  },
 });
 
 const ImageContainer = styled("div", {
@@ -279,8 +303,7 @@ const TextContainer = styled("div", {
   width: "85vw",
   margin: "0 auto",
 
-  paddingBottom: '46px', // TODO: fix me when we have a new content or design solution
-
+  paddingBottom: "46px", // TODO: fix me when we have a new content or design solution
 
   zIndex: "100",
   "@3": {
@@ -289,7 +312,7 @@ const TextContainer = styled("div", {
     width: "50%",
     textAlign: "left",
 
-    paddingBottom: '0px',
+    paddingBottom: "0px",
     /* 1px @ 576px increasing to 371px @ 2560px */
     paddingTop:
       "clamp(0.0625rem, calc(0.0625rem + ((1vw - 0.36rem) * 18.6492)), 23.1875rem)",
@@ -300,6 +323,3 @@ const TextContainer = styled("div", {
     paddingRight: "25%",
   },
 });
-
-
-
