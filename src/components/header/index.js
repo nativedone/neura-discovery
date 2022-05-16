@@ -68,24 +68,27 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
       <SemanticHeader>
         <GradientLine />
         <SemanticNav>
-          <li className="li">
-            <a
-              href="https://www.neura.edu.au/"
-              target="_blank"
-              rel="noreferrer"
-            >
-            <LogoControl>
-              <Logo />
-            </LogoControl>
-            <VisuallyHidden>Visit our Webpage</VisuallyHidden>
-            </a>
-          </li>
+          <ul>
+            <li className="li">
+              <a
+                href="https://www.neura.edu.au/"
+                target="_blank"
+                rel="noreferrer"
+              >
+              <LogoControl>
+                <Logo />
+              </LogoControl>
+              <VisuallyHidden>Visit our Webpage</VisuallyHidden>
+              </a>
+            </li>
+          </ul>
           <Button variant="secondary">JOIN US NOW</Button>
         </SemanticNav>
       </SemanticHeader>
     </MotionHeaderContainer>
   );
 }
+
 
 const MotionHeaderContainer = styled(motion.div, {
   backgroundColor: "transparent",
@@ -154,7 +157,7 @@ const SemanticNav = styled("nav", {
   margin: "0 auto",
   width: "85vw",
 
-  ".li" : {
+  "ul" : {
     listStyle: "none",
   },
 
