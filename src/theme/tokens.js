@@ -75,7 +75,7 @@ export const tokens = {
     },
   },
   media: {
-    // 0: '(min-width: 0px)', // Unnecessary for  x-small phones
+    0: "(min-width: 318px)", // Unnecessary for  x-small phones
     1: "(min-width: 350px)", // small phones
     2: "(min-width: 400px)", // large phones
     3: "(min-width: 576px)", // x-large phones & small tablets

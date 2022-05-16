@@ -33,6 +33,6 @@ const H2 = styled("h2", {
   color:"#fff",
   width: "85vw",
   "@3": {
-    width: "58vw",
+    width: "75vw",
   },
 });

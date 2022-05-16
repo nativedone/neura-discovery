@@ -7,12 +7,14 @@ import { RightArrowIcon } from "./rightArrowIcon";
 export function CarouselArrowsNavigation({ prevSlide, nextSlide }) {
   return (
     <CarouselDesktopNavigationContainer>
-      <DesktopNavigationButton
+      <DesktopNavigationButton 
+        className="navigation-arrow"
         onClick={prevSlide}
       >
         <LeftArrowIcon/>
       </DesktopNavigationButton>
-      <DesktopNavigationButton
+      <DesktopNavigationButton 
+        className="navigation-arrow"
         onClick={nextSlide}
       >
         <RightArrowIcon />
@@ -41,6 +43,12 @@ const CarouselDesktopNavigationContainer = styled("div", {
 
 const DesktopNavigationButton = styled("button", {
   zIndex: 1, // this is necessary because the swiper/react slider stays on top
+
+  // opacity changes when user hovers the parent
+  "@media (hover: hover) and (pointer: fine)": {
+    opacity: 0,
+  },
+  transition: "opacity 0.5s ease",
 
   fontSize: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.34375rem) * 3.4826)), 6.875rem)",
 

@@ -12,9 +12,10 @@ export const Button = styled("button", {
   "@3": {
     paddingTop: "$x_8",
     paddingBottom: "$x_8",
-    paddingLeft: "$x_4",
-    paddingRight: "$x_4",
+    paddingLeft: "$x_2", // Before was "x_4"
+    paddingRight: "$x_2" , // Before was "x_4"
   },
+
   color: 'white',
   backgroundColor: "rgba(0, 0, 0, 0.7)",
   fontSize: "$3",
@@ -30,7 +31,6 @@ export const Button = styled("button", {
     borderTop: "none",
   },
 
-
   variants: {
     variant: {
       primary: {
@@ -38,8 +38,11 @@ export const Button = styled("button", {
         backgroundColor: "rgba(0, 0, 0, 0.7)",
       },
       secondary: {
-        fontSize: "$0",
+        fontSize: "$0", 
         backgroundColor: "transparent",
+        "@8": {
+          fontSize: "$3", // Before was $0
+        }
       },
     },
   },

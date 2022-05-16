@@ -11,16 +11,15 @@ export function BecomePartnerSection() {
         <DividerGapWithFiller />
 
         <Statement>
-          Become a Discovery Partner today and change the world of brain
-          research.
+          Become a Discovery Partner today and change the world of brain research. 
         </Statement>
 
         <DividerGapWithFiller />
 
         <Card
-          subheading={`“The generosity of everyday Australians keeps our research going” – Professor XXXXXXXXXXXXXX.`}
+          subheading={`“The generosity of everyday Australians keeps our research going” – Professor Peter Schofield AO.`}
           paragraphs={[
-            `NeuRA’s scientists and researchers are among the best in the world. But their work is only possible with ongoing support from regular donors who are passionate about f inding ways to cure, treat and prevent diseases, disabilities and injuries of the brain.`,
+            `NeuRA’s scientists and researchers are among the best in the world. But their work is only possible with ongoing support from regular donors who are passionate about finding ways to cure, treat and prevent diseases, disabilities and injuries of the brain.`,
 
             `Join us in this extraordinary journey.`,
           ]}

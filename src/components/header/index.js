@@ -1,6 +1,6 @@
 import { styled } from "@theme";
 import { Button } from "@components/button";
-
+import { VisuallyHidden } from "@components/visually-hidden";
 import { useEffect, useState } from "react";
 import { useViewportScroll, motion } from "framer-motion";
 import useDebounce from "react-use/lib/useDebounce";
@@ -68,15 +68,29 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
       <SemanticHeader>
         <GradientLine />
         <SemanticNav>
-          <LogoControl>
-            <Logo />
-          </LogoControl>
-          <Button variant="secondary">JOIN US NOW</Button>
+          <ul>
+            <li>
+              <a
+                href="https://www.neura.edu.au/"
+                target="_blank"
+                rel="noreferrer"
+              >
+              <LogoControl>
+                <Logo />
+              </LogoControl>
+              <VisuallyHidden>Visit our Webpage</VisuallyHidden>
+              </a>
+            </li>
+            <li>
+              <Button variant="secondary">JOIN US NOW</Button>
+            </li>
+          </ul>
         </SemanticNav>
       </SemanticHeader>
     </MotionHeaderContainer>
   );
 }
+
 
 const MotionHeaderContainer = styled(motion.div, {
   backgroundColor: "transparent",
@@ -144,6 +158,10 @@ const SemanticNav = styled("nav", {
 
   margin: "0 auto",
   width: "85vw",
+
+  "ul" : {
+    listStyle: "none",
+  },
 
   "@3": {
     width: "75vw",

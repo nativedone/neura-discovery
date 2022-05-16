@@ -1,18 +1,17 @@
 import Head from "next/head";
 
 export function SEO({
-  title = "Take the Quiz",
-  description = "An ambulance pulls up in front of our hospital in Kenema, Sierra Leone. A mother gets out. She is holding a bundle in her arms with one leg hanging down limply.",
+  title = "Neura discovery",
+  description = "Join us on the discovery mission of your lifetime",
   author = {
-    name: "Médecins Sans Frontières/Doctors without Borders news, opinion & stories",
-    twitter: "@MSFAustralia",
+    name: "NeuRA: Discover. Conquer. Cure.",
+    twitter: "@neuraustralia",
   },
   image = {
-    // url: "/assets/21-MSF_OpenGraph_1200x630_FINAL.jpeg",
     url: "/assets/Open_Graph_Image_Landing_Page.jpeg",
-    alt: "Banner for changeand.co, featuring our tagline 'Do good. Better.'",
+    alt: "Banner for discovery.neura.edu.au",
   },
-  websiteUrl = "https://stories.msf.org.au/",
+  websiteUrl = "https://discovery.neura.edu.au/",
   meta = [],
 }) {
   const metaData = [
