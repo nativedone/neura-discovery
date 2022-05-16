@@ -69,7 +69,7 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
         <GradientLine />
         <SemanticNav>
           <ul>
-            <li className="li">
+            <li>
               <a
                 href="https://www.neura.edu.au/"
                 target="_blank"
@@ -81,8 +81,10 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
               <VisuallyHidden>Visit our Webpage</VisuallyHidden>
               </a>
             </li>
+            <li>
+              <Button variant="secondary">JOIN US NOW</Button>
+            </li>
           </ul>
-          <Button variant="secondary">JOIN US NOW</Button>
         </SemanticNav>
       </SemanticHeader>
     </MotionHeaderContainer>
