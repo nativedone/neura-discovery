@@ -122,18 +122,28 @@ const MotionHeaderContainer = styled(motion.div, {
 
 const SemanticHeader = styled("header", {
   backgroundColor: "transparent",
-
   position: "absolute",
   top: 0,
   left: 0,
   right: 0,
   zIndex: "$50",
-
-  height: "$2x",
+  // height:"50px", // 320px
+  // height:"62px", // 575px
+  height:"calc(3.125rem + ((1vw - 0.2rem) * 4.7059))",
+  /* Safari resize fix */
+  minHeight: "0vw",
 
   /* 0.25rem(4px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
   "--height-gradient-line":
     "clamp(0.25rem, calc(0.25rem + ((1vw - 0.2rem) * 0.7143)), 1.25rem)",
+
+  "@3": {
+    // height:"130px", // 2560px
+    // height:"40px", // 576px
+    height:"calc(2.5rem + ((1vw - 0.36rem) * 4.5363))",
+    /* Safari resize fix */
+    minHeight: "0vw",
+  },
 });
 
 const GradientLine = styled("div", {
@@ -174,8 +184,9 @@ const LogoControl = styled("div", {
   left: 0,
 
   /* 1.23125rem(19.7px) @ 20rem(320px) increasing to 4.6875rem(75px) @ 160rem(2560px) */
-  fontSize:
-    "clamp(1.23125rem, calc(1.23125rem + ((1vw - 0.2rem) * 2.4688)), 4.6875rem)",
+  fontSize: "35px", // 320px
+  fontSize: "40px", // 575px
+  fontSize: "calc(2.1875rem + ((1vw - 0.2rem) * 1.9608))",
 
   /* Safari resize fix */
   minHeight: "0vw",
@@ -188,5 +199,9 @@ const LogoControl = styled("div", {
 
   borderBottomLeftRadius: "var(--radius-value)",
   borderBottomRightRadius: "var(--radius-value)",
+
+  "@3": {
+    fontSize: "clamp(1.23125rem, calc(1.23125rem + ((1vw - 0.2rem) * 2.4688)), 4.6875rem)",
+  }
 
 });
