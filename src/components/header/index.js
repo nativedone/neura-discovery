@@ -65,8 +65,8 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
       variants={headerAnimationVariants}
       className={headerContainerClass}
     >
+      <GradientLine />
       <SemanticHeader>
-        <GradientLine />
         <SemanticNav>
           <ul>
             <li>
@@ -75,10 +75,10 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
                 target="_blank"
                 rel="noreferrer"
               >
-              <LogoControl>
-                <Logo />
-              </LogoControl>
-              <VisuallyHidden>Visit our Webpage</VisuallyHidden>
+                <LogoControl>
+                  <Logo />
+                </LogoControl>
+                <VisuallyHidden>Visit our Webpage</VisuallyHidden>
               </a>
             </li>
             <li>
@@ -90,7 +90,6 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
     </MotionHeaderContainer>
   );
 }
-
 
 const MotionHeaderContainer = styled(motion.div, {
   backgroundColor: "transparent",
@@ -109,37 +108,17 @@ const MotionHeaderContainer = styled(motion.div, {
 
   "&.is-visible": {
     boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
-
-    // header: {
-    //   /* From https://css.glass */
-    //   background: "rgba(0, 35, 65, 0.1)",
-    //   boxShadow: " 0 4px 30px rgba(0, 0, 0, 0.1)",
-    //   backdropFilter: "blur(5px)",
-    //   WebkitBackdropFilter: "blur(5px)",
-    // },
   },
 });
 
 const SemanticHeader = styled("header", {
   backgroundColor: "transparent",
-  position: "absolute",
-  top: 0,
-  left: 0,
-  right: 0,
   zIndex: "$50",
-  // height:"52.5px", // 320px
-  // height:"137px", // 2560px
-  height:"clamp(3.28125rem, calc(3.28125rem + ((1vw - 0.2rem) * 3.7723)), 8.5625rem)",
-  /* Safari resize fix */
-  minHeight: "0vw",
-
-  /* 0.25rem(4px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
-  "--height-gradient-line":
-    "clamp(0.25rem, calc(0.25rem + ((1vw - 0.2rem) * 0.7143)), 1.25rem)",
 });
 
 const GradientLine = styled("div", {
-  height: "var(--height-gradient-line)",
+  /* 0.25rem(4px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
+  height: "clamp(0.25rem, calc(0.25rem + ((1vw - 0.2rem) * 0.7143)), 1.25rem)",
 
   /* Safari resize fix */
   minHeight: "0vw",
@@ -150,19 +129,16 @@ const GradientLine = styled("div", {
 });
 
 const SemanticNav = styled("nav", {
-  height: "calc(100% - var(--height-gradient-line))",
-
-  display: "flex",
-  justifyContent: "flex-end",
-  alignItems: "center",
-
   position: "relative",
 
   margin: "0 auto",
   width: "85vw",
 
-  "ul" : {
+  ul: {
     listStyle: "none",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 
   "@3": {
@@ -171,13 +147,10 @@ const SemanticNav = styled("nav", {
 });
 
 const LogoControl = styled("div", {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-
   // fontSize: "35px", // 320px
   // fontSize: "75px", // 2560px
-  fontSize: "clamp(2.1875rem, calc(2.1875rem + ((1vw - 0.2rem) * 1.7857)), 4.6875rem)",
+  fontSize:
+    "clamp(2.1875rem, calc(2.1875rem + ((1vw - 0.2rem) * 1.7857)), 4.6875rem)",
 
   /* Safari resize fix */
   minHeight: "0vw",
