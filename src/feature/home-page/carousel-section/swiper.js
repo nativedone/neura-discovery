@@ -130,8 +130,10 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
+          longSwipes={false}
+          grabCursor={true}
           ref={swiperRef}
-          speed={1200}
+          speed={2300}
           slidesPerView={1}
           keyboard={true}
           modules={[Keyboard]}
@@ -184,9 +186,9 @@ const fadeInSlow = keyframes({
 });
 
 const fadeOutFast = keyframes({
-  '0%': {  opacity: 1 },
-  '20%': {  opacity: 0.4 },
-  '100%': {  opacity: 0 },
+  // '0%': {  opacity: 1 },
+  // '20%': {  opacity: 0.4 },
+  // '100%': {  opacity: 0 },
 });
 
 const CarouselContainer = styled("div", {
@@ -215,10 +217,10 @@ const CarouselContainer = styled("div", {
     animationDelay: `0.5s`,
   },
   ".swiper-slide-prev .slider-text-container": {
-    animation: `${fadeOutFast} 2s`,
+    animation: `${fadeOutFast} 0.1s`,
   },
   ".swiper-slide-next .slider-text-container": {
-    animation: `${fadeOutFast} 2s`,
+    animation: `${fadeOutFast} 0.1s`,
   },
 });
 
