@@ -148,11 +148,11 @@ export function CarouselSwiper() {
               <CarouselItemContainer>
                 <TextContainer className="slider-text-container">
                   <BackgroundSubheading>
-                    <CarouselSubheading>
+                    <CarouselSubheading >
                       {item.subheading}
                     </CarouselSubheading>
                   </BackgroundSubheading>
-                  <CarouselParagraph
+                  <CarouselParagraph className="slider-paragraph-container"
                   >
                     {item.paragraph}
                   </CarouselParagraph>
@@ -207,6 +207,12 @@ const CarouselContainer = styled("div", {
     animationName: `${fadeInSlow}`,
     animationDuration: `2s`,
     animationDelay: `0.3s`,
+  },
+  
+  ".swiper-slide-active .slider-paragraph-container" :{
+    animationName: `${fadeInSlow}`,
+    animationDuration: `2.8s`,
+    animationDelay: `0.5s`,
   },
   ".swiper-slide-prev .slider-text-container": {
     animation: `${fadeOutFast} 2s`,
@@ -271,6 +277,7 @@ const CarouselSubheading = styled("span", {
 });
 
 const CarouselParagraph = styled("p", {
+
   zIndex: "$40",
   fontSize: "$0",
   lineHeight: "$tight",
