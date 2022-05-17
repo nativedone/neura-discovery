@@ -85,7 +85,7 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
   console.log(imageData, "imageData");
   return (
     <CardContainer variantLayout={layout}>
-      <ScrollArea type="always">
+      <ScrollArea type="auto">
         <ScrollAreaViewport css={{ }}>
           <TextContainer>
             <H2>{subheading}</H2>
