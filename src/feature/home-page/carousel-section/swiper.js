@@ -133,7 +133,7 @@ export function CarouselSwiper() {
           longSwipes={false}
           grabCursor={true}
           ref={swiperRef}
-          speed={2300}
+          speed={1600}
           slidesPerView={1}
           keyboard={true}
           modules={[Keyboard]}
@@ -186,9 +186,9 @@ const fadeInSlow = keyframes({
 });
 
 const fadeOutFast = keyframes({
-  // '0%': {  opacity: 1 },
-  // '20%': {  opacity: 0.4 },
-  // '100%': {  opacity: 0 },
+  '0%': {  opacity: 1 },
+  '20%': {  opacity: 0.4 },
+  '100%': {  opacity: 0 },
 });
 
 const CarouselContainer = styled("div", {
@@ -207,20 +207,34 @@ const CarouselContainer = styled("div", {
 
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
-    animationDuration: `2s`,
-    animationDelay: `0.3s`,
+    animationDuration: `2.85s`,
+    // animationDelay: `0.5s`,
   },
   
   ".swiper-slide-active .slider-paragraph-container" :{
     animationName: `${fadeInSlow}`,
-    animationDuration: `2.8s`,
-    animationDelay: `0.5s`,
+    animationDuration: `4.7s`,
+    // animationDelay: `0.8s`,
   },
   ".swiper-slide-prev .slider-text-container": {
-    animation: `${fadeOutFast} 0.1s`,
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
   },
   ".swiper-slide-next .slider-text-container": {
-    animation: `${fadeOutFast} 0.1s`,
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
+  },
+  ".swiper-slide-prev .slider-paragraph-container": {
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
+  },
+  ".swiper-slide-next .slider-paragraph-container": {
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
   },
 });
 
