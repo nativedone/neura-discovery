@@ -130,7 +130,7 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
-          longSwipes={false}
+          // longSwipes={false}
           grabCursor={true}
           ref={swiperRef}
           speed={1600}
@@ -204,6 +204,14 @@ const CarouselContainer = styled("div", {
       },
     },
   },
+
+  ".swiper-slide": {
+    opacity: 0,
+  },
+
+  ".swiper-slide.swiper-slide-active": {
+    opacity: 1,
+   },
 
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
