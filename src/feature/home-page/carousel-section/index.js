@@ -1,5 +1,6 @@
 import { styled } from "@theme";
-import { CarouselSwiper } from "./swiper"
+import { CarouselSwiper } from "./swiper";
+import { motion } from "framer-motion";
 
 // TODO: add carousel lib react/swiper
 // TODO: add images to data
@@ -7,21 +8,31 @@ import { CarouselSwiper } from "./swiper"
 
 export function CarouselSection() {
   return (
-    <CarouselSectionContainer>
-    {/* Example of one item */}
+    <CarouselSectionContainer
+      onViewportEnter={() => {
+        const header = document.getElementById("header")
+        header.classList.add("totally-hidden");
+      }}
+      onViewportLeave={() => {
+        const header = document.getElementById("header")
+        header.classList.remove("totally-hidden");
+      }}
+      viewport={{ once: false }}
+    >
+      {/* Example of one item */}
       {/* <CarouselItem
         subheading={data[0].subheading}
         paragraph={data[0].paragraph}
       /> */}
-      <CarouselSwiper/>
+      <CarouselSwiper />
     </CarouselSectionContainer>
   );
 }
 
-const CarouselSectionContainer = styled("section", {
+const CarouselSectionContainer = styled(motion.section, {
   zIndex: "$20",
 
-  backgroundColor: 'white' // TODO: fix me
+  backgroundColor: "white", // TODO: fix me
 });
 
 // const CarouselItem = ({ subheading, paragraph }) => {

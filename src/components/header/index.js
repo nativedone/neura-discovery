@@ -12,7 +12,7 @@ const headerAnimationVariants = {
 
 import { Logo } from "./logo";
 
-export function Header({ shouldSticky = true, animateOnScroll = true }) {
+export function Header({ animateOnScroll = true }) {
   const { scrollY } = useViewportScroll();
 
   const [currentScroll, setCurrentScroll] = useState(0);
@@ -53,17 +53,12 @@ export function Header({ shouldSticky = true, animateOnScroll = true }) {
     };
   }, [animateOnScroll, debouncedPreviousScroll, clearDebounceListener]);
 
-  const stickyClass = shouldSticky ? "is-sticky" : "";
-  const isHeaderVisibleClass =
-    isHeaderVisible && scrollY.get() > 200 ? "is-visible" : "";
-
-  const headerContainerClass = `${stickyClass} ${isHeaderVisibleClass}`;
 
   return (
     <MotionHeaderContainer
+      id="header"
       animate={isHeaderVisible ? "show" : "hide"}
       variants={headerAnimationVariants}
-      className={headerContainerClass}
     >
       <GradientLine />
       <SemanticHeader>
@@ -98,16 +93,15 @@ const MotionHeaderContainer = styled(motion.div, {
   "--radius-value":
     "clamp(0.21875rem, calc(0.21875rem + ((1vw - 0.2rem) * 0.5357)), 0.96875rem)",
 
-  "&.is-sticky": {
-    position: "fixed",
-    top: "0px",
-    left: "0px",
-    right: "0px",
-    zIndex: "$50",
-  },
+  position: "fixed",
+  top: "0px",
+  left: "0px",
+  right: "0px",
+  zIndex: "$50",
+  boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
 
-  "&.is-visible": {
-    boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
+  "&.totally-hidden": {
+    display: "none",
   },
 });
 
