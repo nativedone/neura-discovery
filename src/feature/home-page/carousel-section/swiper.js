@@ -130,8 +130,10 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
+          // longSwipes={false}
+          grabCursor={true}
           ref={swiperRef}
-          speed={1200}
+          speed={1600}
           slidesPerView={1}
           keyboard={true}
           modules={[Keyboard]}
@@ -148,11 +150,11 @@ export function CarouselSwiper() {
               <CarouselItemContainer>
                 <TextContainer className="slider-text-container">
                   <BackgroundSubheading>
-                    <CarouselSubheading>
+                    <CarouselSubheading >
                       {item.subheading}
                     </CarouselSubheading>
                   </BackgroundSubheading>
-                  <CarouselParagraph
+                  <CarouselParagraph className="slider-paragraph-container"
                   >
                     {item.paragraph}
                   </CarouselParagraph>
@@ -203,16 +205,44 @@ const CarouselContainer = styled("div", {
     },
   },
 
+  ".swiper-slide": {
+    opacity: 0,
+  },
+
+  ".swiper-slide.swiper-slide-active": {
+    opacity: 1,
+   },
+
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
-    animationDuration: `2s`,
-    animationDelay: `0.3s`,
+    animationDuration: `2.85s`,
+    // animationDelay: `0.5s`,
+  },
+  
+  ".swiper-slide-active .slider-paragraph-container" :{
+    animationName: `${fadeInSlow}`,
+    animationDuration: `4.7s`,
+    // animationDelay: `0.8s`,
   },
   ".swiper-slide-prev .slider-text-container": {
-    animation: `${fadeOutFast} 2s`,
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
   },
   ".swiper-slide-next .slider-text-container": {
-    animation: `${fadeOutFast} 2s`,
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
+  },
+  ".swiper-slide-prev .slider-paragraph-container": {
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
+  },
+  ".swiper-slide-next .slider-paragraph-container": {
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
   },
 });
 
@@ -271,6 +301,7 @@ const CarouselSubheading = styled("span", {
 });
 
 const CarouselParagraph = styled("p", {
+
   zIndex: "$40",
   fontSize: "$0",
   lineHeight: "$tight",
