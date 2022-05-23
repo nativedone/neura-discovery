@@ -10,7 +10,7 @@ export function BackgroundVideoDesktop() {
 
   const source = useSources({
     mediaQueryType: "landscape",
-    matchingSuccessData: "/assets/TONE-NeuRa-LandingPage-1920x10810-v02.mp4",
+    matchingSuccessData: "/assets/landing--3000k.mp4",
     matchingFailData: "", // we don't let the browser to download the desktop video if user is on mobile
   });
 
