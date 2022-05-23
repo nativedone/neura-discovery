@@ -26,8 +26,6 @@ const data = [
         width: 320,
         height: 235,
       },
-      // width: 320,
-      // height: 235,
     },
     landscape: {
       blurURL: '/assets/BrainAtlas-Desktop-blur.webp',
@@ -36,8 +34,6 @@ const data = [
         width: 2560,
         height: 1256,
       },
-      // width: 2560,
-      // height: 1256,
     },
   },
   {
@@ -62,8 +58,6 @@ const data = [
         width: 2560,
         height: 1256,
       },
-      // width: 2560,
-      // height: 1256,
     },
   },
   {
@@ -78,8 +72,6 @@ const data = [
         width: 320,
         height: 235,
       },
-      // width: 320,
-      // height: 235,
     },
     landscape: {
       blurURL: '/assets/BrainBank-Desktop-blur.webp',
@@ -88,8 +80,6 @@ const data = [
         width: 2560,
         height: 1256,
       },
-      // width: 2560,
-      // height: 1256,
     },
   },
 
@@ -105,8 +95,6 @@ const data = [
         width: 320,
         height: 235,
       },
-      // width: 320,
-      // height: 235,
     },
     landscape: {
       blurURL: '/assets/Muggle-Desktop-blur.webp',
@@ -115,8 +103,6 @@ const data = [
         width: 2560,
         height: 1256,
       },
-      // width: 2560,
-      // height: 1256,
     },
   },
   {
@@ -131,8 +117,6 @@ const data = [
         width: 320,
         height: 235,
       },
-      // width: 320,
-      // height: 235,
     },
     landscape: {
       blurURL: '/assets/SupportingSchizophrenia-Desktop-blur.webp',
@@ -141,8 +125,6 @@ const data = [
         width: 2560,
         height: 1256,
       },
-      // width: 2560,
-      // height: 1256,
     },
   },
 ];
@@ -181,7 +163,6 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
-          // longSwipes={false}
           grabCursor={true}
           ref={swiperRef}
           speed={1600}
@@ -189,10 +170,7 @@ export function CarouselSwiper() {
           keyboard={true}
           modules={[Keyboard]}
           key={source}
-          // onChange={(value) => setCurrentSlide(value)}
           onSlideChange={(a) => {
-            // console.log("slide change", a);
-            // console.log("slide change realIndex", a.realIndex);
             setIndex(a.realIndex);
           }}
         >
@@ -212,13 +190,9 @@ export function CarouselSwiper() {
                 </TextContainer>
                 <ImageContainer>
                   <ImageWithBlur 
-                    // src={item[source].url}
-                    // width={item[source].width}
-                    // height={item[source].height}
-
                     src={item[source].url}
                     aspect_ratio={item[source].aspectRatio}
-                    blurURL={item[source].blurURL || "https://a.storyblok.com/f/145688/570x605/5a9665afd2/dr-steve-570x605px-desktop.jpg/m/50x0/filters:quality(10):blur(10)"} // update to use a very small image
+                    blurURL={item[source].blurURL}
                     layout="responsive"
                     alt={item.subheading}
                   />
@@ -271,13 +245,11 @@ const CarouselContainer = styled("div", {
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
     animationDuration: `2.85s`,
-    // animationDelay: `0.5s`,
   },
   
   ".swiper-slide-active .slider-paragraph-container" :{
     animationName: `${fadeInSlow}`,
     animationDuration: `4.7s`,
-    // animationDelay: `0.8s`,
   },
   ".swiper-slide-prev .slider-text-container": {
     animation: `${fadeOutFast} 0.35s`,
@@ -320,7 +292,6 @@ const BackgroundSubheading = styled("span", {
   "@3": {
     display: "flex",
     alignItems: "center",
-    // justifyContent: "center",
     minWidth: "50vw",
     paddingTop: "$x_4",
     paddingBottom: "$x_2",
@@ -343,12 +314,10 @@ const CarouselSubheading = styled("span", {
   "@3": {
     whiteSpace: "nowrap",
     display: "inline-block",
-    // minWidth: '34ch',
     lineHeight: "1",
     paddingBottom: "$x_8",
     paddingTop: "$x_4",
     paddingLeft: "$x_2",
-    // width: "100%",
     transform: "translate3d(0, 0.1em, 0)",
     display: "inline-block",
     textAlign: "left",
