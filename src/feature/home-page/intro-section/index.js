@@ -13,7 +13,7 @@ export function IntroSection() {
             `Our brains are incredible. They have taken us to the moon and will one day take us to Mars. And yet, we still know so little about them. That’s why research into brain function and neuroscience is urgently needed. Because research leads to discoveries, and discoveries lead to cures for conditions that affect millions of people. Will you join NeuRA’s researchers in the greatest discovery mission of your lifetime?`,
           ]}
           imageData={{
-            src: "/assets/Dr. Steve - 570x605px - Desktop.jpg",
+            src: "/assets/Dr. Steve - 570x605px - Desktop.webp",
             blurURL: '/assets/Dr. Steve - 570x605px - Desktop-blur.webp',
             aspectRatio: {
               width: 570,
