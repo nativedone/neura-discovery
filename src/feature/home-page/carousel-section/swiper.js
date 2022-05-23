@@ -1,5 +1,4 @@
 import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { Keyboard } from "swiper";
@@ -44,7 +43,7 @@ const data = [
   {
     id: "carousel-item2",
     subheading: "Connecting young & old",
-    paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. Early research suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
+    paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. This suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
 
     portrait: {
       blurURL: '/assets/ConnectingYoung&Old-Mobile-blur.webp',
