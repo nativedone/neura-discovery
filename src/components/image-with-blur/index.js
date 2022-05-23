@@ -44,7 +44,7 @@ export function ImageWithBlur(props) {
       placeholder="blur"
       blurDataURL={blurURL}
       {...dimensions}
-      loader={cloudflareImageLoader}
+      // loader={cloudflareImageLoader} See why it does not work anymore
     />
   );
 }
