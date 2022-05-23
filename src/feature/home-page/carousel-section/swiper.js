@@ -81,7 +81,7 @@ const data = [
   {
     id: "carousel-item5",
     subheading: "Supporting schizophrenia",
-    paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s Schizophrenia Research Institute is the only national institute solely dedicated to discovering ways to treat, prevent and possibly cure this disorder - and in 2020, our scientists made an incredible discovery that gets us closer.`,
+    paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s schizophrenia research team is solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made an incredible discovery that gets closer to finding a cure.`,
 
     portrait: {
       url: "/assets/SupportingSchizophrenia-320x235px-MobileNew2.jpg",
