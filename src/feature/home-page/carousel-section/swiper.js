@@ -390,10 +390,16 @@ const TextContainer = styled("div", {
   width: "85vw",
   margin: "0 auto",
 
-  paddingBottom: "46px", // TODO: fix me when we have a new content or design solution
+  paddingBottom: "56px",
+  "@1": {
+    paddingBottom: "36px"
+  }, 
+
+  minHeight: "calc(100vh - calc( (235 / 320) * 100vw ))",
 
   zIndex: "100",
   "@3": {
+    minHeight: 'unset',
     margin: "unset",
 
     width: "50%",

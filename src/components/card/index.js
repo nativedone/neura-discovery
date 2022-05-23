@@ -1,5 +1,4 @@
 import { styled } from "@theme";
-import Image from "next/image";
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
 
 import { ImageWithBlur } from "@components/image-with-blur";
@@ -82,7 +81,7 @@ export const ScrollAreaThumb = StyledThumb;
 export const ScrollAreaCorner = StyledCorner;
 
 export function Card({ layout, subheading, paragraphs, imageData }) {
-  console.log(imageData, "imageData");
+  // console.log(imageData, "imageData");x
   return (
     <CardContainer variantLayout={layout}>
       <ScrollArea type="auto">
