@@ -14,7 +14,7 @@ export function IntroSection() {
           ]}
           imageData={{
             src: "/assets/Dr. Steve - 570x605px - Desktop.jpg",
-            blurURL: 'Dr. Steve - 570x605px - Desktop-blur.webp',
+            blurURL: '/assets/Dr. Steve - 570x605px - Desktop-blur.webp',
             aspectRatio: {
               width: 570,
               height: 605,
