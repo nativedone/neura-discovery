@@ -81,7 +81,6 @@ export const ScrollAreaThumb = StyledThumb;
 export const ScrollAreaCorner = StyledCorner;
 
 export function Card({ layout, subheading, paragraphs, imageData }) {
-  // console.log(imageData, "imageData");x
   return (
     <CardContainer variantLayout={layout}>
       <ScrollArea type="auto">
@@ -161,7 +160,6 @@ const ImageContainer = styled("div", {
 const TextContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  // justifyContent: "center",
   alignItems: "center",
   color: "#fff",
   maxWidth: "100%",
@@ -169,9 +167,6 @@ const TextContainer = styled("div", {
     minWidth: "10%",
     maxWidth: "100%",
   },
-  // backgroundColor: "blue",
-
-  //   fontSize: "$5", // TODO: confirm b/c design says 72px
   fontWeight: "$bold",
 });
 

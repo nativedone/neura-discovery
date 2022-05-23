@@ -24,8 +24,6 @@ class MyDocument extends Document {
             href="/fonts/neo-sans-medium-500.woff2"
             crossOrigin=""
           />
-
-          <link rel="stylesheet" href="https://use.typekit.net/awf4vkd.css" />
         </Head>
         <body>
           <Main />
