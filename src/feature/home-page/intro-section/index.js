@@ -40,6 +40,7 @@ export function IntroSection() {
           ]}
           imageData={{
             src: "/assets/Bringing Hope - 570 x 605px - Desktop.webp",
+            blurURL: "/assets/Bringing Hope - 570 x 605px - Desktop-blur.webp",
             aspectRatio: {
               width: 570,
               height: 605,
