@@ -39,7 +39,7 @@ export function IntroSection() {
             `As a leader in brain and nervous system research, NeuRA’s goal is to tackle some of the world’s biggest health challenges. Our scientists have pioneered breakthroughs in dementia and schizophrenia research, developed mobile phone apps that can predict falls in older people, and given hope to those living with spinal cord injuries.`,
           ]}
           imageData={{
-            src: "/assets/Bringing Hope - 570 x 605px - Desktop.jpg",
+            src: "/assets/Bringing Hope - 570 x 605px - Desktop.webp",
             aspectRatio: {
               width: 570,
               height: 605,

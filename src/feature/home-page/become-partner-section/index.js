@@ -24,7 +24,7 @@ export function BecomePartnerSection() {
             `Join us in this extraordinary journey.`,
           ]}
           imageData={{
-            src: "/assets/The Generosity - 570x605px - Desktop.jpg",
+            src: "/assets/The Generosity - 570x605px - Desktop.webp",
             aspectRatio: {
               width: 570,
               height: 605,

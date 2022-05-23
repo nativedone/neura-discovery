@@ -19,12 +19,12 @@ const data = [
     paragraph: `Like all explorers, neuroscientists need maps to guide their path to success. World-renowned brain cartographer and NeuRA scientist Professor George Paxinos AO made medical history in 2019 when he launched the most comprehensive atlas of the human brainstem ever made. His work has assisted in the development of treatments for conditions like Parkinson’s and Alzheimer’s disease.`,
 
     portrait: {
-      url: "/assets/Brain Atlas - 320x235px - Mobile.jpg",
+      url: "/assets/Brain Atlas - 320x235px - Mobile.webp",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/BrainAtlas-DesktopNew.jpg",
+      url: "/assets/BrainAtlas-DesktopNew.webp",
       width: 2560,
       height: 1256,
     },
@@ -35,12 +35,12 @@ const data = [
     paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. Early research suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
 
     portrait: {
-      url: "/assets/ConnectingYoung&Old-MobileNew2.jpg",
+      url: "/assets/ConnectingYoung&Old-MobileNew2.webp",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/ConnectingYoung&Old-DesktopNew2.jpg",
+      url: "/assets/ConnectingYoung&Old-DesktopNew2.webp",
       width: 2560,
       height: 1256,
     },
@@ -51,12 +51,12 @@ const data = [
     paragraph: `Can you imagine a bank that houses not money, but human brain? The Sydney Brain Bank at NeuRA does just that. The facility collects, stores and distributes tissue samples for research into conditions such as Alzheimer’s and Parkinson’s disease. Currently they have brain tissue from over 700 donors and donate around 6,000 specimens each year to research groups to aid in medical research.`,
 
     portrait: {
-      url: "/assets/Brain Bank-320x235px-MobileNew2.jpg",
+      url: "/assets/Brain Bank-320x235px-MobileNew2.webp",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/BrainBank-DesktopNew2.jpg",
+      url: "/assets/BrainBank-DesktopNew2.webp",
       width: 2560,
       height: 1256,
     },
@@ -68,12 +68,12 @@ const data = [
     paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. Data from the 320 participants aged 5–14 will help researchers track muscles over time, creating a foundation for further investigation. Pretty magical stuff!`,
 
     portrait: {
-      url: "/assets/Muggle-320x235px-MobileNew2.jpg",
+      url: "/assets/Muggle-320x235px-MobileNew2.webp",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/Muggle-DesktopNew2.jpg",
+      url: "/assets/Muggle-DesktopNew2.webp",
       width: 2560,
       height: 1256,
     },
@@ -84,12 +84,12 @@ const data = [
     paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s schizophrenia research team is solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made an incredible discovery that gets closer to finding a cure.`,
 
     portrait: {
-      url: "/assets/SupportingSchizophrenia-320x235px-MobileNew2.jpg",
+      url: "/assets/SupportingSchizophrenia-320x235px-MobileNew2.webp",
       width: 320,
       height: 235,
     },
     landscape: {
-      url: "/assets/SupportingSchizophrenia-DesktopNew2.jpg",
+      url: "/assets/SupportingSchizophrenia-DesktopNew2.webp",
       width: 2560,
       height: 1256,
     },
