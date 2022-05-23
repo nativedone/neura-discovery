@@ -1,5 +1,4 @@
 import { styled } from "@theme";
-import Image from "next/image";
 import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area";
 
 import { ImageWithBlur } from "@components/image-with-blur";
@@ -82,7 +81,7 @@ export const ScrollAreaThumb = StyledThumb;
 export const ScrollAreaCorner = StyledCorner;
 
 export function Card({ layout, subheading, paragraphs, imageData }) {
-  console.log(imageData, "imageData");
+  // console.log(imageData, "imageData");x
   return (
     <CardContainer variantLayout={layout}>
       <ScrollArea type="auto">
@@ -102,6 +101,7 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
       <ImageContainer>
         <ImageWithBlur  
           src={imageData.src}
+          alt={imageData.alt}
           aspect_ratio={imageData.aspectRatio}
           layout="responsive"
           blurURL={imageData.blurURL || "https://a.storyblok.com/f/145688/570x605/5a9665afd2/dr-steve-570x605px-desktop.jpg/m/50x0/filters:quality(10):blur(10)"} // update to use a very small image

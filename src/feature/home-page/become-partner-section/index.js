@@ -24,7 +24,9 @@ export function BecomePartnerSection() {
             `Join us in this extraordinary journey.`,
           ]}
           imageData={{
-            src: "/assets/The Generosity - 570x605px - Desktop.jpg",
+            src: "/assets/The Generosity - 570x605px - Desktop.webp",
+            blurURL: '/assets/The Generosity - 570x605px - Desktop-blur.webp',
+            alt:"The Generosity",
             aspectRatio: {
               width: 570,
               height: 605,

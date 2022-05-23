@@ -51,9 +51,8 @@ export function Footer() {
           </li>
         </LogoControl>
         <SocialLinksNav>
-          <Span>
-            <LogoDiv>
-            <li className="li">
+          <Span>           
+            <li className="logo">
               <a
                 href="https://www.neura.edu.au/"
                 target="_blank"
@@ -63,7 +62,6 @@ export function Footer() {
                 <VisuallyHidden>Visit our Webpage</VisuallyHidden>
               </a>
             </li>             
-            </LogoDiv> 
             <li className="li">
               <a
                 href="https://www.facebook.com/NeuroscienceResearchAustralia/"
@@ -129,7 +127,7 @@ const SemanticFooter = styled("footer", {
   padding: "calc($x * 1.5)",
 });
 
-const LogoControl = styled("div",{
+const LogoControl = styled("ul",{
  /* 2.125rem(34px) @ 20rem(320px) increasing to 5.35rem(85.6px) @ 160rem(2560px) */
   fontSize: "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 2.3036)), 5.35rem)",
 
@@ -184,7 +182,7 @@ const SocialLinksNav = styled("nav", {
   }
 });
 
-const Span = styled("span", {
+const Span = styled("ul", {
   display: "flex",
   justifyContent:"space-between",
  /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 4.71875rem(75.5px) @ 160rem(2560px) */
@@ -196,8 +194,18 @@ const Span = styled("span", {
 
 ".li" : {
   listStyle: "none",
-}
+},
 
+".logo" : {
+  listStyle: "none",
+
+  "@0":{
+    display: "none"
+  },
+  "@3": {
+    display: "block"
+  }
+},
 });
 
 const Rights = styled("div",{
@@ -215,12 +223,6 @@ const Links = styled("div",{
   }
 })
 
-const LogoDiv = styled("div",{
-  "@0":{
-    display: "none"
-  },
-  "@3": {
-    display: "block"
-  }
-})
+
+
 
