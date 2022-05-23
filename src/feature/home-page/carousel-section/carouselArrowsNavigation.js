@@ -12,6 +12,7 @@ export function CarouselArrowsNavigation({ prevSlide, nextSlide }) {
         onClick={prevSlide}
       >
         <LeftArrowIcon/>
+        <VisuallyHidden>{`Go to prev slide`}</VisuallyHidden>
       </DesktopNavigationButton>
       <DesktopNavigationButton 
         className="navigation-arrow"

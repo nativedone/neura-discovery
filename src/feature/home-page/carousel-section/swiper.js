@@ -1,10 +1,11 @@
 import React, { useCallback, useRef, useState } from "react";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
 import { Keyboard } from "swiper";
 // Import Swiper styles
 import "swiper/css";
+
+import { ImageWithBlur } from "@components/image-with-blur";
 
 import { styled, keyframes } from "@theme";
 import { useSources } from "@hooks/use-sources";
@@ -19,30 +20,44 @@ const data = [
     paragraph: `Like all explorers, neuroscientists need maps to guide their path to success. World-renowned brain cartographer and NeuRA scientist Professor George Paxinos AO made medical history in 2019 when he launched the most comprehensive atlas of the human brainstem ever made. His work has assisted in the development of treatments for conditions like Parkinson’s and Alzheimer’s disease.`,
 
     portrait: {
-      url: "/assets/Brain Atlas - 320x235px - Mobile.jpg",
-      width: 320,
-      height: 235,
+      blurURL: '/assets/Brain Atlas - 320x235px - Mobile-blur.webp',
+      url: "/assets/Brain Atlas - 320x235px - Mobile.webp",
+      aspectRatio: {
+        width: 320,
+        height: 235,
+      },
     },
     landscape: {
-      url: "/assets/BrainAtlas-DesktopNew.jpg",
-      width: 2560,
-      height: 1256,
+      blurURL: '/assets/BrainAtlas-Desktop-blur.webp',
+      url: "/assets/BrainAtlas-Desktop.webp",
+      aspectRatio: {
+        width: 2560,
+        height: 1256,
+      },
     },
   },
   {
     id: "carousel-item2",
     subheading: "Connecting young & old",
-    paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. Early research suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
+    paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. This suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
 
     portrait: {
-      url: "/assets/ConnectingYoung&Old-MobileNew2.jpg",
-      width: 320,
-      height: 235,
+      blurURL: '/assets/ConnectingYoung&Old-Mobile-blur.webp',
+      url: "/assets/ConnectingYoung&Old-Mobile.webp",
+      aspectRatio: {
+        width: 320,
+        height: 235,
+      },
+      // width: 320,
+      // height: 235,
     },
     landscape: {
-      url: "/assets/ConnectingYoung&Old-DesktopNew2.jpg",
-      width: 2560,
-      height: 1256,
+      blurURL: '/assets/ConnectingYoung&Old-Desktop-blur.webp',
+      url: "/assets/ConnectingYoung&Old-Desktop.webp",
+      aspectRatio: {
+        width: 2560,
+        height: 1256,
+      },
     },
   },
   {
@@ -51,14 +66,20 @@ const data = [
     paragraph: `Can you imagine a bank that houses not money, but human brain? The Sydney Brain Bank at NeuRA does just that. The facility collects, stores and distributes tissue samples for research into conditions such as Alzheimer’s and Parkinson’s disease. Currently they have brain tissue from over 700 donors and donate around 6,000 specimens each year to research groups to aid in medical research.`,
 
     portrait: {
-      url: "/assets/Brain Bank-320x235px-MobileNew2.jpg",
-      width: 320,
-      height: 235,
+      blurURL: '/assets/Brain Bank-320x235px-Mobile-blur.webp',
+      url: "/assets/Brain Bank-320x235px-Mobile.webp",
+      aspectRatio: {
+        width: 320,
+        height: 235,
+      },
     },
     landscape: {
-      url: "/assets/BrainBank-DesktopNew2.jpg",
-      width: 2560,
-      height: 1256,
+      blurURL: '/assets/BrainBank-Desktop-blur.webp',
+      url: "/assets/BrainBank-Desktop.webp",
+      aspectRatio: {
+        width: 2560,
+        height: 1256,
+      },
     },
   },
 
@@ -68,30 +89,42 @@ const data = [
     paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. Data from the 320 participants aged 5–14 will help researchers track muscles over time, creating a foundation for further investigation. Pretty magical stuff!`,
 
     portrait: {
-      url: "/assets/Muggle-320x235px-MobileNew2.jpg",
-      width: 320,
-      height: 235,
+      blurURL: '/assets/Muggle-320x235px-Mobile-blur.webp',
+      url: "/assets/Muggle-320x235px-Mobile.webp",
+      aspectRatio: {
+        width: 320,
+        height: 235,
+      },
     },
     landscape: {
-      url: "/assets/Muggle-DesktopNew2.jpg",
-      width: 2560,
-      height: 1256,
+      blurURL: '/assets/Muggle-Desktop-blur.webp',
+      url: "/assets/Muggle-Desktop.webp",
+      aspectRatio: {
+        width: 2560,
+        height: 1256,
+      },
     },
   },
   {
     id: "carousel-item5",
     subheading: "Supporting schizophrenia",
-    paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s Schizophrenia Research Institute is the only national institute solely dedicated to discovering ways to treat, prevent and possibly cure this disorder - and in 2020, our scientists made an incredible discovery that gets us closer.`,
+    paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s schizophrenia research team is solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made an incredible discovery that gets closer to finding a cure.`,
 
     portrait: {
-      url: "/assets/SupportingSchizophrenia-320x235px-MobileNew2.jpg",
-      width: 320,
-      height: 235,
+      blurURL: '/assets/SupportingSchizophrenia-320x235px-Mobile-blur.webp',
+      url: "/assets/SupportingSchizophrenia-320x235px-Mobile.webp",
+      aspectRatio: {
+        width: 320,
+        height: 235,
+      },
     },
     landscape: {
-      url: "/assets/SupportingSchizophrenia-DesktopNew2.jpg",
-      width: 2560,
-      height: 1256,
+      blurURL: '/assets/SupportingSchizophrenia-Desktop-blur.webp',
+      url: "/assets/SupportingSchizophrenia-Desktop.webp",
+      aspectRatio: {
+        width: 2560,
+        height: 1256,
+      },
     },
   },
 ];
@@ -130,16 +163,14 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
+          grabCursor={true}
           ref={swiperRef}
-          speed={1200}
+          speed={1600}
           slidesPerView={1}
           keyboard={true}
           modules={[Keyboard]}
           key={source}
-          // onChange={(value) => setCurrentSlide(value)}
           onSlideChange={(a) => {
-            // console.log("slide change", a);
-            // console.log("slide change realIndex", a.realIndex);
             setIndex(a.realIndex);
           }}
         >
@@ -148,22 +179,22 @@ export function CarouselSwiper() {
               <CarouselItemContainer>
                 <TextContainer className="slider-text-container">
                   <BackgroundSubheading>
-                    <CarouselSubheading>
+                    <CarouselSubheading >
                       {item.subheading}
                     </CarouselSubheading>
                   </BackgroundSubheading>
-                  <CarouselParagraph
+                  <CarouselParagraph className="slider-paragraph-container"
                   >
                     {item.paragraph}
                   </CarouselParagraph>
                 </TextContainer>
                 <ImageContainer>
-                  <Image
+                  <ImageWithBlur 
                     src={item[source].url}
-                    alt={item.subheading}
-                    width={item[source].width}
-                    height={item[source].height}
+                    aspect_ratio={item[source].aspectRatio}
+                    blurURL={item[source].blurURL}
                     layout="responsive"
+                    alt={item.subheading}
                   />
                 </ImageContainer>
               </CarouselItemContainer>
@@ -203,16 +234,42 @@ const CarouselContainer = styled("div", {
     },
   },
 
+  ".swiper-slide": {
+    opacity: 0,
+  },
+
+  ".swiper-slide.swiper-slide-active": {
+    opacity: 1,
+   },
+
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
-    animationDuration: `2s`,
-    animationDelay: `0.3s`,
+    animationDuration: `2.85s`,
+  },
+  
+  ".swiper-slide-active .slider-paragraph-container" :{
+    animationName: `${fadeInSlow}`,
+    animationDuration: `4.7s`,
   },
   ".swiper-slide-prev .slider-text-container": {
-    animation: `${fadeOutFast} 2s`,
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
   },
   ".swiper-slide-next .slider-text-container": {
-    animation: `${fadeOutFast} 2s`,
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
+  },
+  ".swiper-slide-prev .slider-paragraph-container": {
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
+  },
+  ".swiper-slide-next .slider-paragraph-container": {
+    animation: `${fadeOutFast} 0.35s`,
+
+    opacity: 0,
   },
 });
 
@@ -235,7 +292,6 @@ const BackgroundSubheading = styled("span", {
   "@3": {
     display: "flex",
     alignItems: "center",
-    // justifyContent: "center",
     minWidth: "50vw",
     paddingTop: "$x_4",
     paddingBottom: "$x_2",
@@ -258,12 +314,10 @@ const CarouselSubheading = styled("span", {
   "@3": {
     whiteSpace: "nowrap",
     display: "inline-block",
-    // minWidth: '34ch',
     lineHeight: "1",
     paddingBottom: "$x_8",
     paddingTop: "$x_4",
     paddingLeft: "$x_2",
-    // width: "100%",
     transform: "translate3d(0, 0.1em, 0)",
     display: "inline-block",
     textAlign: "left",
@@ -271,6 +325,7 @@ const CarouselSubheading = styled("span", {
 });
 
 const CarouselParagraph = styled("p", {
+
   zIndex: "$40",
   fontSize: "$0",
   lineHeight: "$tight",
@@ -303,10 +358,16 @@ const TextContainer = styled("div", {
   width: "85vw",
   margin: "0 auto",
 
-  paddingBottom: "46px", // TODO: fix me when we have a new content or design solution
+  paddingBottom: "56px",
+  "@1": {
+    paddingBottom: "36px"
+  }, 
+
+  minHeight: "calc(100vh - calc( (235 / 320) * 100vw ))",
 
   zIndex: "100",
   "@3": {
+    minHeight: 'unset',
     margin: "unset",
 
     width: "50%",
