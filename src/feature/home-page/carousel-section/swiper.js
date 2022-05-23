@@ -354,7 +354,7 @@ const ImageContainer = styled("div", {
 const TextContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  textAlign: "center",
+  textAlign: "align-left",
   width: "85vw",
   margin: "0 auto",
 
