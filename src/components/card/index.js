@@ -102,6 +102,7 @@ export function Card({ layout, subheading, paragraphs, imageData }) {
       <ImageContainer>
         <ImageWithBlur  
           src={imageData.src}
+          alt={imageData.alt}
           aspect_ratio={imageData.aspectRatio}
           layout="responsive"
           blurURL={imageData.blurURL || "https://a.storyblok.com/f/145688/570x605/5a9665afd2/dr-steve-570x605px-desktop.jpg/m/50x0/filters:quality(10):blur(10)"} // update to use a very small image

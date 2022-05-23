@@ -26,6 +26,7 @@ export function BecomePartnerSection() {
           imageData={{
             src: "/assets/The Generosity - 570x605px - Desktop.webp",
             blurURL: '/assets/The Generosity - 570x605px - Desktop-blur.webp',
+            alt:"The Generosity",
             aspectRatio: {
               width: 570,
               height: 605,
