@@ -160,7 +160,6 @@ const ImageContainer = styled("div", {
 const TextContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
   color: "#fff",
   maxWidth: "100%",
   "@3": {
