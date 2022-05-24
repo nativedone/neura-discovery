@@ -1,9 +1,11 @@
 import React, { useCallback, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Keyboard } from "swiper";
+import { Keyboard, EffectFade } from "swiper";
 // Import Swiper styles
 import "swiper/css";
+
+import "swiper/css/effect-fade";
 
 import { ImageWithBlur } from "@components/image-with-blur";
 
@@ -164,7 +166,8 @@ export function CarouselSwiper() {
           ref={swiperRef}
           slidesPerView={1}
           keyboard={true}
-          modules={[Keyboard]}
+          effect={"fade"}
+          modules={[Keyboard, EffectFade]}
           key={source}
           onSlideChange={(a) => {
             setIndex(a.realIndex);
@@ -228,7 +231,11 @@ const CarouselContainer = styled("div", {
   },
 
   ".swiper-slide": {
-    opacity: 1,
+    opacity: "1 !important",
+
+    "&:not(.swiper-slide-active)": {
+        opacity: "0 !important",
+     }
   },
 
   ".swiper-slide.swiper-slide-active": {
@@ -246,22 +253,18 @@ const CarouselContainer = styled("div", {
   },
   ".swiper-slide-prev .slider-text-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
   ".swiper-slide-next .slider-text-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
   ".swiper-slide-prev .slider-paragraph-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
   ".swiper-slide-next .slider-paragraph-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
 });
