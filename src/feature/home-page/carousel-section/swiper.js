@@ -230,6 +230,9 @@ const CarouselContainer = styled("div", {
     },
   },
 
+// fix text overlapping on mobile when add fade effect on swiper  ////
+// See more at - https://github.com/nolimits4web/swiper/issues/1098 //
+
   ".swiper-slide": {
     opacity: "1 !important",
 
@@ -238,9 +241,7 @@ const CarouselContainer = styled("div", {
      }
   },
 
-  ".swiper-slide.swiper-slide-active": {
-    opacity: 1,
-  },
+///////////////////////////////////////////////////////////////////////
 
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
