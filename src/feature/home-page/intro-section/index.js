@@ -8,9 +8,8 @@ export function IntroSection() {
       <Lateral />
       <div>
         <Card
-          // subheading={`“We know more about space than we do about the brain.”`}
-          subhead={`“We know more about space than we do about the brain.”`}
-          quote={[
+          subheading={`“We know more about space than we do about the brain.”`}
+          author={[
             `– Dr Steve Kassem`,
           ]}
           paragraphs={[
