@@ -15,7 +15,7 @@ export function BecomePartnerSection() {
         <DividerGapWithFiller />
         <Card
           subheading={`“The generosity of everyday Australians keeps our research going.”`}
-          author={` – Professor Peter Schofield AO`}
+          author={` – Prof Peter Schofield AO`}
           paragraphs={[
             `NeuRA’s scientists and researchers are among the best in the world. But their work is only possible with ongoing support from regular donors who are passionate about finding ways to cure, treat and prevent diseases, disabilities and injuries of the brain.`,
 
