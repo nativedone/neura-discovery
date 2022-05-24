@@ -31,22 +31,18 @@ export const Button = styled("button", {
     borderTop: "none",
   },
 
+  fontSize: "$0", 
+  "@8": {
+  fontSize: "$3", 
+  },
+
   variants: {
     variant: {
       primary: {
-        fontSize: "$0", 
         backgroundColor: "rgba(0, 35, 63, 0.8)",
-        opacity: "80%", 
-        "@8": {
-          fontSize: "$3", 
-        }    
       },
       secondary: {
-        fontSize: "$0", 
         backgroundColor: "transparent",
-        "@8": {
-          fontSize: "$3", 
-        }
       },
     },
   },

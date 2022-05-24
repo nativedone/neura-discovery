@@ -87,7 +87,7 @@ export function Card({ layout, subheading, author, paragraphs, imageData }) {
         <ScrollAreaViewport css={{}}>
           <TextContainer>
             <H2>{subheading}</H2>
-            <Span>{author}</Span>
+            <Author>{author}</Author>
             {paragraphs.map((paragraph) => (
               <P key={paragraph}>{paragraph}</P>
             ))}
@@ -181,7 +181,7 @@ const P = styled("p", {
   fontWeight: "$normal",
 });
 
-const Span = styled("p", {
+const Author = styled("span", {
   fontSize: "$0",
   paddingTop: "$x_8",
   fontWeight: "$normal",
