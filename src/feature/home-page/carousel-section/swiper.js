@@ -53,7 +53,7 @@ const data = [
     },
     landscape: {
       blurURL: "/assets/ConnectingYoungOld-Desktop-blur.webp",
-      url: "/assets/ConnectingYoungOld-Desktop.webp",
+      url: "/assets/ConnectingYoung-Old-Desktop.webp",
       aspectRatio: {
         width: 2560,
         height: 1256,

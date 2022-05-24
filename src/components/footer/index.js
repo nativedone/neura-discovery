@@ -159,14 +159,8 @@ const SemanticContainer = styled("div", {
 });
 
 const ExternalLinksNav = styled("nav", {
-  // fontSize: "48px", // 2560px
-  // fontSize: "10px", // 320px
-  // fontSize: "clamp(0.625rem, calc(0.625rem + ((1vw - 0.2rem) * 1.6964)), 3rem)", //old
-
-
 /* 0.625rem(10px) @ 20rem(320px) increasing to 2rem(32px) @ 160rem(2560px) */
   fontSize: "clamp(0.625rem, calc(0.625rem + ((1vw - 0.2rem) * 0.9821)), 2rem)", // new
-
 
   /* Safari resize fix */
   minHeight: "0vw",
@@ -191,9 +185,6 @@ const SocialLinksNav = styled("nav", {
 const Span = styled("ul", {
   display: "flex",
   justifyContent:"space-between",
- /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 4.71875rem(75.5px) @ 160rem(2560px) */
-  // fontSize: "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 2.4554)), 4.71875rem)", // old
-
 
   /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
   fontSize: "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 1.7634)), 3.75rem)", // new
