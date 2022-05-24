@@ -77,7 +77,7 @@ export function Header({ animateOnScroll = true }) {
               </a>
             </li>
             <li>
-              <Button variant="secondary">JOIN US NOW</Button>
+              <Button variant="primary">JOIN US NOW</Button>
             </li>
           </ul>
         </SemanticNav>

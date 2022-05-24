@@ -56,7 +56,6 @@ const BodyContainer = styled("div", {
 const BodyContent = styled("div", {
   position: "relative",
   zIndex: "$40",
-
   display: "flex",
   flexDirection: "column",
   width: "100vw",
