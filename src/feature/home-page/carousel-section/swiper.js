@@ -1,9 +1,10 @@
 import React, { useCallback, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import required modules
-import { Keyboard } from "swiper";
+import { Keyboard, EffectFade } from "swiper";
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-fade";
 
 import { ImageWithBlur } from "@components/image-with-blur";
 
@@ -165,11 +166,12 @@ export function CarouselSwiper() {
         <Swiper
           // grabCursor={true}
           ref={swiperRef}
+          effect={"fade"}
           // speed={1600}
-          // speed={700}
+          speed={700}
           slidesPerView={1}
           keyboard={true}
-          modules={[Keyboard]}
+          modules={[EffectFade, Keyboard]}
           key={source}
           onSlideChange={(a) => {
             setIndex(a.realIndex);
@@ -178,7 +180,7 @@ export function CarouselSwiper() {
           {data?.map((item, index) => (
             <SwiperSlide key={`slide key.id ${index}`}>
               <CarouselItemContainer>
-                <TextContainer className="slider-text-container">
+                <TextContainer className="slider-text-container" key={`slide key.id ${index}`}>
                   <BackgroundSubheading>
                     <CarouselSubheading>{item.subheading}</CarouselSubheading>
                   </BackgroundSubheading>
