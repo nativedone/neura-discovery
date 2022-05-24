@@ -77,7 +77,13 @@ export function Header({ animateOnScroll = true }) {
               </a>
             </li>
             <li>
-              <Button variant="secondary">JOIN US NOW</Button>
+              <Button
+                variant="secondary"
+                as="a"
+                href="/?form=donate"
+              >
+                JOIN US NOW
+              </Button>
             </li>
           </ul>
         </SemanticNav>

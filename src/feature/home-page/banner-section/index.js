@@ -6,7 +6,12 @@ export function BannerSection({ text, renderButton }) {
     <BannerSectionContainer>
       <H2>{text}</H2>
       {renderButton && (
-        <Button variant="secondary" css={{ marginTop: "$x_2" }}>
+        <Button
+          variant="secondary"
+          css={{ marginTop: "$x_2" }}
+          as="a"
+          href="/?form=donate"
+        >
           JOIN US NOW
         </Button>
       )}
@@ -23,14 +28,14 @@ const BannerSectionContainer = styled("section", {
   background:
     "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
 
-    zIndex: '$20',
+  zIndex: "$20",
 });
 
 const H2 = styled("h2", {
   fontSize: "$3",
   // paddingBottom: "$x_2",
   fontWeight: "medium",
-  color:"#fff",
+  color: "#fff",
   width: "85vw",
   "@3": {
     width: "75vw",
