@@ -20,7 +20,7 @@ const data = [
     paragraph: `Like all explorers, neuroscientists need maps to guide their path to success. World-renowned brain cartographer and NeuRA scientist Professor George Paxinos AO made medical history in 2019 when he launched the most comprehensive atlas of the human brainstem ever made. His work has assisted in the development of treatments for conditions like Parkinson’s and Alzheimer’s disease.`,
 
     portrait: {
-      blurURL: '/assets/Brain Atlas - 320x235px - Mobile-blur.webp',
+      blurURL: "/assets/Brain Atlas - 320x235px - Mobile-blur.webp",
       url: "/assets/Brain Atlas - 320x235px - Mobile.webp",
       aspectRatio: {
         width: 320,
@@ -28,7 +28,7 @@ const data = [
       },
     },
     landscape: {
-      blurURL: '/assets/BrainAtlas-Desktop-blur.webp',
+      blurURL: "/assets/BrainAtlas-Desktop-blur.webp",
       url: "/assets/BrainAtlas-Desktop.webp",
       aspectRatio: {
         width: 2560,
@@ -42,8 +42,8 @@ const data = [
     paragraph: `Inspired by a TV show, NeuRA scientists launched a study that placed older Australians with pre-schoolers to see what physical, cognitive and social benefits could be brought to both groups. This suggests that coming together for purposeful activities could reduce frailty and feelings of loneliness in older people, while boosting social and language skills for children.`,
 
     portrait: {
-      blurURL: '/assets/ConnectingYoung&Old-Mobile-blur.webp',
-      url: "/assets/ConnectingYoung&Old-Mobile.webp",
+      blurURL: "/assets/ConnectingYoungOld-Mobile-blur.webp",
+      url: "/assets/ConnectingYoungOld-Mobile.webp",
       aspectRatio: {
         width: 320,
         height: 235,
@@ -52,8 +52,8 @@ const data = [
       // height: 235,
     },
     landscape: {
-      blurURL: '/assets/ConnectingYoung&Old-Desktop-blur.webp',
-      url: "/assets/ConnectingYoung&Old-Desktop.webp",
+      blurURL: "/assets/ConnectingYoungOld-Desktop-blur.webp",
+      url: "/assets/ConnectingYoungOld-Desktop.webp",
       aspectRatio: {
         width: 2560,
         height: 1256,
@@ -66,7 +66,7 @@ const data = [
     paragraph: `Can you imagine a bank that houses not money, but human brain? The Sydney Brain Bank at NeuRA does just that. The facility collects, stores and distributes tissue samples for research into conditions such as Alzheimer’s and Parkinson’s disease. Currently they have brain tissue from over 700 donors and donate around 6,000 specimens each year to research groups to aid in medical research.`,
 
     portrait: {
-      blurURL: '/assets/Brain Bank-320x235px-Mobile-blur.webp',
+      blurURL: "/assets/Brain Bank-320x235px-Mobile-blur.webp",
       url: "/assets/Brain Bank-320x235px-Mobile.webp",
       aspectRatio: {
         width: 320,
@@ -74,7 +74,7 @@ const data = [
       },
     },
     landscape: {
-      blurURL: '/assets/BrainBank-Desktop-blur.webp',
+      blurURL: "/assets/BrainBank-Desktop-blur.webp",
       url: "/assets/BrainBank-Desktop.webp",
       aspectRatio: {
         width: 2560,
@@ -89,7 +89,7 @@ const data = [
     paragraph: `In the world of Harry Potter, Muggles didn’t have any magical abilities. But at NeuRA, MUGgLEs have very special powers — they help researchers understand more about how muscles grow and develop in children with cerebral palsy. Data from the 320 participants aged 5–14 will help researchers track muscles over time, creating a foundation for further investigation. Pretty magical stuff!`,
 
     portrait: {
-      blurURL: '/assets/Muggle-320x235px-Mobile-blur.webp',
+      blurURL: "/assets/Muggle-320x235px-Mobile-blur.webp",
       url: "/assets/Muggle-320x235px-Mobile.webp",
       aspectRatio: {
         width: 320,
@@ -97,7 +97,7 @@ const data = [
       },
     },
     landscape: {
-      blurURL: '/assets/Muggle-Desktop-blur.webp',
+      blurURL: "/assets/Muggle-Desktop-blur.webp",
       url: "/assets/Muggle-Desktop.webp",
       aspectRatio: {
         width: 2560,
@@ -111,7 +111,7 @@ const data = [
     paragraph: `1 in 100 people live with schizophrenia - a serious mental disorder. Currently there is no cure and treatments only help manage psychotic symptoms. NeuRA’s schizophrenia research team is solely dedicated to discovering ways to treat, prevent and cure this disorder and in 2020, our scientists made an incredible discovery that gets closer to finding a cure.`,
 
     portrait: {
-      blurURL: '/assets/SupportingSchizophrenia-320x235px-Mobile-blur.webp',
+      blurURL: "/assets/SupportingSchizophrenia-320x235px-Mobile-blur.webp",
       url: "/assets/SupportingSchizophrenia-320x235px-Mobile.webp",
       aspectRatio: {
         width: 320,
@@ -119,7 +119,7 @@ const data = [
       },
     },
     landscape: {
-      blurURL: '/assets/SupportingSchizophrenia-Desktop-blur.webp',
+      blurURL: "/assets/SupportingSchizophrenia-Desktop-blur.webp",
       url: "/assets/SupportingSchizophrenia-Desktop.webp",
       aspectRatio: {
         width: 2560,
@@ -179,17 +179,14 @@ export function CarouselSwiper() {
               <CarouselItemContainer>
                 <TextContainer className="slider-text-container">
                   <BackgroundSubheading>
-                    <CarouselSubheading >
-                      {item.subheading}
-                    </CarouselSubheading>
+                    <CarouselSubheading>{item.subheading}</CarouselSubheading>
                   </BackgroundSubheading>
-                  <CarouselParagraph className="slider-paragraph-container"
-                  >
+                  <CarouselParagraph className="slider-paragraph-container">
                     {item.paragraph}
                   </CarouselParagraph>
                 </TextContainer>
                 <ImageContainer>
-                  <ImageWithBlur 
+                  <ImageWithBlur
                     src={item[source].url}
                     aspect_ratio={item[source].aspectRatio}
                     blurURL={item[source].blurURL}
@@ -209,15 +206,15 @@ export function CarouselSwiper() {
 }
 
 const fadeInSlow = keyframes({
-  '0%': {  opacity: 0 },
-  '20%': {  opacity: 0.1 },
-  '100%': {  opacity: 1 },
+  "0%": { opacity: 0 },
+  "20%": { opacity: 0.1 },
+  "100%": { opacity: 1 },
 });
 
 const fadeOutFast = keyframes({
-  '0%': {  opacity: 1 },
-  '20%': {  opacity: 0.4 },
-  '100%': {  opacity: 0 },
+  "0%": { opacity: 1 },
+  "20%": { opacity: 0.4 },
+  "100%": { opacity: 0 },
 });
 
 const CarouselContainer = styled("div", {
@@ -240,14 +237,14 @@ const CarouselContainer = styled("div", {
 
   ".swiper-slide.swiper-slide-active": {
     opacity: 1,
-   },
+  },
 
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
     animationDuration: `2.85s`,
   },
-  
-  ".swiper-slide-active .slider-paragraph-container" :{
+
+  ".swiper-slide-active .slider-paragraph-container": {
     animationName: `${fadeInSlow}`,
     animationDuration: `4.7s`,
   },
@@ -325,7 +322,6 @@ const CarouselSubheading = styled("span", {
 });
 
 const CarouselParagraph = styled("p", {
-
   zIndex: "$40",
   fontSize: "$0",
   lineHeight: "$tight",
@@ -360,14 +356,14 @@ const TextContainer = styled("div", {
 
   paddingBottom: "56px",
   "@1": {
-    paddingBottom: "36px"
-  }, 
+    paddingBottom: "36px",
+  },
 
   minHeight: "calc(100vh - calc( (235 / 320) * 100vw ))",
 
   zIndex: "100",
   "@3": {
-    minHeight: 'unset',
+    minHeight: "unset",
     margin: "unset",
 
     width: "50%",
