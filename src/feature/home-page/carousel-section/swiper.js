@@ -163,9 +163,10 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
-          grabCursor={true}
+          // grabCursor={true}
           ref={swiperRef}
-          speed={1600}
+          // speed={1600}
+          // speed={700}
           slidesPerView={1}
           keyboard={true}
           modules={[Keyboard]}
@@ -226,13 +227,13 @@ const CarouselContainer = styled("div", {
   "@media (hover: hover) and (pointer: fine)": {
     "&:hover": {
       ".navigation-arrow": {
-        opacity: "1",
+        opacity: 1,
       },
     },
   },
 
   ".swiper-slide": {
-    opacity: 0,
+    opacity: 1,
   },
 
   ".swiper-slide.swiper-slide-active": {
@@ -241,7 +242,7 @@ const CarouselContainer = styled("div", {
 
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
-    animationDuration: `2.85s`,
+    animationDuration: `3s`,
   },
 
   ".swiper-slide-active .slider-paragraph-container": {
