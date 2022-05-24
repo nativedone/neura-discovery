@@ -48,8 +48,6 @@ const data = [
         width: 320,
         height: 235,
       },
-      // width: 320,
-      // height: 235,
     },
     landscape: {
       blurURL: "/assets/ConnectingYoungOld-Desktop-blur.webp",
@@ -163,10 +161,7 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
-          // grabCursor={true}
           ref={swiperRef}
-          // speed={1600}
-          // speed={700}
           slidesPerView={1}
           keyboard={true}
           modules={[Keyboard]}
@@ -294,8 +289,6 @@ const BackgroundSubheading = styled("span", {
     paddingTop: "$x_4",
     paddingBottom: "$x_2",
     marginBottom: "$_2",
-
-    // outline: "1px solid red",
   },
 });
 
@@ -304,7 +297,6 @@ const CarouselSubheading = styled("span", {
   fontSize: "$5",
   lineHeight: "1",
   fontWeight: "$bold",
-  // color: "red",
   background:
     "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
   WebkitBackgroundClip: "text",

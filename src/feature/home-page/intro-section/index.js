@@ -23,15 +23,11 @@ export function IntroSection() {
             },
           }}
         />
-
         <DividerGapWithFiller />
-
         <Statement>
           Research leads to discoveries. Discoveries lead to cures. At NeuRA, we change lives through brain research. 
         </Statement>
-
         <DividerGapWithFiller />
-
         <Card
           layout="reverse"
           subheading={`Bringing hope through medical research`}
@@ -58,10 +54,8 @@ export function IntroSection() {
 
 const SectionContainer = styled("section", {
   zIndex: "$20",
-
   display: "grid",
   gridTemplateColumns: "1fr auto 1fr",
-  // backgroundColor: "rgb(18, 26, 57)",
 });
 
 const Lateral = styled("span", {});
@@ -71,7 +65,6 @@ const Statement = styled("h2", {
   backgroundColor: "rgb( 0, 35, 65)",
   fontSize: "$3",
   textAlign: "center",
-
   margin: "0 auto",
   padding: "$x_2 $x",
   width: "85vw",

@@ -160,7 +160,7 @@ const SemanticContainer = styled("div", {
 
 const ExternalLinksNav = styled("nav", {
 /* 0.625rem(10px) @ 20rem(320px) increasing to 2rem(32px) @ 160rem(2560px) */
-  fontSize: "clamp(0.625rem, calc(0.625rem + ((1vw - 0.2rem) * 0.9821)), 2rem)", // new
+  fontSize: "clamp(0.625rem, calc(0.625rem + ((1vw - 0.2rem) * 0.9821)), 2rem)", 
 
   /* Safari resize fix */
   minHeight: "0vw",
@@ -187,7 +187,7 @@ const Span = styled("ul", {
   justifyContent:"space-between",
 
   /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
-  fontSize: "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 1.7634)), 3.75rem)", // new
+  fontSize: "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 1.7634)), 3.75rem)", 
 
   /* Safari resize fix */
   minHeight:" 0vw",

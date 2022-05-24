@@ -9,13 +9,10 @@ export function BecomePartnerSection() {
       <div>
         <FullFiller />
         <DividerGapWithFiller />
-
         <Statement>
           Become a Discovery Partner today and change the world of brain research. 
         </Statement>
-
         <DividerGapWithFiller />
-
         <Card
           subheading={`“The generosity of everyday Australians keeps our research going” – Professor Peter Schofield AO.`}
           paragraphs={[
@@ -41,10 +38,8 @@ export function BecomePartnerSection() {
 
 const SectionContainer = styled("section", {
   zIndex: "$20",
-
   display: "grid",
   gridTemplateColumns: "1fr auto 1fr",
-  // backgroundColor: "rgb(18, 26, 57)",
 });
 
 const Lateral = styled("span", {});
