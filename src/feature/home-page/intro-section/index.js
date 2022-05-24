@@ -8,7 +8,11 @@ export function IntroSection() {
       <Lateral />
       <div>
         <Card
-          subheading={`“We know more about space than we do about the brain.” – Dr Steve Kassem`}
+          // subheading={`“We know more about space than we do about the brain.”`}
+          subhead={`“We know more about space than we do about the brain.”`}
+          quote={[
+            `– Dr Steve Kassem`,
+          ]}
           paragraphs={[
             `Our brains are incredible. They have taken us to the moon and will one day take us to Mars. And yet, we still know so little about them. That’s why research into brain function and neuroscience is urgently needed. Because research leads to discoveries, and discoveries lead to cures for conditions that affect millions of people. Will you join NeuRA’s researchers in the greatest discovery mission of your lifetime?`,
           ]}
