@@ -98,7 +98,6 @@ const MotionHeaderContainer = styled(motion.div, {
   left: "0px",
   right: "0px",
   zIndex: "$50",
-  boxShadow: "0 6px 13px rgba(38, 78, 118, 0.1)",
 
   "&.totally-hidden": {
     display: "none",
