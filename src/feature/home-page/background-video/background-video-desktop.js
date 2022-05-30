@@ -17,7 +17,7 @@ export function BackgroundVideoDesktop() {
   });
 
   return (
-    <Video style={{ scale, y }} key={source} autoPlay muted loop playsInline controls>
+    <Video style={{ scale, y }} key={source} autoPlay muted loop playsInline>
       <source src={source} type="video/webm" />
       <source src={source} type="video/mp4" />
     </Video>
