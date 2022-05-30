@@ -6,6 +6,8 @@ import { Keyboard, EffectFade } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
+import "swiper/css/effect-fade";
+
 import { ImageWithBlur } from "@components/image-with-blur";
 
 import { styled, keyframes } from "@theme";
@@ -49,12 +51,10 @@ const data = [
         width: 320,
         height: 235,
       },
-      // width: 320,
-      // height: 235,
     },
     landscape: {
       blurURL: "/assets/ConnectingYoungOld-Desktop-blur.webp",
-      url: "/assets/ConnectingYoungOld-Desktop.webp",
+      url: "/assets/ConnectingYoung-Old-Desktop.webp",
       aspectRatio: {
         width: 2560,
         height: 1256,
@@ -164,14 +164,11 @@ export function CarouselSwiper() {
     <>
       <CarouselContainer>
         <Swiper
-          // grabCursor={true}
           ref={swiperRef}
-          effect={"fade"}
-          // speed={1600}
-          speed={700}
           slidesPerView={1}
           keyboard={true}
-          modules={[EffectFade, Keyboard]}
+          effect={"fade"}
+          modules={[Keyboard, EffectFade]}
           key={source}
           onSlideChange={(a) => {
             setIndex(a.realIndex);
@@ -234,13 +231,18 @@ const CarouselContainer = styled("div", {
     },
   },
 
+// fix text overlapping on mobile when add fade effect on swiper  ////
+// See more at - https://github.com/nolimits4web/swiper/issues/1098 //
+
   ".swiper-slide": {
-    opacity: 1,
+    opacity: "1 !important",
+
+    "&:not(.swiper-slide-active)": {
+        opacity: "0 !important",
+     }
   },
 
-  ".swiper-slide.swiper-slide-active": {
-    opacity: 1,
-  },
+///////////////////////////////////////////////////////////////////////
 
   ".swiper-slide-active .slider-text-container": {
     animationName: `${fadeInSlow}`,
@@ -253,22 +255,18 @@ const CarouselContainer = styled("div", {
   },
   ".swiper-slide-prev .slider-text-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
   ".swiper-slide-next .slider-text-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
   ".swiper-slide-prev .slider-paragraph-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
   ".swiper-slide-next .slider-paragraph-container": {
     animation: `${fadeOutFast} 0.35s`,
-
     opacity: 0,
   },
 });
@@ -296,8 +294,6 @@ const BackgroundSubheading = styled("span", {
     paddingTop: "$x_4",
     paddingBottom: "$x_2",
     marginBottom: "$_2",
-
-    // outline: "1px solid red",
   },
 });
 
@@ -306,7 +302,6 @@ const CarouselSubheading = styled("span", {
   fontSize: "$5",
   lineHeight: "1",
   fontWeight: "$bold",
-  // color: "red",
   background:
     "-webkit-linear-gradient(0deg, var(--color-red-left), var(--color-red-middle) 50%, var(--color-red-right) 100%)",
   WebkitBackgroundClip: "text",

@@ -16,7 +16,7 @@ const DividerContainer = styled("div", {
   display: "flex",
   margin: "0 auto",
   width: "85vw",
-  height: "5px", // Before was 10px all time
+  height: "5px",
   "@3": {
     width: "58vw",
     height: "7.5px",

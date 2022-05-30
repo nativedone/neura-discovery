@@ -80,13 +80,14 @@ export const ScrollAreaScrollbar = StyledScrollbar;
 export const ScrollAreaThumb = StyledThumb;
 export const ScrollAreaCorner = StyledCorner;
 
-export function Card({ layout, subheading, paragraphs, imageData }) {
+export function Card({ layout, subheading, author, paragraphs, imageData }) {
   return (
     <CardContainer variantLayout={layout}>
       <ScrollArea type="auto">
         <ScrollAreaViewport css={{}}>
           <TextContainer>
             <H2>{subheading}</H2>
+            <Author>{author}</Author>
             {paragraphs.map((paragraph) => (
               <P key={paragraph}>{paragraph}</P>
             ))}
@@ -160,7 +161,6 @@ const ImageContainer = styled("div", {
 const TextContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
   color: "#fff",
   maxWidth: "100%",
   "@3": {
@@ -172,12 +172,17 @@ const TextContainer = styled("div", {
 
 const H2 = styled("h2", {
   fontSize: "$2",
-  paddingBottom: "$x_2",
   fontWeight: "$bold",
 });
 
 const P = styled("p", {
   fontSize: "$0",
-  paddingBottom: "$x_2",
+  paddingTop: "$x_2",
+  fontWeight: "$normal",
+});
+
+const Author = styled("span", {
+  fontSize: "$0",
+  paddingTop: "$x_8",
   fontWeight: "$normal",
 });
