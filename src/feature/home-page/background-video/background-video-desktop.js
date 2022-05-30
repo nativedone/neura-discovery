@@ -10,13 +10,23 @@ export function BackgroundVideoDesktop() {
 
   const source = useSources({
     mediaQueryType: "landscape",
-    matchingSuccessData: "/assets/landing--1000k.mp4",
-    matchingFailData: "", // we don't let the browser to download the desktop video if user is on mobile
+    // matchingSuccessData: "/assets/TONE-NeuRa-LandingPage-1920x1080-H.264-no-audio.mp4",
+    matchingSuccessData: "/assets/video-landscape-1m-HEVC.P8.webm",
+    matchingFailData: "" // we don't let the browser to download the desktop video if user is on mobile
   });
 
   return (
-    <Video style={{ scale, y }} key={source} autoPlay muted loop playsInline>
-      <source src={source} type="video/mp4" />
+    <Video
+      poster={"/assets/desktop_poster.webp"}
+      style={{ scale, y }}
+      key={source}
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src={source} type="video/webm" />
+      {/* <source src={source} type="video/mp4" /> */}
     </Video>
   );
 }

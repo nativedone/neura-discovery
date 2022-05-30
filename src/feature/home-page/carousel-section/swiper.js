@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Keyboard, EffectFade } from "swiper";
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/effect-fade";
 
 import "swiper/css/effect-fade";
 
@@ -176,7 +177,7 @@ export function CarouselSwiper() {
           {data?.map((item, index) => (
             <SwiperSlide key={`slide key.id ${index}`}>
               <CarouselItemContainer>
-                <TextContainer className="slider-text-container">
+                <TextContainer className="slider-text-container" key={`slide key.id ${index}`}>
                   <BackgroundSubheading>
                     <CarouselSubheading>{item.subheading}</CarouselSubheading>
                   </BackgroundSubheading>
