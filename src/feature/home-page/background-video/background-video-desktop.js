@@ -12,14 +12,26 @@ export function BackgroundVideoDesktop() {
     mediaQueryType: "landscape",
     // matchingSuccessData: "/assets/TONE-NeuRa-LandingPage-1920x1080-H.264-no-audio.mp4",
     // matchingSuccessData: "/assets/TONE-NeuRa-LandingPage-1920x1080.HEVC.P8.webm",
-    matchingSuccessData: "/assets/video-landscape-1m-HEVC.P8.webm",
-    matchingFailData: "", // we don't let the browser to download the desktop video if user is on mobile
+    matchingSuccessData: {
+      video: "/assets/video-landscape-1m-HEVC.P8.webm",
+      poster: "/assets/desktop_poster.webp",
+    },
+    matchingFailData: { video: "", poster: "" }, // we don't let the browser to download the desktop video if user is on mobile
+    defaultData: { video: "", poster: "" }, // we don't let the browser to download the desktop video if user is on mobile
   });
 
   return (
-    <Video style={{ scale, y }} key={source} autoPlay muted loop playsInline>
-      <source src={source} type="video/webm" />
-      <source src={source} type="video/mp4" />
+    <Video
+      poster={source.poster}
+      style={{ scale, y }}
+      key={source.video}
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src={source.video} type="video/webm" />
+      {/* <source src={source} type="video/mp4" /> */}
     </Video>
   );
 }
