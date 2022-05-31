@@ -20,7 +20,7 @@ export function Footer() {
               ><p>DISCLAIMER</p></a> 
               <Space> | </Space>
               <a
-              href="https://www.neura.edu.au/privacy/"
+              href="https://foundation.neura.edu.au/privacy/"
               target="_blank"
               rel="noreferrer" 
               ><p>PRIVACY</p></a> 
