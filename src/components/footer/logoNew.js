@@ -32,19 +32,15 @@ const Div  = styled("span", {
 const ImageContainer = styled("div", {
   paddingRight: "3px",
 
-  // "31px", // 320
+  // "22px", // 576
   // "67px", // 2560
-  /* 1.9375rem(31px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
-  width: 
-  "clamp(1.9375rem, calc(1.9375rem + ((1vw - 0.2rem) * 1.6071)), 4.1875rem)",
- 
-  // "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 1.6071)), 4.375rem)",
+  /* 1.375rem(22px) @ 36rem(576px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
+  width: "clamp(1.375rem, calc(1.375rem + ((1vw - 0.36rem) * 2.2681)), 4.1875rem)",
 
-  // "40px", // 320
+  // "32px", // 576
   // "83px", // 2560
-  /* 2.5rem(40px) @ 20rem(320px) increasing to 5.1875rem(83px) @ 160rem(2560px) */
-  height: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 1.9196)), 5.1875rem)",
-  // "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 1.7857)), 5rem)",
+  /* 2rem(32px) @ 36rem(576px) increasing to 5.1875rem(83px) @ 160rem(2560px) */
+  height: "clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 2.5706)), 5.1875rem)",
 });
 
 const Logo = (props) => (
