@@ -64,12 +64,12 @@ export function Header({ animateOnScroll = true }) {
         <SemanticNav>
           <ul>
             <li>
-              <a href="/">
+              <SlowLink href="/">
                 <LogoControl>
                   <Logo />
                 </LogoControl>
                 <VisuallyHidden>Visit our Webpage</VisuallyHidden>
-              </a>
+              </SlowLink>
             </li>
             <li>
               <Button href="/donate" as="a" variant="primary">
@@ -82,6 +82,8 @@ export function Header({ animateOnScroll = true }) {
     </MotionHeaderContainer>
   );
 }
+
+const SlowLink = styled("a", {}); // We don't use next/link here to give time to the donation form to load
 
 const MotionHeaderContainer = styled(motion.div, {
   backgroundColor: "transparent",
