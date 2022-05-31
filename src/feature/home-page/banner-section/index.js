@@ -6,7 +6,7 @@ export function BannerSection({ text, renderButton }) {
     <BannerSectionContainer>
       <H2>{text}</H2>
       {renderButton && (
-        <Button variant="secondary" css={{ marginTop: "$x_2" }}>
+        <Button href="/donate"  as="a" variant="secondary" css={{ marginTop: "$x_2" }}>
           JOIN US NOW
         </Button>
       )}

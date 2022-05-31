@@ -53,7 +53,6 @@ export function Header({ animateOnScroll = true }) {
     };
   }, [animateOnScroll, debouncedPreviousScroll, clearDebounceListener]);
 
-
   return (
     <MotionHeaderContainer
       id="header"
@@ -65,11 +64,7 @@ export function Header({ animateOnScroll = true }) {
         <SemanticNav>
           <ul>
             <li>
-              <a
-                href="https://www.neura.edu.au/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="/">
                 <LogoControl>
                   <Logo />
                 </LogoControl>
@@ -77,7 +72,9 @@ export function Header({ animateOnScroll = true }) {
               </a>
             </li>
             <li>
-              <Button variant="primary">JOIN US NOW</Button>
+              <Button href="/donate" as="a" variant="primary">
+                JOIN US NOW
+              </Button>
             </li>
           </ul>
         </SemanticNav>
