@@ -10,12 +10,15 @@ export function BackgroundVideoMobile() {
 
   const source = useSources({
     mediaQueryType: "portrait",
-    matchingSuccessData: "/assets/mobile--1000k.mp4",
+    // matchingSuccessData: "/assets/mobile--1000k.mp4",
+    matchingSuccessData:
+      "/assets/TONE-NeuRa-LandingPage-922x1920.new.HEVC.P8.1000k.webm",
     matchingFailData: "", // we don't let the browser to download the mobile video if user is on desktop
   });
 
   return (
     <Video
+      poster={"/assets/mobile_poster.webp"}
       key={source}
       autoPlay={true}
       preload="auto"
@@ -24,7 +27,7 @@ export function BackgroundVideoMobile() {
       playsInline={true}
       style={{ scale, y }}
     >
-      <source src={source} type="video/mp4" />
+      <source src={source} type="video/webm" />
     </Video>
   );
 }

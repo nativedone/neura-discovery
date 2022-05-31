@@ -53,7 +53,6 @@ export function Header({ animateOnScroll = true }) {
     };
   }, [animateOnScroll, debouncedPreviousScroll, clearDebounceListener]);
 
-
   return (
     <MotionHeaderContainer
       id="header"
@@ -65,19 +64,17 @@ export function Header({ animateOnScroll = true }) {
         <SemanticNav>
           <ul>
             <li>
-              <a
-                href="https://www.neura.edu.au/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <SlowLink href="/">
                 <LogoControl>
                   <Logo />
                 </LogoControl>
                 <VisuallyHidden>Visit our Webpage</VisuallyHidden>
-              </a>
+              </SlowLink>
             </li>
             <li>
-              <Button variant="primary">JOIN US NOW</Button>
+              <Button href="/donate" as="a" variant="primary">
+                JOIN US NOW
+              </Button>
             </li>
           </ul>
         </SemanticNav>
@@ -85,6 +82,8 @@ export function Header({ animateOnScroll = true }) {
     </MotionHeaderContainer>
   );
 }
+
+const SlowLink = styled("a", {}); // We don't use next/link here to give time to the donation form to load
 
 const MotionHeaderContainer = styled(motion.div, {
   backgroundColor: "transparent",
