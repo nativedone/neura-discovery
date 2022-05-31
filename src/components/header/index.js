@@ -141,10 +141,13 @@ const SemanticNav = styled("nav", {
 });
 
 const LogoControl = styled("div", {
-  // fontSize: "35px", // 320px
-  // fontSize: "75px", // 2560px
+  // fontSize: "35px", // 320px 28
+  // fontSize: "75px", // 2560px 60
   fontSize:
-    "clamp(2.1875rem, calc(2.1875rem + ((1vw - 0.2rem) * 1.7857)), 4.6875rem)",
+    // "clamp(2.1875rem, calc(2.1875rem + ((1vw - 0.2rem) * 1.7857)), 4.6875rem)",
+
+    /* 1.75rem(28px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
+    "clamp(1.75rem, calc(1.75rem + ((1vw - 0.2rem) * 1.4286)), 3.75rem)",
 
   /* Safari resize fix */
   minHeight: "0vw",

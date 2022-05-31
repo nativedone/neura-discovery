@@ -128,8 +128,15 @@ const SemanticFooter = styled("footer", {
 });
 
 const LogoControl = styled("ul",{
- /* 2.125rem(34px) @ 20rem(320px) increasing to 5.35rem(85.6px) @ 160rem(2560px) */
-  fontSize: "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 2.3036)), 5.35rem)",
+  // fontSize: "35px", // 320px 28
+  // fontSize: "75px", // 2560px 60
+  
+  /* 2.125rem(34px) @ 20rem(320px) increasing to 5.35rem(85.6px) @ 160rem(2560px) */ //old
+  fontSize: 
+  // "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 2.3036)), 5.35rem)",
+
+  /* 1.75rem(28px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
+  "clamp(1.75rem, calc(1.75rem + ((1vw - 0.2rem) * 1.4286)), 3.75rem)",
 
   /* Safari resize fix */
   minHeight: "0vw",
