@@ -141,23 +141,21 @@ const SemanticNav = styled("nav", {
 });
 
 const LogoControl = styled("div", {
-  // fontSize: "35px", // 320px 28
-  // fontSize: "75px", // 2560px 60
-  fontSize:
-    // "clamp(2.1875rem, calc(2.1875rem + ((1vw - 0.2rem) * 1.7857)), 4.6875rem)",
 
-    /* 1.75rem(28px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
-    "clamp(1.75rem, calc(1.75rem + ((1vw - 0.2rem) * 1.4286)), 3.75rem)",
+  // fontSize: "30.5px", //320
+  // fontSize: "67px", //2560
+  /* 1.90625rem(30.5px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
+  fontSize: "clamp(1.90625rem, calc(1.90625rem + ((1vw - 0.2rem) * 1.6295)), 4.1875rem)",
+
+  // padding: "5px", //320
+  // padding: "15px", // 2560
+  /* 0.3125rem(5px) @ 20rem(320px) increasing to 0.9375rem(15px) @ 160rem(2560px) */
+  padding: "clamp(0.3125rem, calc(0.3125rem + ((1vw - 0.2rem) * 0.4464)), 0.9375rem)",
 
   /* Safari resize fix */
   minHeight: "0vw",
   lineHeight: "1",
   backgroundColor: "#fff",
-
-  /* 0.28125rem(4.5px) @ 20rem(320px) increasing to 1.10625rem(17.7px) @ 160rem(2560px) */
-  padding:
-    "clamp(0.28125rem, calc(0.28125rem + ((1vw - 0.2rem) * 0.5893)), 1.10625rem)",
-
   borderBottomLeftRadius: "var(--radius-value)",
   borderBottomRightRadius: "var(--radius-value)",
 });

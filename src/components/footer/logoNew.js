@@ -30,17 +30,22 @@ const Div  = styled("span", {
 })
 
 const ImageContainer = styled("div", {
-  paddingRight: "3px",
+  // width: "21px", //320
+  // width: "47px", //2560 
+  /* 1.3125rem(21px) @ 20rem(320px) increasing to 2.9375rem(47px) @ 160rem(2560px) */
+  width: "clamp(1.3125rem, calc(1.3125rem + ((1vw - 0.2rem) * 1.1607)), 2.9375rem)",
 
-  // "22px", // 576
-  // "67px", // 2560
-  /* 1.375rem(22px) @ 36rem(576px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
-  width: "clamp(1.375rem, calc(1.375rem + ((1vw - 0.36rem) * 2.2681)), 4.1875rem)",
+  // height: "29px", //320
+  // height: "69px", //2560
+  /* 1.8125rem(29px) @ 20rem(320px) increasing to 4.3125rem(69px) @ 160rem(2560px) */
+  height: "clamp(1.8125rem, calc(1.8125rem + ((1vw - 0.2rem) * 1.7857)), 4.3125rem)",
 
-  // "32px", // 576
-  // "83px", // 2560
-  /* 2rem(32px) @ 36rem(576px) increasing to 5.1875rem(83px) @ 160rem(2560px) */
-  height: "clamp(2rem, calc(2rem + ((1vw - 0.36rem) * 2.5706)), 5.1875rem)",
+  marginBottom: "5px", //320
+
+  // marginRight: "4px", //2560 att
+  // marginRight: "2px", //320
+  /* 0.125rem(2px) @ 20rem(320px) increasing to 0.25rem(4px) @ 160rem(2560px) */
+  marginRight: "clamp(0.125rem, calc(0.125rem + ((1vw - 0.2rem) * 0.0893)), 0.25rem)",
 });
 
 const Logo = (props) => (

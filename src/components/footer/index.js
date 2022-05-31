@@ -128,15 +128,15 @@ const SemanticFooter = styled("footer", {
 });
 
 const LogoControl = styled("ul",{
-  // fontSize: "35px", // 320px 28
-  // fontSize: "75px", // 2560px 60
+  // fontSize: "30.5px", //320
+  // fontSize: "67px", //2560
+  /* 1.90625rem(30.5px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
+  fontSize: "clamp(1.90625rem, calc(1.90625rem + ((1vw - 0.2rem) * 1.6295)), 4.1875rem)",
 
-  /* 2.125rem(34px) @ 20rem(320px) increasing to 5.35rem(85.6px) @ 160rem(2560px) */ //old
-  fontSize: 
-  // "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 2.3036)), 5.35rem)",
-
-  /* 1.75rem(28px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
-  "clamp(1.75rem, calc(1.75rem + ((1vw - 0.2rem) * 1.4286)), 3.75rem)",
+  // padding: "5px", //320
+  // padding: "15px", // 2560
+  /* 0.3125rem(5px) @ 20rem(320px) increasing to 0.9375rem(15px) @ 160rem(2560px) */
+  padding: "clamp(0.3125rem, calc(0.3125rem + ((1vw - 0.2rem) * 0.4464)), 0.9375rem)",
 
   /* Safari resize fix */
   minHeight: "0vw",
@@ -192,6 +192,7 @@ const SocialLinksNav = styled("nav", {
 const Span = styled("ul", {
   display: "flex",
   justifyContent:"space-between",
+  alignItems: "center",
 
   /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
   fontSize: "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 1.7634)), 3.75rem)", 
@@ -205,11 +206,15 @@ const Span = styled("ul", {
 },
 
 ".logo" : {
-  // "24px", 576px
-  // "60px", 2560px
-  /* 1.5rem(24px) @ 36rem(576px) increasing to 3.75rem(60px) @ 160rem(2560px) */
-  fontSize: 
-  "clamp(1.5rem, calc(1.5rem + ((1vw - 0.36rem) * 1.8145)), 3.75rem)",
+  // fontSize: "30.5px", //320
+  // fontSize: "67px", //2560
+  /* 1.90625rem(30.5px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
+  fontSize: "clamp(1.90625rem, calc(1.90625rem + ((1vw - 0.2rem) * 1.6295)), 4.1875rem)",
+
+  // padding: "5px", //320
+  // padding: "15px", // 2560
+  /* 0.3125rem(5px) @ 20rem(320px) increasing to 0.9375rem(15px) @ 160rem(2560px) */
+  padding: "clamp(0.3125rem, calc(0.3125rem + ((1vw - 0.2rem) * 0.4464)), 0.9375rem)",
 
   listStyle: "none",
 

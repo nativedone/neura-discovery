@@ -10,8 +10,8 @@ export const LogoType = (props) => {
       <Image
         src="/assets/head_outline.webp"
         alt=""
-        width={464}
-        height={628}
+        width={124}
+        height={201}
         layout={"responsive"}
       />
       </ImageContainer>
@@ -29,21 +29,27 @@ const Div  = styled("span", {
 })
 
 const ImageContainer = styled("div", {
-  paddingRight: "3px",
 
-  // "31px", // 320
-  // "67px", // 2560
-  /* 1.9375rem(31px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
-  width: 
-  "clamp(1.9375rem, calc(1.9375rem + ((1vw - 0.2rem) * 1.6071)), 4.1875rem)",
- 
-  // "clamp(2.125rem, calc(2.125rem + ((1vw - 0.2rem) * 1.6071)), 4.375rem)",
 
-  // "40px", // 320
-  // "83px", // 2560
-  /* 2.5rem(40px) @ 20rem(320px) increasing to 5.1875rem(83px) @ 160rem(2560px) */
-  height: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 1.9196)), 5.1875rem)",
-  // "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 1.7857)), 5rem)",
+  // width: "21px", //320
+  // width: "47px", //2560 
+  /* 1.3125rem(21px) @ 20rem(320px) increasing to 2.9375rem(47px) @ 160rem(2560px) */
+  width: "clamp(1.3125rem, calc(1.3125rem + ((1vw - 0.2rem) * 1.1607)), 2.9375rem)",
+
+  // height: "29px", //320
+  // height: "69px", //2560
+  /* 1.8125rem(29px) @ 20rem(320px) increasing to 4.3125rem(69px) @ 160rem(2560px) */
+  height: "clamp(1.8125rem, calc(1.8125rem + ((1vw - 0.2rem) * 1.7857)), 4.3125rem)",
+
+  // marginBottom: "20px", //2560 att
+  // marginBottom: "11px", //320
+  /* 0.6875rem(11px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
+  marginBottom: "clamp(0.6875rem, calc(0.6875rem + ((1vw - 0.2rem) * 0.4018)), 1.25rem)",
+
+  // marginRight: "4px", //2560 att
+  // marginRight: "2px", //320
+  /* 0.125rem(2px) @ 20rem(320px) increasing to 0.25rem(4px) @ 160rem(2560px) */
+  marginRight: "clamp(0.125rem, calc(0.125rem + ((1vw - 0.2rem) * 0.0893)), 0.25rem)",
 });
 
 const Logo = (props) => (
