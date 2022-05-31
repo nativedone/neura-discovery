@@ -10,7 +10,7 @@ const headerAnimationVariants = {
   hide: { opacity: 0, y: "-100%" },
 };
 
-import { Logo } from "./logo";
+import { LogoType } from "./logo";
 
 export function Header({ animateOnScroll = true }) {
   const { scrollY } = useViewportScroll();
@@ -71,7 +71,7 @@ export function Header({ animateOnScroll = true }) {
                 rel="noreferrer"
               >
                 <LogoControl>
-                  <Logo />
+                  <LogoType />
                 </LogoControl>
                 <VisuallyHidden>Visit our Webpage</VisuallyHidden>
               </a>
