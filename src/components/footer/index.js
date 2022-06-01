@@ -5,6 +5,7 @@ import { TwitterIcon } from './twitterIcon';
 import { FacebookIcon } from './facebookIcon';
 import { VisuallyHidden } from "@components/visually-hidden";
 import { LogoNew } from './logoNew';
+import { LogoIcon } from './logoIcon';
 
 export function Footer() {
   return (
@@ -45,7 +46,7 @@ export function Footer() {
               target="_blank"
               rel="noreferrer"
             >
-            <LogoNew />
+            <LogoIcon />
             <VisuallyHidden>Visit our Webpage</VisuallyHidden>
             </a>
           </li>
@@ -128,15 +129,12 @@ const SemanticFooter = styled("footer", {
 });
 
 const LogoControl = styled("ul",{
-  // fontSize: "30.5px", //320
-  // fontSize: "67px", //2560
-  /* 1.90625rem(30.5px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
-  fontSize: "clamp(1.90625rem, calc(1.90625rem + ((1vw - 0.2rem) * 1.6295)), 4.1875rem)",
+  // fontSize: "29.85px", //320
+  // fontSize: "35px", //575
+  /* 1.865625rem(29.85px) @ 20rem(320px) increasing to 2.1875rem(35px) @ 35.9375rem(575px) */
+  fontSize: "clamp(1.865625rem, calc(1.865625rem + ((1vw - 0.2rem) * 2.0196)), 2.1875rem)",
 
-  // padding: "5px", //320
-  // padding: "15px", // 2560
-  /* 0.3125rem(5px) @ 20rem(320px) increasing to 0.9375rem(15px) @ 160rem(2560px) */
-  padding: "clamp(0.3125rem, calc(0.3125rem + ((1vw - 0.2rem) * 0.4464)), 0.9375rem)",
+  paddingBottom: "7px",
 
   /* Safari resize fix */
   minHeight: "0vw",
@@ -206,18 +204,17 @@ const Span = styled("ul", {
 },
 
 ".logo" : {
-  // fontSize: "30.5px", //320
-  // fontSize: "67px", //2560
-  /* 1.90625rem(30.5px) @ 20rem(320px) increasing to 4.1875rem(67px) @ 160rem(2560px) */
-  fontSize: "clamp(1.90625rem, calc(1.90625rem + ((1vw - 0.2rem) * 1.6295)), 4.1875rem)",
+  // fontSize: "22px", //576
+  // fontSize: "52.8px", //2560
+  /* 1.375rem(22px) @ 36rem(576px) increasing to 3.3rem(52.8px) @ 160rem(2560px) */
+  fontSize: "clamp(1.375rem, calc(1.375rem + ((1vw - 0.36rem) * 1.5524)), 3.3rem)",
 
-  // padding: "5px", //320
-  // padding: "15px", // 2560
-  /* 0.3125rem(5px) @ 20rem(320px) increasing to 0.9375rem(15px) @ 160rem(2560px) */
-  padding: "clamp(0.3125rem, calc(0.3125rem + ((1vw - 0.2rem) * 0.4464)), 0.9375rem)",
+  // paddingBottom: "4.6px", // 576
+  // paddingBottom: "7px", // 2560
+  /* 0.2875rem(4.6px) @ 36rem(576px) increasing to 0.4375rem(7px) @ 160rem(2560px) */
+  paddingBottom: "clamp(0.2875rem, calc(0.2875rem + ((1vw - 0.36rem) * 0.121)), 0.4375rem)",
 
   listStyle: "none",
-
   "@0":{
     display: "none"
   },

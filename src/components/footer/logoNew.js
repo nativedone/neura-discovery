@@ -10,7 +10,7 @@ export const LogoNew = (props) => {
       <Image
         src="/assets/head_outline.webp"
         alt=""
-        width={464}
+        width={394}
         height={628}
         layout={"responsive"}
       />
@@ -30,22 +30,27 @@ const Div  = styled("span", {
 })
 
 const ImageContainer = styled("div", {
-  // width: "21px", //320
-  // width: "47px", //2560 
-  /* 1.3125rem(21px) @ 20rem(320px) increasing to 2.9375rem(47px) @ 160rem(2560px) */
-  width: "clamp(1.3125rem, calc(1.3125rem + ((1vw - 0.2rem) * 1.1607)), 2.9375rem)",
+  lineHeight: "0px",
 
-  // height: "29px", //320
-  // height: "69px", //2560
-  /* 1.8125rem(29px) @ 20rem(320px) increasing to 4.3125rem(69px) @ 160rem(2560px) */
-  height: "clamp(1.8125rem, calc(1.8125rem + ((1vw - 0.2rem) * 1.7857)), 4.3125rem)",
+  // width: "15.1px", //576
+  // width: "38px", //2560 
+  /* 0.94375rem(15.1px) @ 36rem(576px) increasing to 2.375rem(38px) @ 160rem(2560px) */
+  width: "clamp(0.94375rem, calc(0.94375rem + ((1vw - 0.36rem) * 1.1542)), 2.375rem)",
 
-  marginBottom: "5px", //320
+  // height: "28.8px", //576
+  // height: "58px", //2560
+  /* 1.8rem(28.8px) @ 36rem(576px) increasing to 3.625rem(58px) @ 160rem(2560px) */
+  height: "clamp(1.8rem, calc(1.8rem + ((1vw - 0.36rem) * 1.4718)), 3.625rem)",
 
-  // marginRight: "4px", //2560 att
-  // marginRight: "2px", //320
-  /* 0.125rem(2px) @ 20rem(320px) increasing to 0.25rem(4px) @ 160rem(2560px) */
-  marginRight: "clamp(0.125rem, calc(0.125rem + ((1vw - 0.2rem) * 0.0893)), 0.25rem)",
+  // marginBottom: "0.8px", //576
+  // marginBottom: "12px", //2560
+  /* 0.05rem(0.8px) @ 36rem(576px) increasing to 0.75rem(12px) @ 160rem(2560px) */
+  marginBottom: "clamp(0.05rem, calc(0.05rem + ((1vw - 0.36rem) * 0.5645)), 0.75rem)",
+
+  // marginRight: "3px", //2560 att
+  // marginRight: "1px", //576
+  /* 0.0625rem(1px) @ 36rem(576px) increasing to 0.1875rem(3px) @ 160rem(2560px) */
+  marginRight: "clamp(0.0625rem, calc(0.0625rem + ((1vw - 0.36rem) * 0.1008)), 0.1875rem)",
 });
 
 const Logo = (props) => (

@@ -10,7 +10,7 @@ export const LogoIcon = (props) => {
       <Image
         src="/assets/head_outline.webp"
         alt=""
-        width={464}
+        width={394}
         height={628}
         layout={"responsive"}
       />
@@ -22,6 +22,7 @@ export const LogoIcon = (props) => {
 const Div  = styled("span", {
   display: "flex",
   flexDirection: "row-reverse",
+  justifyContent: "center",
   objectFit: "contain",
   alignItems: "center",
   width: "100%",
@@ -29,26 +30,24 @@ const Div  = styled("span", {
 })
 
 const ImageContainer = styled("div", {
-  // width: "21px", //320
-  // width: "47px", //2560 
-  /* 1.3125rem(21px) @ 20rem(320px) increasing to 2.9375rem(47px) @ 160rem(2560px) */
-  width: "clamp(1.3125rem, calc(1.3125rem + ((1vw - 0.2rem) * 1.1607)), 2.9375rem)",
+  lineHeight: "0",
 
-  // height: "29px", //320
-  // height: "69px", //2560
-  /* 1.8125rem(29px) @ 20rem(320px) increasing to 4.3125rem(69px) @ 160rem(2560px) */
-  height: "clamp(1.8125rem, calc(1.8125rem + ((1vw - 0.2rem) * 1.7857)), 4.3125rem)",
+  // width: "21.2px", //320
+  // width: "25px", //575
+  /* 1.325rem(21.2px) @ 20rem(320px) increasing to 1.5625rem(25px) @ 35.9375rem(575px) */
+  width: "clamp(1.325rem, calc(1.325rem + ((1vw - 0.2rem) * 1.4902)), 1.5625rem)",
 
-  // marginBottom: "20px", //2560 att
-  // marginBottom: "11px", //320
-  /* 0.6875rem(11px) @ 20rem(320px) increasing to 1.25rem(20px) @ 160rem(2560px) */
-  marginBottom: "clamp(0.6875rem, calc(0.6875rem + ((1vw - 0.2rem) * 0.4018)), 1.25rem)",
-
-  // marginRight: "4px", //2560 att
-  // marginRight: "2px", //320
-  /* 0.125rem(2px) @ 20rem(320px) increasing to 0.25rem(4px) @ 160rem(2560px) */
-  marginRight: "clamp(0.125rem, calc(0.125rem + ((1vw - 0.2rem) * 0.0893)), 0.25rem)",
+  // height: "28.2px", //320
+  // height: "32px", //575
+  /* 1.7625rem(28.2px) @ 20rem(320px) increasing to 2rem(32px) @ 35.9375rem(575px) */
+  height: "clamp(1.7625rem, calc(1.7625rem + ((1vw - 0.2rem) * 1.4902)), 2rem)",
   
+  // marginBottom: "11.5px", //320
+  // marginBottom: "15px", //575
+  /* 0.71875rem(11.5px) @ 20rem(320px) increasing to 0.9375rem(15px) @ 35.9375rem(575px) */
+  marginBottom: "clamp(0.71875rem, calc(0.71875rem + ((1vw - 0.2rem) * 1.3725)), 0.9375rem)",
+
+  marginRight: "2px",
 });
 
 const Logo = (props) => (
