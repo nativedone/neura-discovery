@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useViewportScroll, motion } from "framer-motion";
 import useDebounce from "react-use/lib/useDebounce";
 
+import * as gtag from "@lib/gtm";
+
 const headerAnimationVariants = {
   show: { opacity: 1, y: 0 },
   hide: { opacity: 0, y: "-100%" },
@@ -72,7 +74,18 @@ export function Header({ animateOnScroll = true }) {
               </SlowLink>
             </li>
             <li>
-              <Button href="/donate" as="a" variant="primary">
+              <Button
+                onClick={() =>
+                  gtag.event({
+                    category: "Buttons",
+                    action: "Click",
+                    label: "Clicked 'JOIN US NOW' at header",
+                  })
+                }
+                href="/donate"
+                as="a"
+                variant="primary"
+              >
                 JOIN US NOW
               </Button>
             </li>

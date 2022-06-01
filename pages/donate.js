@@ -9,7 +9,7 @@ import Script from "next/script";
 export default function DonateRoute() {
   return (
     <>
-      <SEO />
+      <SEO  title="Donate to Neura discovery"/>
       <Layout>
         <GivingFormContainer>
           <GivingForm id="blackbaud-donation-form_dac3f66e-18f7-4d4b-87f9-96a1a4761f4e" />
