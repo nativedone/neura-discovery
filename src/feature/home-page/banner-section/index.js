@@ -1,5 +1,6 @@
 import { styled } from "@theme";
 import { Button } from "@components/button";
+import Link from "next/link";
 
 import * as gtag from "@lib/gtm";
 
@@ -8,21 +9,22 @@ export function BannerSection({ text, renderButton }) {
     <BannerSectionContainer>
       <H2>{text}</H2>
       {renderButton && (
-        <Button
-          onClick={() =>
-            gtag.event({
-              category: "Buttons",
-              action: "Click",
-              label: "Clicked 'JOIN US NOW' at bottom banner",
-            })
-          }
-          href="/donate/?form=discovery"
-          as="a"
-          variant="secondary"
-          css={{ marginTop: "$x_2" }}
-        >
-          JOIN US NOW
-        </Button>
+        <Link href="/donate/?form=discovery" passHref>
+          <Button
+            onClick={() =>
+              gtag.event({
+                category: "Buttons",
+                action: "Click",
+                label: "Clicked 'JOIN US NOW' at bottom banner",
+              })
+            }
+            as="a"
+            variant="secondary"
+            css={{ marginTop: "$x_2" }}
+          >
+            JOIN US NOW
+          </Button>
+        </Link>
       )}
     </BannerSectionContainer>
   );
