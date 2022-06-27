@@ -14,7 +14,7 @@ export default function DonateRoute() {
         <GivingFormContainer>
           <Script
             id="id-FundraiseUp-script"
-            strategy="lazyOnload"
+            strategy="beforeInteractive"
             dangerouslySetInnerHTML={{
               __html: `
             (function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
@@ -36,10 +36,9 @@ export default function DonateRoute() {
 
 const GivingFormContainer = styled("div", {
   marginTop: "15vh", // Make sure the header is clickable
-//   marginBottom: "5vh",
+  //   marginBottom: "5vh",
   width: "100vw",
   height: "100vh",
   zIndex: 999999,
-//   backgroundColor: 'yellow'
+  //   backgroundColor: 'yellow'
 });
-
