@@ -82,7 +82,7 @@ export function Header({ animateOnScroll = true }) {
                     label: "Clicked 'JOIN US NOW' at header",
                   })
                 }
-                href="/donate"
+                href="/?form=discovery"
                 as="a"
                 variant="primary"
               >
