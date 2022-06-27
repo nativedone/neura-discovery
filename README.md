@@ -14,6 +14,7 @@ Change logs:
 - fix GTM
 - fix mobile video
 - add custom gtm events
+- add new donation script
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
