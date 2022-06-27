@@ -16,6 +16,7 @@ Change logs:
 - add custom gtm events
 - add new donation script
 - load script on secondary page
+- use next/link
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
