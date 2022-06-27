@@ -17,6 +17,7 @@ Change logs:
 - add new donation script
 - load script on secondary page
 - use next/link
+- use beforeInteractive strategy to load the form quicker
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
