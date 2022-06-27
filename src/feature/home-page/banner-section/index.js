@@ -16,7 +16,7 @@ export function BannerSection({ text, renderButton }) {
               label: "Clicked 'JOIN US NOW' at bottom banner",
             })
           }
-          href="/?form=discovery"
+          href="/donate/?form=discovery"
           as="a"
           variant="secondary"
           css={{ marginTop: "$x_2" }}
