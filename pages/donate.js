@@ -9,24 +9,21 @@ import Script from "next/script";
 export default function DonateRoute() {
   return (
     <>
-      <SEO  title="Donate to Neura discovery"/>
+      <SEO title="Donate to Neura discovery" />
       <Layout>
         <GivingFormContainer>
-          <GivingForm id="blackbaud-donation-form_dac3f66e-18f7-4d4b-87f9-96a1a4761f4e" />
-          <script
-            async
-            src="https://sky.blackbaudcdn.net/static/donor-form-loader/1/main.js"
-          />
-
           <Script
-            id="id-BBDonorFormLoader"
-            strategy="lazyOnload"
+            id="id-FundraiseUp-script"
+            strategy="beforeInteractive"
             dangerouslySetInnerHTML={{
               __html: `
-              window.BBDonorFormLoader = window.BBDonorFormLoader || {};
-              if(typeof  BBDonorFormLoader.newBlackbaudDonationFormZoned === 'function'){
-                BBDonorFormLoader.newBlackbaudDonationFormZoned('renxt','p-s7Lu0uYOtU-B7WwWoPeu7A', 'dac3f66e-18f7-4d4b-87f9-96a1a4761f4e','aus');
-              }
+            (function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+            .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+            :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+            j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+            t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+            for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+            })(window,document,'script','FundraiseUp','AFRMMDFA');
           `,
             }}
           />
@@ -38,42 +35,10 @@ export default function DonateRoute() {
 }
 
 const GivingFormContainer = styled("div", {
-  marginTop: "15vh",
-  marginBottom: "5vh",
+  marginTop: "15vh", // Make sure the header is clickable
+  //   marginBottom: "5vh",
   width: "100vw",
+  height: "100vh",
   zIndex: 999999,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-
-  "> div": {
-   
-    minHeight: "80vh",
-    backgroundColor: 'white',
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    width: "90vw",
-    "@3": {
-      width: "42vw",
-    },
-  
-    "@8": {
-      width: "30vw",
-      minHeight: "65vh",
-      // backgroundColor: 'red',
-    },
-  
-    "@9": {
-      width: "26vw",
-      minHeight: "50vh",
-      // backgroundColor: 'blue',
-    },
-  
-    iframe: {
-      minWidth: '300px !important'
-    }
-  }
+  //   backgroundColor: 'yellow'
 });
-
-const GivingForm = styled("div", {});

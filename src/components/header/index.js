@@ -4,6 +4,7 @@ import { VisuallyHidden } from "@components/visually-hidden";
 import { useEffect, useState } from "react";
 import { useViewportScroll, motion } from "framer-motion";
 import useDebounce from "react-use/lib/useDebounce";
+import Link from "next/link";
 
 import * as gtag from "@lib/gtm";
 
@@ -74,20 +75,21 @@ export function Header({ animateOnScroll = true }) {
               </SlowLink>
             </li>
             <li>
-              <Button
-                onClick={() =>
-                  gtag.event({
-                    category: "Buttons",
-                    action: "Click",
-                    label: "Clicked 'JOIN US NOW' at header",
-                  })
-                }
-                href="/donate"
-                as="a"
-                variant="primary"
-              >
-                JOIN US NOW
-              </Button>
+              <Link href="/donate/?form=discovery" passHref>
+                <Button
+                  onClick={() =>
+                    gtag.event({
+                      category: "Buttons",
+                      action: "Click",
+                      label: "Clicked 'JOIN US NOW' at header",
+                    })
+                  }
+                  as="a"
+                  variant="primary"
+                >
+                  JOIN US NOW
+                </Button>
+              </Link>
             </li>
           </ul>
         </SemanticNav>
