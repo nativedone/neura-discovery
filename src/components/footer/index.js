@@ -5,7 +5,7 @@ import { TwitterIcon } from "./twitterIcon";
 import { FacebookIcon } from "./facebookIcon";
 import { VisuallyHidden } from "@components/visually-hidden";
 
-import { Logo } from "../logo";
+import { Logo } from "@components/logo";
 
 export function Footer() {
   return (
