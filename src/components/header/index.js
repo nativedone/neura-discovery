@@ -13,7 +13,7 @@ const headerAnimationVariants = {
   hide: { opacity: 0, y: "-100%" },
 };
 
-import { Logo } from "./logo";
+import { Logo } from "@components/logo";
 
 export function Header({ animateOnScroll = true }) {
   const { scrollY } = useViewportScroll();
@@ -68,9 +68,11 @@ export function Header({ animateOnScroll = true }) {
           <ul>
             <li>
               <SlowLink href="/">
-                <LogoControl>
-                  <Logo />
-                </LogoControl>
+                <LogoPadding>
+                  <LogoControl>
+                    <Logo />
+                  </LogoControl>
+                </LogoPadding>
                 <VisuallyHidden>Visit our Webpage</VisuallyHidden>
               </SlowLink>
             </li>
@@ -153,15 +155,24 @@ const SemanticNav = styled("nav", {
   },
 });
 
-const LogoControl = styled("div", {
-  // fontSize: "35px", // 320px
-  // fontSize: "75px", // 2560px
-  fontSize:
-    "clamp(2.1875rem, calc(2.1875rem + ((1vw - 0.2rem) * 1.7857)), 4.6875rem)",
 
-  /* Safari resize fix */
-  minHeight: "0vw",
-  lineHeight: "1",
+const LogoControl = styled("div", {
+  /* 7.088125rem(113.41px) @ 20rem(320px) increasing to 15.181875rem(242.91px) @ 160rem(2560px) */
+  width:
+    "clamp(7.088125rem, calc(7.088125rem + ((1vw - 0.2rem) * 5.7813)), 15.181875rem)",
+
+  /* 2.5rem(40px) @ 20rem(320px) increasing to 5.25rem(84px) @ 160rem(2560px) */
+  height: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 1.9643)), 5.25rem)",
+  /* 7.088125rem(113.41px) @ 20rem(320px) increasing to 15.181875rem(242.91px) @ 160rem(2560px) */
+  minWidth:
+    "clamp(7.088125rem, calc(7.088125rem + ((1vw - 0.2rem) * 5.7813)), 15.181875rem)",
+
+  /* 2.5rem(40px) @ 20rem(320px) increasing to 5.25rem(84px) @ 160rem(2560px) */
+  minHeight: "clamp(2.5rem, calc(2.5rem + ((1vw - 0.2rem) * 1.9643)), 5.25rem)",
+
+});
+
+const LogoPadding = styled("div", {
   backgroundColor: "#fff",
 
   /* 0.28125rem(4.5px) @ 20rem(320px) increasing to 1.10625rem(17.7px) @ 160rem(2560px) */
@@ -171,3 +182,4 @@ const LogoControl = styled("div", {
   borderBottomLeftRadius: "var(--radius-value)",
   borderBottomRightRadius: "var(--radius-value)",
 });
+
