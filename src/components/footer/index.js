@@ -63,7 +63,7 @@ export function Footer() {
                 <VisuallyHidden>Visit our Webpage</VisuallyHidden>
               </a>
             </li>
-            <li className="facebook">
+            <li>
               <a
                 href="https://www.facebook.com/NeuroscienceResearchAustralia/"
                 target="_blank"
@@ -73,7 +73,7 @@ export function Footer() {
                 <VisuallyHidden>Visit our facebook page</VisuallyHidden>
               </a>
             </li>
-            <li className="instagram">
+            <li>
               <a
                 href="https://www.instagram.com/neuraustralia/"
                 target="_blank"
@@ -83,7 +83,7 @@ export function Footer() {
                 <VisuallyHidden>Visit our instagram page</VisuallyHidden>
               </a>
             </li>
-            <li className="twitter">
+            <li>
               <a
                 href="https://twitter.com/neuraustralia/"
                 target="_blank"
@@ -93,7 +93,7 @@ export function Footer() {
                 <VisuallyHidden>Visit our twitter page</VisuallyHidden>
               </a>
             </li>
-            <li className="youtube">
+            <li>
               <a
                 href="https://www.youtube.com/user/neuraustralia/"
                 target="_blank"
