@@ -20,6 +20,7 @@ Change logs:
 - use beforeInteractive strategy to load the form quicker
 - fix auto load donation script
 - optimize logo size
+- optimize logo image priority & placeholder
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
