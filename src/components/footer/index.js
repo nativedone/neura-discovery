@@ -50,7 +50,7 @@ export function Footer() {
           </Links>
         </ExternalLinksNav>
         <SocialLinksNav>
-          <SocialLinksGrid>
+          <ul>
             <li className="logo">
               <a
                 href="https://www.neura.edu.au/"
@@ -103,7 +103,7 @@ export function Footer() {
                 <VisuallyHidden>Visit our youtube page</VisuallyHidden>
               </a>
             </li>
-          </SocialLinksGrid>
+          </ul>
         </SocialLinksNav>
       </SemanticContainer>
     </SemanticFooter>
@@ -190,62 +190,34 @@ const SocialLinksNav = styled("nav", {
   // paddingLeft: "30px", // 574px
   paddingLeft:
     "clamp(1.125rem, calc(1.125rem + ((1vw - 0.2rem) * 4.7244)), 1.875rem)",
+  paddingRight:
+    "clamp(1.125rem, calc(1.125rem + ((1vw - 0.2rem) * 4.7244)), 1.875rem)",
   /* Safari resize fix */
   minHeight: "0vw",
   "@3": {
     paddingLeft: "0",
+    paddingRight: "0",
   },
-});
-
-const SocialLinksGrid = styled("ul", {
-  display: "grid",
-  gridTemplateAreas:
-    '"logo logo logo logo "\n "facebook instagram twitter youtube"',
-
-  // gridTemplateColumns: "11.078px 23.672px 29.578px 33.109px",
-  gridTemplateColumns: `${84.425/180.400}em 1em ${225.400/180.400}em ${252.312/180.400}em`,
-
-
-  "@3": {
-    gridTemplateAreas:
-      '". . . . ."\n "logo facebook instagram twitter youtube"',
-    gridTemplateRows: "unset",
-    gridTemplateColumns: "unset",
-  },
-
-  justifyContent: "space-between",
 
   /* 1.28125rem(20.5px) @ 20rem(320px) increasing to 3.75rem(60px) @ 160rem(2560px) */
   fontSize:
     "clamp(1.28125rem, calc(1.28125rem + ((1vw - 0.2rem) * 1.7634)), 3.75rem)",
 
-  /* Safari resize fix */
-  minHeight: " 0vw",
-  maxWidth: "50vw",
-
-  li: {
-    listStyle: "none",
-
-    "&.logo": {
-      gridArea: "logo",
-      width: "100%",
-
+    ul: {
       display: "flex",
-      justifyContent: "center",
-    },
-    "&.facebook": {
-      gridArea: "facebook",
-    },
-    "&.instagram": {
-      gridArea: "instagram",
-    },
-    "&.twitter": {
-      gridArea: "twitter",
-    },
-    "&.youtube": {
-      gridArea: "youtube",
-    },
-  }
+      justifyContent: "space-between",
+      flexWrap: "wrap",
+
+      "li.logo": {
+        width: "100%",
+        "@3": {
+          width: "unset",
+        },
+  
+        display: "flex",
+        justifyContent: "center",
+      },
+    }
 });
 
 const Rights = styled("div", {
