@@ -21,6 +21,7 @@ Change logs:
 - fix auto load donation script
 - optimize logo size
 - optimize logo image priority & placeholder
+- dynamic import heavy components
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

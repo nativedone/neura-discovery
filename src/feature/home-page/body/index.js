@@ -1,19 +1,31 @@
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 import { styled } from "@theme";
 
 import { DividerGap } from "@components/divider-gap";
 
 import { IntroSection } from "../intro-section";
 import { BannerSection } from "../banner-section";
-import { CarouselSection } from "../carousel-section";
-import { BecomePartnerSection } from "../become-partner-section";
 import { BackgroundVideo } from "../background-video";
 
 const HeroSection = dynamic(() =>
   import("../hero-section").then((mod) => mod.HeroSection)
 );
 
+const CarouselSection = dynamic(() =>
+  import("../carousel-section").then((mod) => mod.CarouselSection)
+);
+
+const BecomePartnerSection = dynamic(() =>
+  import("../become-partner-section").then((mod) => mod.BecomePartnerSection)
+);
+
 export function Body() {
+  const [carouselInView, setCarouselInView] = useState(false);
+  const [partnerInView, setPartnerInView] = useState(false);
+
   return (
     <BodyContainer>
       <BodyContent>
@@ -29,9 +41,21 @@ export function Body() {
 
         <DividerGap />
 
-        <CarouselSection />
+        <LazyLoading
+          onViewportEnter={() => {
+            setCarouselInView(true);
+          }}
+        >
+          {carouselInView && <CarouselSection />}
+        </LazyLoading>
 
-        <BecomePartnerSection />
+        <LazyLoading
+          onViewportEnter={() => {
+            setPartnerInView(true);
+          }}
+        >
+          {partnerInView && <BecomePartnerSection />}
+        </LazyLoading>
 
         <DividerGap />
 
@@ -60,3 +84,5 @@ const BodyContent = styled("div", {
   flexDirection: "column",
   width: "100vw",
 });
+
+const LazyLoading = styled(motion.div, {});
