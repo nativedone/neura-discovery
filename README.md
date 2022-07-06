@@ -22,6 +22,7 @@ Change logs:
 - optimize logo size
 - optimize logo image priority & placeholder
 - dynamic import heavy components
+- fix safari pinned favicon
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
